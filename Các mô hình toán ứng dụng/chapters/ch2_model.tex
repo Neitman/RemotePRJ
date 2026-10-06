@@ -1,0 +1,385 @@
+\chapter{MÔ HÌNH TOÁN HỌC VÀ DỮ LIỆU THỰC TẾ}
+\label{ch:model}
+
+\section{Hệ phương trình vi phân Lotka--Volterra tổng quát}
+\label{sec:model_lv}
+
+Để nghiên cứu động thái biến động số lượng cá thể trong mối quan hệ dinh dưỡng giữa cá mòi dầu Đại Tây Dương (\textit{Atlantic menhaden}) và cá vược sọc (\textit{striped bass}), bài báo của Panayotova và cộng sự \cite{panayotova2023bioeconomic} sử dụng hệ phương trình vi phân Lotka--Volterra tổng quát mở rộng (\textit{generalized Lotka--Volterra model}). Hệ gồm hai phương trình vi phân phi tuyến bậc nhất mô tả tốc độ biến thiên theo thời gian của sinh khối con mồi $x(t) = x$ và kẻ săn mồi $y(t) = y$:
+\begin{equation}
+\label{eq:lv_two_species}
+\left\{
+\begin{aligned}
+\frac{dx}{dt} &= x(r - ax - by), \\
+\frac{dy}{dt} &= y(-e - cy + dx).
+\end{aligned}
+\right.
+\end{equation}
+
+\subsection{Ý nghĩa sinh học của các tham số}
+Trong hệ phương trình \eqref{eq:lv_two_species}, các tham số đều nhận giá trị thực dương và mang ý nghĩa sinh thái rõ rệt:
+\begin{itemize}
+    \item $r > 0$ ($\text{năm}^{-1}$): Tốc độ tăng trưởng nội tại (\textit{intrinsic growth rate}) của quần thể cá mòi dầu khi mật độ cá thể ở mức rất thấp và không chịu áp lực từ kẻ săn mồi.
+    \item $a > 0$ ($\text{năm}^{-1} \times (\text{tỷ con})^{-1}$): Hệ số tự giới hạn (\textit{self-limitation parameter}) của cá mòi dầu. Đại lượng này phản ánh sự cạnh tranh nội bộ loài (\textit{intra-species competition}) đối với thức ăn (thực vật phù du) và không gian sống ven bờ. Sức chứa môi trường của riêng cá mòi dầu khi vắng bóng kẻ săn mồi là $K_x = r/a$.
+    \item $b > 0$ ($\text{năm}^{-1} \times (\text{tỷ con})^{-1}$): Tốc độ tiêu thụ cá mòi dầu của cá vược sọc, biểu thị tác động săn bắt làm suy giảm quần thể con mồi trên mỗi đơn vị gặp gỡ giữa hai loài.
+    \item $e > 0$ ($\text{năm}^{-1}$): Tỷ lệ tử vong tự nhiên (\textit{natural mortality rate}) của cá vược sọc khi hoàn toàn không có nguồn thức ăn cá mòi dầu.
+    \item $c > 0$ ($\text{năm}^{-1} \times (\text{tỷ con})^{-1}$): Hệ số tự giới hạn nội bộ loài của cá vược sọc, phản ánh áp lực cạnh tranh lãnh thổ sinh sản tại bãi đẻ nước ngọt và các yếu tố mật độ quần thể.
+    \item $d > 0$ ($\text{năm}^{-1} \times (\text{tỷ con})^{-1}$): Hiệu quả chuyển đổi sinh khối (\textit{conversion efficiency}), đo lường tốc độ gia tăng số lượng kẻ săn mồi nhờ hấp thụ thức ăn từ việc tiêu thụ quần thể con mồi.
+\end{itemize}
+
+\subsection{Các giả thiết sinh học nền tảng}
+Hệ mô hình \eqref{eq:lv_two_species} được thiết lập dựa trên 5 giả thiết sinh học then chốt sau đây:
+\begin{enumerate}
+    \item \textbf{Tăng trưởng logistic của con mồi:} Khi không có kẻ săn mồi ($y = 0$), tốc độ biến thiên của cá mòi dầu tuân theo phương trình vi phân logistic:
+    \begin{equation}
+    \frac{dx}{dt} = x(r - ax) = rx\left(1 - \frac{x}{r/a}\right).
+    \end{equation}
+    Quần thể con mồi sẽ tiệm cận ổn định về sức chứa môi trường $K_x = r/a$.
+    
+    \item \textbf{Nguồn thức ăn duy nhất của kẻ săn mồi:} Trong phạm vi không gian sinh thái của mô hình, cá vược sọc phụ thuộc hoàn toàn vào nguồn thức ăn là cá mòi dầu để duy trì sự sống và sinh sản.
+    
+    \item \textbf{Suy giảm theo hàm mũ khi thiếu thức ăn:} Khi vắng bóng con mồi ($x = 0$), phương trình cho cá vược sọc trở thành $\frac{dy}{dt} = -ey - cy^2 < -ey$. Do đó, số lượng cá vược sọc sẽ suy giảm nhanh hơn hoặc bằng hàm mũ $y(t) \le y(0)e^{-et} \to 0$ khi $t \to \infty$.
+    
+    \item \textbf{Cô lập hóa hệ sinh thái hai loài:} Bỏ qua các tương tác dinh dưỡng phức tạp với các loài sinh vật khác (như cá xanh, chim ưng, động vật phù du) cũng như những biến động ngẫu nhiên về khí hậu thời tiết.
+    
+    \item \textbf{Đồng nhất về cấu trúc cá thể:} Mô hình không phân biệt cấu trúc tuổi, giới tính, kích thước cá thể hay sự phân bố không gian địa lý của các đàn cá.
+\end{enumerate}
+
+\subsection{Ưu thế của mô hình}
+Mặc dù là một sự đơn giản hóa so với lưới thức ăn tự nhiên khổng lồ của vịnh Chesapeake, mô hình Lotka--Volterra tổng quát có các ưu thế vượt trội:
+\begin{itemize}
+    \item \textbf{Nắm bắt được tính dao động trễ pha (\textit{phase-shifted behavior}):} Tái hiện quy luật tự nhiên trong quan hệ con mồi -- kẻ săn mồi: sự phát triển của con mồi thúc đẩy sự bùng nổ của kẻ săn mồi, sau đó áp lực săn bắt khiến con mồi sụt giảm, dẫn tới sự suy giảm trễ pha của kẻ săn mồi.
+    \item \textbf{Giải tích khả thi (\textit{analytically tractable}):} Số lượng phương trình và tham số vừa phải, cho phép giải tích tường minh các trạng thái cân bằng, khảo sát ma trận Jacobi và tính ổn định tiệm cận mà không cần dùng đến các phương pháp xấp xỉ quá phức tạp.
+    \item \textbf{Ước lượng tin cậy từ dữ liệu thực tế:} Hệ thống gồm 6 tham số là quy mô lý tưởng để khớp với chuỗi dữ liệu lịch sử hạn chế mà không bị rơi vào hiện tượng quá khớp (\textit{overfitting}).
+\end{itemize}
+
+\section{Dữ liệu thực nghiệm và phương pháp hiệu chỉnh tham số}
+\label{sec:model_data}
+
+\subsection{Nguồn dữ liệu chuỗi thời gian}
+Các tác giả sử dụng chuỗi dữ liệu độ phong phú cá thể (\textit{abundance estimates}) thực tế tại vịnh Chesapeake trong giai đoạn 23 năm (từ 1995 đến 2017) được công bố chính thức bởi Ủy ban Nghề cá Biển các Bang Đại Tây Dương (ASMFC) \cite{asmfc2022stock}:
+\begin{itemize}
+    \item Dữ liệu cá mòi dầu được trích xuất từ Báo cáo Đánh giá Chuẩn Trữ lượng Cá mòi dầu Đại Tây Dương 2019 (\textit{Atlantic Menhaden 2019 Benchmark Stock Assessment}) \cite{sedar2020menhaden}.
+    \item Dữ liệu cá vược sọc được trích xuất từ Báo cáo Cập nhật Đánh giá Trữ lượng Cá vược sọc Đại Tây Dương 2022 (\textit{2022 Atlantic Striped Bass Stock Assessment Update Report}) \cite{asmfc2022stock}.
+\end{itemize}
+Để phản ánh đúng quy mô thực tế của quần thể tự nhiên, chuỗi số liệu đã được hiệu chỉnh bổ sung ước lượng nỗ lực khai thác của nghề cá thương mại và nghề câu cá giải trí hàng năm.
+
+\subsection{Chuẩn hóa dữ liệu và phương pháp khớp bình phương tối thiểu phi tuyến}
+Để phục vụ tính toán số học trên máy tính và tránh sai số tràn số dấu phẩy động, toàn bộ dữ liệu độ phong phú được chuẩn hóa bằng cách thu nhỏ theo tỷ lệ $10^9$ (tức tính theo đơn vị \textbf{tỷ cá thể}):
+\begin{equation}
+x_{\text{scaled}} = \frac{x}{10^9}, \quad y_{\text{scaled}} = \frac{y}{10^9}.
+\end{equation}
+
+Nhóm tác giả sử dụng phần mềm MATLAB và Python để giải bài toán tối ưu hóa khớp mô hình \eqref{eq:lv_two_species} với chuỗi dữ liệu thời gian bằng \textbf{Phương pháp bình phương tối thiểu phi tuyến} (\textit{Nonlinear Least Squares method}). Mục tiêu là tìm véctơ tham số tối ưu $\theta = (r, a, b, e, c, d)^T$ nhằm cực tiểu hóa hàm mục tiêu sai số bình phương:
+\begin{equation}
+\min_{\theta \in \Theta} \sum_{k=1}^{N} \left[ \left(x(t_k; \theta) - x_k^{\text{obs}}\right)^2 + \left(y(t_k; \theta) - y_k^{\text{obs}}\right)^2 \right],
+\end{equation}
+trong đó $N = 23$ là số mốc thời gian quan sát từ năm 1995 đến 2017.
+
+Do bản chất phi tuyến cao của hệ Lotka--Volterra và việc hệ phương trình là một hệ toán học quá xác định (\textit{over-determined system}), trong không gian tham số có thể tồn tại nhiều bộ tham số cục bộ cho kết quả khớp tương đối tốt. Nhóm tác giả đã thiết lập ràng buộc chặn trên cho tất cả các tham số là 10 ($\theta_i \in (0, 10]$). Ràng buộc này cho phép xác định được giá trị tối ưu của tốc độ tăng trưởng nội tại của cá mòi dầu là $r = 0.513$. Đáng chú ý, giá trị $r = 0.513$ hoàn toàn phù hợp và tương thích về độ lớn với kết quả ước lượng độc lập từ dữ liệu sinh học thống kê trong công trình của Drew và cộng sự (2021) \cite{drew2021balancing}.
+
+\subsection{Bảng tham số tối ưu thu được}
+Bộ tham số tối ưu của mô hình được tổng hợp trong Bảng \ref{tab:model_parameters} (tương ứng với Table 1 trong bài báo gốc \cite{panayotova2023bioeconomic}):
+
+\begin{table}[h!]
+\centering
+\caption{Bảng giá trị tham số của mô hình thu được từ quá trình khớp dữ liệu thực tế.}
+\label{tab:model_parameters}
+\vspace{0.2cm}
+\begin{tabularx}{0.92\textwidth}{c l c X}
+\toprule
+\textbf{Tham số} & \textbf{Ý nghĩa sinh học} & \textbf{Giá trị} & \textbf{Đơn vị thứ nguyên} \\
+\midrule
+$r$ & Tốc độ tăng trưởng nội tại cá mòi dầu & $0.513$ & $\text{năm}^{-1}$ \\
+$a$ & Hệ số tự giới hạn của cá mòi dầu & $0.026$ & $\text{năm}^{-1} \times (\text{tỷ cá thể})^{-1}$ \\
+$b$ & Tác động săn bắt của cá vược sọc lên cá mòi dầu & $1.765$ & $\text{năm}^{-1} \times (\text{tỷ cá thể})^{-1}$ \\
+$e$ & Tỷ lệ tử vong tự nhiên của cá vược sọc & $1.213$ & $\text{năm}^{-1}$ \\
+$c$ & Hệ số tự giới hạn của cá vược sọc & $0.520$ & $\text{năm}^{-1} \times (\text{tỷ cá thể})^{-1}$ \\
+$d$ & Hiệu quả tiêu thụ cá mòi dầu lên cá vược sọc & $9.999$ & $\text{năm}^{-1} \times (\text{tỷ cá thể})^{-1}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Độ chính xác của mô hình hồi quy phi tuyến được đánh giá thông qua chỉ số \textbf{Sai số chuẩn phần dư} (\textit{Residual Standard Error} -- $S$):
+\begin{equation}
+S = \sqrt{\frac{1}{2N - p} \sum_{k=1}^N \left[ \left(x(t_k) - x_k^{\text{obs}}\right)^2 + \left(y(t_k) - y_k^{\text{obs}}\right)^2 \right]} = 0.11,
+\end{equation}
+trong đó $2N = 46$ là tổng số điểm quan sát của hai loài và $p = 6$ là số tham số ước lượng. Giá trị $S = 0.11$ cho biết khoảng cách sai lệch trung bình giữa các điểm dữ liệu thực nghiệm quan sát được và đường cong hồi quy lý thuyết của mô hình chỉ vào khoảng $0.11$ tỷ cá thể ($110$ triệu con), chứng minh mô hình có độ khớp tốt và mô tả sát thực trạng thái hệ sinh thái vịnh.
+
+\section{Kết quả khớp mô hình và phân tích dự báo đến năm 2100}
+\label{sec:model_results}
+
+\subsection{Biểu đồ khớp mô hình giai đoạn 1995--2017}
+Hình \ref{fig:fitted_curves} biểu diễn kết quả đường cong mô hình lý thuyết so với dữ liệu quan sát thực tế của cá mòi dầu (đường màu đỏ) và cá vược sọc (đường màu xanh lam) trong giai đoạn 1995--2017.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+  \begin{scope}[xscale=0.48, yscale=10]
+    % Hệ trục tọa độ
+    \draw[->, >=stealth, thick] (0, 0) -- (23.8, 0) node[right, font=\footnotesize] {Năm (\textit{Years})};
+    \draw[->, >=stealth, thick] (0, 0) -- (0, 0.53) node[above, font=\footnotesize] {Số lượng (\textit{Tỷ con})};
+
+    % Các vạch chia trục hoành
+    \foreach \t/\yr in {0/1995, 2/1997, 4/1999, 6/2001, 8/2003, 10/2005, 12/2007, 14/2009, 16/2011, 18/2013, 20/2015, 22/2017} {
+      \draw (\t, 0.01) -- (\t, -0.01) node[below, font=\footnotesize] {\yr};
+    }
+    % Các vạch chia trục tung
+    \foreach \ab in {0.1, 0.2, 0.3, 0.4, 0.5} {
+      \draw (-0.2, \ab) -- (0.2, \ab) node[left=3pt, font=\footnotesize] {\ab};
+      \draw[gray!25, dotted] (0, \ab) -- (22.5, \ab);
+    }
+
+    % Đường cong khớp mô hình - Cá mòi dầu (đỏ)
+    \draw[very thick, red!85!black] plot[smooth, tension=0.6] coordinates {
+      (0, 0.09) (2, 0.12) (4, 0.14) (6, 0.15) (8, 0.13)
+      (10, 0.11) (12, 0.10) (14, 0.11) (16, 0.13) (18, 0.14)
+      (20, 0.13) (22, 0.12)
+    };
+
+    % Điểm dữ liệu quan sát - Cá mòi dầu (nút tròn đỏ)
+    \foreach \coord in {
+      (0, 0.08), (1, 0.11), (2, 0.13), (3, 0.15), (4, 0.14),
+      (5, 0.15), (6, 0.16), (7, 0.14), (8, 0.12), (9, 0.10),
+      (10, 0.10), (11, 0.11), (12, 0.11), (13, 0.10), (14, 0.12),
+      (15, 0.13), (16, 0.14), (17, 0.15), (18, 0.14), (19, 0.13),
+      (20, 0.12), (21, 0.11), (22, 0.13)
+    } {
+      \node[draw=red!85!black, fill=white, circle, inner sep=1.2pt, thick] at \coord {};
+    }
+
+    % Đường cong khớp mô hình - Cá vược sọc (xanh lam)
+    \draw[very thick, blue!85!black] plot[smooth, tension=0.6] coordinates {
+      (0, 0.38) (2, 0.34) (4, 0.29) (6, 0.27) (8, 0.28)
+      (10, 0.32) (12, 0.33) (14, 0.31) (16, 0.28) (18, 0.26)
+      (20, 0.27) (22, 0.29)
+    };
+
+    % Điểm dữ liệu quan sát - Cá vược sọc (nút tròn xanh)
+    \foreach \coord in {
+      (0, 0.40), (1, 0.36), (2, 0.33), (3, 0.44), (4, 0.31),
+      (5, 0.28), (6, 0.25), (7, 0.33), (8, 0.24), (9, 0.26),
+      (10, 0.36), (11, 0.34), (12, 0.33), (13, 0.32), (14, 0.30),
+      (15, 0.29), (16, 0.27), (17, 0.31), (18, 0.29), (19, 0.24),
+      (20, 0.22), (21, 0.23), (22, 0.25)
+    } {
+      \node[draw=blue!85!black, fill=white, circle, inner sep=1.2pt, thick] at \coord {};
+    }
+
+    % Chú thích (Legend)
+    \draw[fill=white, draw=gray!70] (15.5, 0.42) rectangle (22.8, 0.52);
+    \draw[red!85!black, thick] (16.0, 0.495) -- (17.2, 0.495);
+    \node[draw=red!85!black, fill=white, circle, inner sep=1.1pt, thick] at (16.6, 0.495) {};
+    \node[right=2pt, font=\footnotesize] at (17.2, 0.495) {Cá mòi dầu};
+    \draw[blue!85!black, thick] (16.0, 0.450) -- (17.2, 0.450);
+    \node[draw=blue!85!black, fill=white, circle, inner sep=1.1pt, thick] at (16.6, 0.450) {};
+    \node[right=2pt, font=\footnotesize] at (17.2, 0.450) {Cá vược sọc};
+  \end{scope}
+\end{tikzpicture}
+\caption{Đường cong khớp của mô hình Lotka--Volterra với chuỗi số liệu thực tế về độ phong phú cá thể của cá mòi dầu (đỏ) và cá vược sọc (xanh) từ 1995 đến 2017 (tái hiện Hình 1 từ bài báo gốc \cite{panayotova2023bioeconomic}).}
+\label{fig:fitted_curves}
+\end{figure}
+
+Từ Hình \ref{fig:fitted_curves}, chúng ta nhận thấy rõ hiện tượng dao động lệch pha sinh thái tự nhiên:
+\begin{itemize}
+    \item Khi quần thể cá mòi dầu dồi dào, quần thể cá vược sọc có nguồn dinh dưỡng phong phú và bắt đầu tăng trưởng mạnh.
+    \item Sự gia tăng của cá vược sọc tạo áp lực săn bắt cực lớn, làm suy giảm quần thể cá mòi dầu trong các giai đoạn tiếp theo.
+    \item Khi cá mòi dầu khan hiếm, đàn cá vược sọc thiếu thức ăn và bước vào chu kỳ suy giảm số lượng, tạo điều kiện cho cá mòi dầu bắt đầu hồi phục trở lại.
+\end{itemize}
+
+\subsection{Dự báo động thái quần thể đến năm 2100}
+Sử dụng mô hình \eqref{eq:lv_two_species} với bộ tham số tối ưu từ Bảng \ref{tab:model_parameters}, nhóm tác giả tiến hành mô phỏng số để dự báo xu thế phát triển dài hạn của quần thể hai loài cá từ năm 1995 đến năm 2100. Kết quả mô phỏng được thể hiện trong Hình \ref{fig:prediction_2100}.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+  \begin{scope}[xscale=0.1, yscale=10]
+    % Trục tọa độ
+    \draw[->, >=stealth, thick] (0, 0) -- (112, 0) node[right, font=\footnotesize] {Năm (\textit{Years})};
+    \draw[->, >=stealth, thick] (0, 0) -- (0, 0.53) node[above, font=\footnotesize] {Sinh khối (\textit{Tỷ con})};
+
+    % Các vạch chia trục hoành
+    \foreach \t/\yr in {0/1995, 15/2010, 30/2025, 45/2040, 60/2055, 75/2070, 90/2085, 105/2100} {
+      \draw (\t, 0.01) -- (\t, -0.01) node[below, font=\footnotesize] {\yr};
+    }
+    % Các vạch chia trục tung
+    \foreach \ab in {0.1, 0.2, 0.3, 0.4, 0.5} {
+      \draw (-1, \ab) -- (1, \ab) node[left=2pt, font=\footnotesize] {\ab};
+      \draw[gray!25, dotted] (0, \ab) -- (105, \ab);
+    }
+
+    % Đường dự báo cá mòi dầu (đỏ) - tắt dần về 0.1363
+    \draw[very thick, red!85!black] plot[smooth, tension=0.6] coordinates {
+      (0, 0.09) (5, 0.14) (10, 0.11) (15, 0.13) (20, 0.15)
+      (25, 0.12) (30, 0.14) (35, 0.13) (40, 0.14) (45, 0.135)
+      (50, 0.137) (55, 0.1363) (65, 0.1363) (85, 0.1363) (105, 0.1363)
+    };
+
+    % Đường dự báo cá vược sọc (xanh) - tắt dần về 0.2886
+    \draw[very thick, blue!85!black] plot[smooth, tension=0.6] coordinates {
+      (0, 0.38) (5, 0.28) (10, 0.33) (15, 0.26) (20, 0.31)
+      (25, 0.27) (30, 0.30) (35, 0.28) (40, 0.295) (45, 0.285)
+      (50, 0.289) (55, 0.2886) (65, 0.2886) (85, 0.2886) (105, 0.2886)
+    };
+
+    % Đường tiệm cận cân bằng
+    \draw[dashed, red!60!black, thick] (45, 0.1363) -- (105, 0.1363) 
+      node[right, font=\footnotesize] {$x^* = 0.1363$};
+    \draw[dashed, blue!60!black, thick] (45, 0.2886) -- (105, 0.2886) 
+      node[right, font=\footnotesize] {$y^* = 0.2886$};
+
+    % Chú thích
+    \draw[fill=white, draw=gray!70] (74, 0.42) rectangle (106, 0.52);
+    \draw[red!85!black, very thick] (76, 0.495) -- (84, 0.495);
+    \node[right=2pt, font=\footnotesize] at (84, 0.495) {Cá mòi dầu};
+    \draw[blue!85!black, very thick] (76, 0.450) -- (84, 0.450);
+    \node[right=2pt, font=\footnotesize] at (84, 0.450) {Cá vược sọc};
+  \end{scope}
+\end{tikzpicture}
+\caption{Dự báo của mô hình về động thái quần thể cá mòi dầu và cá vược sọc đến năm 2100 (tái hiện Hình 2 từ bài báo gốc \cite{panayotova2023bioeconomic}).}
+\label{fig:prediction_2100}
+\end{figure}
+
+Từ đồ thị dự báo Hình \ref{fig:prediction_2100}, chúng ta nhận thấy rằng:
+\begin{enumerate}
+    \item Biên độ dao động của cả hai quần thể suy giảm dần theo thời gian (dao động tắt dần -- \textit{damped oscillations}).
+    \item Sau năm 2050, hệ sinh thái tiệm cận và hội tụ bền vững về trạng thái cân bằng dừng (\textit{steady-state equilibrium}) $Q = (x^*, y^*)$.
+\end{enumerate}
+
+\subsection{Tính toán điểm cân bằng dừng}
+Tại trạng thái cân bằng đồng tồn tại tự nhiên (\textit{co-existence equilibrium}), các đạo hàm theo thời gian bằng 0:
+\begin{equation}
+\left\{
+\begin{aligned}
+r - ax^* - by^* &= 0, \\
+-e - cy^* + dx^* &= 0.
+\end{aligned}
+\right.
+\iff
+\left\{
+\begin{aligned}
+ax^* + by^* &= r, \\
+dx^* - cy^* &= e.
+\end{aligned}
+\right.
+\end{equation}
+
+Sử dụng định lý Cramer, nghiệm cân bằng được tính tường minh:
+\begin{align}
+x^* &= \frac{rc + be}{ac + bd}, \label{eq:eq_x_star} \\
+y^* &= \frac{rd - ae}{ac + bd}. \label{eq:eq_y_star}
+\end{align}
+
+Thay các giá trị tham số từ Bảng \ref{tab:model_parameters} vào công thức:
+\begin{align*}
+ac + bd &= (0.026)(0.520) + (1.765)(9.999) = 0.01352 + 17.648235 = 17.661755, \\
+rc + be &= (0.513)(0.520) + (1.765)(1.213) = 0.26676 + 2.140945 = 2.407705, \\
+rd - ae &= (0.513)(9.999) - (0.026)(1.213) = 5.129487 - 0.031538 = 5.097949.
+\end{align*}
+Do đó:
+\begin{equation}
+x^* = \frac{2.407705}{17.661755} \approx 0.1363, \quad 
+y^* = \frac{5.097949}{17.661755} \approx 0.2886.
+\end{equation}
+
+Như vậy, điểm cân bằng dừng của hệ thống là:
+\begin{equation}
+Q = (x^*, y^*) = (0.1363, 0.2886).
+\end{equation}
+Quy đổi theo quy mô số lượng cá thể thực tế, trạng thái dừng tự nhiên của vịnh Chesapeake tương ứng với khoảng \textbf{136.3 triệu con cá mòi dầu} và \textbf{288.6 triệu con cá vược sọc}.
+
+\section{Phân tích độ đàn hồi sinh thái (Resilience) của hệ thống}
+\label{sec:model_resilience}
+
+\subsection{Khái niệm độ đàn hồi theo Pimm và Lawton (1978)}
+Trong sinh thái học toán học, \textbf{Độ đàn hồi sinh học} (\textit{Resilience -- $R$}) là một chỉ số động lực học định lượng đo lường tốc độ mà một hệ sinh thái có thể tự ổn định và phục hồi trở lại trạng thái cân bằng bền vững ban đầu sau khi phải chịu đựng một cú sốc hoặc nhiễu loạn môi trường đột ngột \cite{pimm1978feeding}.
+
+Theo lý thuyết kinh điển của Stuart L. Pimm và John H. Lawton (1978) \cite{pimm1978feeding}, thời gian phục hồi về trạng thái cân bằng $\tau$ (\textit{return time to equilibrium}) tỷ lệ nghịch với độ lớn của phần thực âm của giá trị riêng chủ đạo (\textit{leading eigenvalue}) của ma trận Jacobian:
+\begin{equation}
+\label{eq:resilience_def}
+\tau = \frac{-1}{\mathrm{Re}(\lambda_m)} \quad \text{và} \quad R = \frac{1}{\tau} = -\mathrm{Re}(\lambda_m),
+\end{equation}
+trong đó $\lambda_m$ là giá trị riêng có phần thực lớn nhất (gần trục ảo nhất, chi phối tốc độ suy giảm chậm nhất của nghiệm nhiễu loạn) của hệ thống tuyến tính hóa tại điểm cân bằng.
+
+\begin{nhanxet}
+Các tính chất quan trọng của chỉ số độ đàn hồi:
+\begin{enumerate}
+    \item Khái niệm độ đàn hồi chỉ có nghĩa khi hệ thống ở trạng thái cân bằng ổn định tiệm cận (\textit{asymptotically stable}), tức $\mathrm{Re}(\lambda_m) < 0$. Khi đó $\tau > 0$ và $R > 0$.
+    \item Độ đàn hồi $R$ và thời gian phục hồi $\tau$ tỷ lệ nghịch với nhau. Hệ sinh thái có độ đàn hồi $R$ càng cao thì thời gian hồi phục $\tau$ sau nhiễu loạn càng ngắn, đồng nghĩa với việc hệ thống có sức đề kháng cao hơn và ít bị tổn thương hơn trước những biến động ngoại cảnh.
+\end{enumerate}
+\end{nhanxet}
+
+\subsection{Thiết lập ma trận Jacobian và giá trị riêng của hệ thống}
+Để khảo sát độ ổn định và tính độ đàn hồi tại điểm cân bằng đồng tồn tại $(x^*, y^*)$, ta tuyến tính hóa hệ phương trình vi phân \eqref{eq:lv_two_species}. Ma trận Jacobi tổng quát của hệ là:
+\begin{equation}
+J(x, y) = \begin{pmatrix}
+\dfrac{\partial \dot{x}}{\partial x} & \dfrac{\partial \dot{x}}{\partial y} \\[10pt]
+\dfrac{\partial \dot{y}}{\partial x} & \dfrac{\partial \dot{y}}{\partial y}
+\end{pmatrix} = \begin{pmatrix}
+r - 2ax - by & -bx \\
+dy & -e - 2cy + dx
+\end{pmatrix}.
+\end{equation}
+
+Tại điểm cân bằng đồng tồn tại $Q = (x^*, y^*)$, do thỏa mãn $r - ax^* - by^* = 0$ và $-e - cy^* + dx^* = 0$, ma trận Jacobi rút gọn thành:
+\begin{equation}
+J(x^*, y^*) = \begin{pmatrix}
+-ax^* & -bx^* \\
+dy^* & -cy^*
+\end{pmatrix} = A.
+\end{equation}
+
+Phương trình đặc trưng của ma trận $A$ là phương trình bậc hai:
+\begin{equation}
+\det(\lambda I - A) = \lambda^2 - \mathrm{tr}(A)\lambda + \det(A) = 0,
+\end{equation}
+với:
+\begin{align}
+\mathrm{tr}(A) &= -(ax^* + cy^*), \label{eq:trace_A} \\
+\det(A) &= (-ax^*)(-cy^*) - (-bx^*)(dy^*) = (ac + bd)x^*y^*. \label{eq:det_A}
+\end{align}
+
+Do $x^* > 0, y^* > 0$ và các tham số $a, b, c, d$ đều dương:
+\begin{itemize}
+    \item Vết của ma trận luôn âm: $\mathrm{tr}(A) = -(ax^* + cy^*) < 0$.
+    \item Định thức luôn dương: $\det(A) = (ac + bd)x^*y^* > 0$.
+\end{itemize}
+Theo tiêu chuẩn Routh--Hurwitz, cả hai giá trị riêng của ma trận $A$ đều có phần thực âm, khẳng định điểm cân bằng đồng tồn tại $Q(x^*, y^*)$ là \textbf{ổn định tiệm cận} (\textit{asymptotically stable}).
+
+\subsection{Tính toán giá trị số cụ thể}
+Thay các giá trị tham số từ Bảng \ref{tab:model_parameters} và tọa độ cân bằng $(x^*, y^*) = (0.1363, 0.2886)$ vào:
+\begin{align*}
+\mathrm{tr}(A) &= - \left[ (0.026)(0.1363) + (0.520)(0.2886) \right] \\
+&= - (0.0035438 + 0.150072) = -0.1536158, \\[6pt]
+\det(A) &= (17.661755)(0.1363)(0.2886) \approx 0.694747.
+\end{align*}
+
+Biệt thức $\Delta$ của phương trình đặc trưng:
+\begin{align}
+\Delta &= (\mathrm{tr}(A))^2 - 4\det(A) \nonumber \\
+&= (-0.1536158)^2 - 4(0.694747) \nonumber \\
+&= 0.023598 - 2.778988 = -2.75539 < 0.
+\end{align}
+
+Vì $\Delta < 0$, hai giá trị riêng là một cặp số phức liên hợp:
+\begin{equation}
+\lambda_{1, 2} = \frac{\mathrm{tr}(A)}{2} \pm i\frac{\sqrt{-\Delta}}{2} \approx \frac{-0.1536}{2} \pm i\frac{\sqrt{2.7554}}{2} \approx -0.0768 \pm 0.8301i.
+\end{equation}
+Kết quả này hoàn toàn trùng khớp với công thức (2) trong bài báo gốc \cite{panayotova2023bioeconomic}:
+\begin{equation}
+\lambda_1 \approx -0.0768 + 0.8301i, \quad \lambda_2 \approx -0.0768 - 0.8301i.
+\end{equation}
+
+\subsection{Ý nghĩa sinh thái của thời gian hồi phục}
+Do cả hai giá trị riêng đều có phần thực bằng nhau $\mathrm{Re}(\lambda_1) = \mathrm{Re}(\lambda_2) \approx -0.0768 < 0$, phần thực của giá trị riêng chủ đạo là $\mathrm{Re}(\lambda_m) = -0.0768$.
+
+Áp dụng công thức \eqref{eq:resilience_def}, ta tính được:
+\begin{align}
+R &\approx 0.0768 \text{ năm}^{-1}, \\
+\tau &\approx \frac{1}{0.0768} \approx 13.021 \text{ năm}.
+\end{align}
+
+\begin{tcolorbox}[colback=teal!5!white, colframe=teal, arc=2mm, title=\textbf{Ý nghĩa sinh thái quan trọng của chỉ số độ đàn hồi:}]
+Giá trị $\tau \approx 13.021$ năm chỉ ra rằng: Nếu hệ sinh thái tự nhiên của vịnh Chesapeake (trong điều kiện chưa bị đánh bắt nhân tạo) phải hứng chịu một cú sốc hoặc nhiễu loạn môi trường lớn (như một đợt rét kỷ lục, hiện tượng tràn dầu, suy thoái đột ngột chất lượng nước hay dịch bệnh), thì hệ thống sẽ mất khoảng \textbf{13 năm} để các dao động số lượng cá thể tắt dần và quần thể hai loài tự phục hồi trở về trạng thái cân bằng sinh học ban đầu.
+
+Khoảng thời gian 13 năm là một chu kỳ phục hồi tương đối dài trong quản lý sinh thái biển. Điều này cho thấy hệ thống vịnh Chesapeake có độ nhạy cảm cao và tốc độ tự chữa lành tương đối chậm, đặt ra yêu cầu nghiêm ngặt rằng mọi chính sách khai thác thương mại của con người cần phải được kiểm soát cẩn trọng để tránh đẩy hệ thống vượt qua ngưỡng chịu đựng tự nhiên.
+\end{tcolorbox}

@@ -1,0 +1,39 @@
+\chapter{MÔ HÌNH KINH TẾ SINH THÁI VÀ PHÂN TÍCH ỔN ĐỊNH}
+\label{ch:bioeconomic}
+
+\textit{(Nội dung chi tiết của chương này sẽ được phát triển đầy đủ trong giai đoạn tiếp theo):}
+
+\section{Mô hình kinh tế sinh thái (Bionomic Model)}
+Xây dựng hệ phương trình vi phân có khai thác dựa trên giả thuyết CPUE và hàm tô kinh tế $\pi(E_1, E_2)$:
+\begin{equation}
+\left\{
+\begin{aligned}
+\frac{dx}{dt} &= x(r - ax - by) - q_1 E_1 x, \\
+\frac{dy}{dt} &= y(-e - cy + dx) - q_2 E_2 y, \\
+\pi(E_1, E_2) &= (p_1 q_1 x - c_1) E_1 + (p_2 q_2 y - c_2) E_2.
+\end{aligned}
+\right.
+\end{equation}
+
+\section{Chứng minh tính dương và tính bị chặn của nghiệm}
+\begin{itemize}
+    \item Xác định miền bất biến sinh học:
+    \begin{equation}
+    \Omega = \left\{ (x, y) \in \mathbb{R}^2_+ \;\middle|\; 0 \le x \le \frac{r}{a}, \; 0 \le x + \frac{y}{\gamma} \le L \right\},
+    \end{equation}
+    với $\gamma = d/b$, $\delta = \min(q_1 E_1, q_2 E_2, e)$, $L = \frac{r^2}{4a\delta}$.
+    \item Chứng minh nghiệm $x(t) \ge 0, y(t) \ge 0$ với mọi $t \ge 0$ khi điều kiện đầu không âm.
+    \item Ứng dụng thừa số tích phân để chứng minh $\limsup_{t \to \infty} w(t) \le \frac{r^2}{4a\delta}$, bảo đảm tính bị chặn toàn cục.
+\end{itemize}
+
+\section{Điều kiện tồn tại các điểm cân bằng bionomic}
+Khảo sát 4 trường hợp khai thác:
+\begin{enumerate}
+    \item \textbf{Trường hợp 1:} Chỉ khai thác cá vược sọc ($E_1 = 0, E_2 \ne 0$) -- Định lý 3.1.
+    \item \textbf{Trường hợp 2:} Chỉ khai thác cá mòi dầu ($E_1 \ne 0, E_2 = 0$) -- Định lý 3.2.
+    \item \textbf{Trường hợp 3:} Không khai thác loài nào ($E_1 = E_2 = 0$) -- Điểm cân bằng sinh học thuần túy.
+    \item \textbf{Trường hợp 4:} Khai thác đồng thời cả hai loài ($E_1 \ne 0, E_2 \ne 0$) -- Định lý 3.3.
+\end{enumerate}
+
+\section{Tác động của khai thác lên tính ổn định tiệm cận}
+Phân tích ma trận Jacobi $J(x, y)$, phương trình đặc trưng và dấu của Trace, Determinant để chứng minh tính ổn định tiệm cận cho từng trường hợp.

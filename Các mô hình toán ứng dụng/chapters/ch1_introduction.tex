@@ -1,0 +1,237 @@
+\chapter{MỞ ĐẦU}
+\label{ch:introduction}
+
+\section{Bối cảnh nghiên cứu và hệ sinh thái vịnh Chesapeake}
+\label{sec:intro_chesapeake}
+
+Việc khai thác và quản lý bền vững các nguồn tài nguyên thiên nhiên tái tạo, đặc biệt là nguồn lợi thủy sản biển, hiện đang là một trong những thách thức liên ngành cấp bách nhất đối với toán học ứng dụng, sinh thái học và kinh tế học môi trường. Khi các hoạt động khai thác vượt quá ngưỡng chịu đựng tự nhiên của quần thể sinh vật, tình trạng cạn kiệt nguồn lợi sinh khối (\textit{stock depletion}) sẽ xảy ra trong dài hạn, kéo theo sự đổ vỡ của chuỗi thức ăn tự nhiên và đe dọa nghiêm trọng đến đa dạng sinh học toàn cầu.
+
+Vịnh Chesapeake (nằm ở bờ biển phía Đông nước Mỹ, tiếp giáp các bang Virginia và Maryland) là vùng cửa sông (\textit{estuary}) lớn nhất tại Bắc Mỹ và là một trong những hệ sinh thái biển ven bờ phong phú nhưng có độ nhạy cảm sinh thái cao bậc nhất trên thế giới. Vịnh đóng vai trò là môi trường sống thiết yếu cho hơn 3.600 loài thực vật và động vật, đồng thời là ngư trường truyền thống cung cấp sinh kế cho hàng triệu người dân duyên hải. Để duy trì sự thịnh vượng kinh tế song hành cùng việc bảo tồn tính toàn vẹn của hệ sinh thái, việc xây dựng các chính sách khai thác nghề cá có cơ sở khoa học định lượng vững chắc là nhiệm vụ mang tính sống còn đối với các nhà quản lý \cite{panayotova2023bioeconomic}.
+
+Trong các mô hình sinh thái học truyền thống, các quần thể sinh vật thường được xem xét dưới góc độ đơn loài (\textit{single-species management}), bỏ qua các mối tương tác cạnh tranh và săn bắt đa chiều trong lưới thức ăn. Tuy nhiên, trong môi trường tự nhiên như vịnh Chesapeake, sự biến động số lượng của một loài mắt xích có thể gây ra những hiệu ứng dây chuyền (\textit{trophic cascade}) làm đảo lộn cấu trúc của toàn bộ hệ sinh thái. Bài báo khoa học của Iordanka N. Panayotova, John Herrmann và Nathan Kolling (2023) \cite{panayotova2023bioeconomic} tập trung nghiên cứu mối quan hệ tương tác mật thiết giữa hai loài cá có tầm quan trọng kinh tế và sinh thái bậc nhất tại vịnh Chesapeake:
+\begin{enumerate}
+    \item \textbf{Cá mòi dầu Đại Tây Dương} (\textit{Brevoortia tyrannus} -- Atlantic Menhaden): loài cá mồi (\textit{prey}) chiếm sinh khối khổng lồ, đóng vai trò nền tảng dinh dưỡng của vịnh.
+    \item \textbf{Cá vược sọc} (\textit{Morone saxatilis} -- Striped Bass / Rockfish): loài cá ăn thịt hàng đầu (\textit{predator}), là mục tiêu chính của các ngành kinh tế khai thác thương mại và câu cá giải trí.
+\end{enumerate}
+
+\section{Đặc điểm sinh học và vai trò của các loài sinh vật nghiên cứu}
+\label{sec:intro_species}
+
+\subsection{Cá mòi dầu Đại Tây Dương (\textit{Brevoortia tyrannus}) -- Loài cá mồi nền tảng}
+
+Cá mòi dầu Đại Tây Dương (\textit{Brevoortia tyrannus}) được đông đảo các nhà sinh học biển và quản lý môi trường công nhận là \textit{``loài cá quan trọng nhất trong vịnh Chesapeake''} \cite{cbf2021menhaden}. 
+
+\paragraph{Đặc điểm sinh học và tập tính:}
+Cá mòi dầu trưởng thành có thể đạt chiều dài khoảng 18 inch (xấp xỉ 45 cm), tuổi thọ dao động từ 10 đến 12 năm và cân nặng trung bình lên đến 1 pound (khoảng 0.45 kg) \cite{ahrenholz1991population, cbp2021menhaden}. Chúng có tập tính bơi thành những đàn khổng lồ (\textit{schools}) với mật độ dày đặc tại các tầng nước mặt ven bờ và cửa sông. Hoạt động sinh sản diễn ra chủ yếu vào các tháng thời tiết mát mẻ hoặc lạnh trong năm, song trên thực tế chúng có khả năng sinh sản rải rác quanh năm tại các vùng nước biển ấm hơn \cite{ahrenholz1991population, ahrenholz1987population}.
+
+\paragraph{Cơ chế dinh dưỡng và vai trò làm sạch môi trường nước:}
+Cá mòi dầu là sinh vật ăn lọc (\textit{filter-feeder}). Cấu tạo mang của chúng có các lược mang (\textit{gill rakers}) rất phát triển và mịn màng, hoạt động như một hệ thống lưới lọc cơ học hoàn hảo giúp chúng lọc các hạt thức ăn lơ lửng trong nước khi bơi mở miệng. Chế độ dinh dưỡng của cá mòi dầu bao gồm thực vật phù du (\textit{phytoplankton}), động vật phù du (\textit{zooplankton}) và các vụn bã thực vật hữu cơ \cite{june1970food}. Thông qua việc tiêu thụ khối lượng khổng lồ tảo và sinh vật phù du, cá mòi dầu đóng vai trò như những ``nhà máy xử lý sinh học tự nhiên'', giúp hạn chế hiện tượng phú dưỡng hóa (\textit{eutrophication}), kiểm soát sự bùng phát của tảo độc và giữ cho làn nước vịnh Chesapeake luôn trong sạch và giàu dưỡng khí.
+
+\paragraph{Mắt xích truyền tải năng lượng sinh khối:}
+Về mặt chức năng sinh thái học, cá mòi dầu đóng vai trò cầu nối chuyển giao năng lượng và chất dinh dưỡng từ các bậc dinh dưỡng thấp (sinh vật sản xuất sơ cấp) lên các bậc dinh dưỡng cao hơn trong chuỗi thức ăn biển \cite{anstead2021path}. Chúng là nguồn thức ăn chính và giàu năng lượng cho hàng loạt loài sinh vật ăn thịt quan trọng trong vịnh:
+\begin{itemize}
+    \item Các loài cá săn mồi thương mại: cá vược sọc (\textit{Morone saxatilis}) \cite{walter2003diet}, cá xanh (\textit{Pomatomus saltatrix}) \cite{harding2001diet}, cá yếu (\textit{Cynoscion regalis}) \cite{merriner1975food}.
+    \item Động vật săn mồi biển lớn: các loài cá mập cát (\textit{Carcharhinus plumbeus}) \cite{ellis2003diet}.
+    \item Chim săn mồi ven biển: chim ưng biển (\textit{Pandion haliaetus} -- Osprey) \cite{glass2009osprey}, đại bàng đầu trắng.
+    \item Các loài động vật có vú biển và chim di cư ven bờ.
+\end{itemize}
+
+\paragraph{Giá trị kinh tế và sức khỏe con người:}
+Bên cạnh vai trò sinh thái, cá mòi dầu tạo ra nguồn lợi kinh tế khổng lồ. Mặc dù thịt của cá mòi dầu nhiều xương và dầu, không phù hợp để dùng trực tiếp làm thực phẩm trên bàn ăn thông thường, nhưng loài cá này lại là đối nguyên liệu hàng đầu cho ngành công nghiệp chế biến bột cá (dùng làm thức ăn chăn nuôi gia súc, gia cầm và nuôi trồng thủy sản) cũng như làm mồi câu cho nghề đánh bắt cua xanh và tôm hùm. Đặc biệt, dầu ép từ cá mòi dầu rất giàu các axit béo không bão hòa đa chuỗi dài Omega-3 (đặc biệt là EPA và DHA). Các hợp chất này có giá trị y dược và dinh dưỡng cực kỳ cao, hỗ trợ giảm thiểu nguy cơ mắc các bệnh tim mạch, viêm khớp và tăng cường chức năng não bộ ở con người.
+
+\subsection{Cá vược sọc (\textit{Morone saxatilis}) -- Kẻ săn mồi đầu bảng}
+
+Cá vược sọc (\textit{Morone saxatilis}), thường được gọi dân dã là \textit{Rockfish}, là một trong những loài cá biểu tượng và có giá trị cao nhất tại vùng vịnh Chesapeake cũng như toàn bộ vùng duyên hải Đại Tây Dương của Bắc Mỹ \cite{cbp2021stripedbass}.
+
+\paragraph{Đặc điểm sinh học và vòng đời:}
+Cá vược sọc trưởng thành có kích thước lớn, chiều dài phổ biến từ 2 đến 3 feet (khoảng 60 đến 90 cm) và khối lượng dao động từ 10 đến 30 pounds (tương đương 4.5 đến 13.6 kg), đôi khi có những cá thể vượt quá 40--50 pounds. Đây là loài cá di cư sinh sản ngược dòng (\textit{anadromous}): chúng sống phần lớn cuộc đời trưởng thành ở vùng nước lợ và biển, nhưng di cư ngược dòng vào vùng nước ngọt của các nhánh sông thuộc vịnh Chesapeake từ tháng 4 đến tháng 6 hàng năm để đẻ trứng. Cá con sau khi nở sẽ lưu trú và kiếm ăn ở các vùng cửa sông nông có độ mặn thấp trong vài năm đầu trước khi gia nhập đàn cá trưởng thành ngoài biển khơi \cite{robichaud1996spawning}.
+
+\paragraph{Tập tính săn mồi và vị trí trong lưới thức ăn:}
+Cá vược sọc là loài săn mồi cơ hội ở bậc dinh dưỡng cao. Chế độ ăn của chúng rất phong phú, nhưng cá mòi dầu Đại Tây Dương chiếm tỷ trọng vượt trội trong khẩu phần thức ăn về mặt sinh khối và năng lượng trao đổi chất \cite{walter2003diet}. Bên cạnh đó, chúng tiêu thụ thêm các loài giáp xác (cua, tôm) và cá cơm biển. Khi còn nhỏ hoặc ở giai đoạn bán trưởng thành, cá vược sọc cũng là đối tượng săn mồi của cá mập lớn và chim ưng biển \cite{ellis2003diet, glass2009osprey}. Do đó, trạng thái số lượng của cá vược sọc phản ánh trực tiếp sức khỏe sinh thái của toàn bộ hệ sinh thái vịnh.
+
+\paragraph{Tầm quan trọng kinh tế và thể thao giải trí:}
+Khác với cá mòi dầu vốn chủ yếu được đánh bắt công nghiệp chế biến bột cá, cá vược sọc là trung tâm của hai ngành kinh tế thủy sản song song:
+\begin{itemize}
+    \item \textbf{Nghề cá thương mại (\textit{commercial fisheries}):} Cung cấp thịt cá thương phẩm cao cấp cho các nhà hàng và chuỗi cung ứng thực phẩm tươi sống trên toàn quốc.
+    \item \textbf{Nghề cá giải trí (\textit{recreational fisheries}):} Ngành du lịch câu cá giải trí thu hút hàng trăm nghìn cần thủ và du khách mỗi năm. Báo cáo phân tích kinh tế của tổ chức Southwick Associates (2019) \cite{southwick2019economic} chỉ ra rằng nghề câu cá vược sọc đóng góp hàng tỷ đô la vào Tổng sản phẩm quốc nội (GDP) của Hoa Kỳ, bảo đảm hàng chục ngàn việc làm trực tiếp và gián tiếp tại 11 bang dọc theo bờ biển Đại Tây Dương.
+\end{itemize}
+
+\section{Hiện trạng suy giảm và khủng hoảng khai thác nghề cá}
+\label{sec:intro_crises}
+
+Mặc dù có vai trò thiết yếu, cả hai quần thể cá mòi dầu và cá vược sọc đều đã và đang trải qua những giai đoạn suy thoái trầm trọng, làm dấy lên những cuộc tranh luận gay gắt giữa giới khoa học bảo tồn, các nhà hoạch định chính sách và các tập đoàn công nghiệp đánh bắt.
+
+\subsection{Khủng hoảng suy giảm cá mòi dầu và xung đột hạn ngạch}
+
+Từ những năm 1970 đến nay, sinh khối của cá mòi dầu Đại Tây Dương đã sụt giảm nghiêm trọng và liên tục duy trì ở mức thấp báo động \cite{cbf2021menhaden}. Sự suy thoái này bắt nguồn từ hai nhóm nguyên nhân chính:
+\begin{enumerate}
+    \item \textbf{Các áp lực môi trường sống suy thoái:} Ô nhiễm không khí và nguồn nước, hiện tượng nước biển ấm lên và biến đổi khí hậu toàn cầu, xâm lấn của các loài sinh vật ngoại lai, suy giảm diện tích đất ngập nước ven bờ do đô thị hóa và phân bón nông nghiệp chảy tràn tạo nên những ``vùng chết'' (\textit{dead zones}) thiếu dưỡng khí vào mùa hè.
+    \item \textbf{Khai thác công nghiệp quá mức (\textit{overharvesting}):} Đây được xem là mối đe dọa trực tiếp và nguy hiểm nhất. Các đội tàu công nghiệp quy mô lớn (điển hình là tập đoàn Omega Protein) sử dụng công nghệ trinh sát đàn cá bằng máy bay phối hợp cùng lưới vây khổng lồ (\textit{purse seine nets}) để càn quét các đàn cá mòi dầu trong vịnh. Các tập đoàn lớn này liên tục vấp phải sự phản đối kịch liệt từ công chúng và các nhà bảo tồn vì nhiều lần vi phạm hoặc vận động hành lang làm suy yếu hạn ngạch đánh bắt (\textit{harvest caps}) do chính quyền quy định \cite{ress2020chesapeake, cbf2021menhaden}.
+\end{enumerate}
+
+Điều đáng chú ý là tồn tại một mâu thuẫn sâu sắc giữa quan điểm quản lý hành chính và thực tế sinh thái: Trong khi Quỹ Bảo tồn Vịnh Chesapeake (\textit{Chesapeake Bay Foundation}) và các nhà khoa học độc lập liên tục cảnh báo về sự cạn kiệt của cá mòi dầu, thì Báo cáo Đánh giá Trữ lượng năm 2019 của Ủy ban Nghề cá Biển các Bang Đại Tây Dương (ASMFC) thông qua chương trình SEDAR 69 lại đưa ra nhận định rằng \textit{``loài cá mòi dầu Đại Tây Dương hiện chưa bị khai thác quá mức và tình trạng đánh bắt quá mức không xảy ra''} \cite{sedar2020menhaden}. Nghịch lý này phản ánh sự sai lệch giữa các chỉ số tính toán đơn loài truyền thống so với nhu cầu thức ăn thực tế của toàn bộ lưới sinh thái.
+
+\subsection{Nguy cơ suy thoái và tình trạng đánh bắt quá mức của cá vược sọc}
+
+Đối với cá vược sọc, lịch sử sinh học cũng ghi nhận những đợt sụt giảm quần thể cận kề bờ vực tuyệt chủng vào cuối thập niên 1970 và đầu thập niên 1980, đến mức các cơ quan quản lý đã phải áp đặt lệnh cấm đánh bắt tạm thời (\textit{moratorium}) nghiêm ngặt để quần thể có cơ hội phục hồi.
+
+Tuy nhiên, trong những năm gần đây, quần thể cá vược sọc lại một lần nữa rơi vào tình trạng nguy cấp do sự kết hợp của nhiều yếu tố bất lợi:
+\begin{itemize}
+    \item Ô nhiễm môi trường và độ pH suy giảm tại các khu vực bãi đẻ nước ngọt.
+    \item Tình trạng suy kiệt nguồn thức ăn chính: sự suy giảm của đàn cá mòi dầu khiến cá vược sọc không đủ năng lượng dự trữ, dẫn đến tình trạng gầy yếu và bùng phát các bệnh truyền nhiễm nguy hiểm (như bệnh lao cá do vi khuẩn \textit{Mycobacteriosis}).
+    \item Áp lực đánh bắt quá mức từ cả tàu cá thương mại và cần thủ giải trí. Đặc biệt, nghiên cứu sinh học ghi nhận khoảng 9\% lượng cá vược sọc bắt được rồi thả lại (\textit{catch-and-release}) trong nghề câu giải trí vẫn bị chết do sốc nhiệt độ và thương tích \cite{cbf2021rockfish}.
+\end{itemize}
+Theo Báo cáo Đánh giá Trữ lượng tại Hội thảo Đánh giá Trữ lượng Vùng Đông Bắc lần thứ 66 do Trung tâm Khoa học Nghề cá Đông Bắc (NEFSC) công bố, trữ lượng cá vược sọc chính thức bị xếp vào diện \textbf{bị khai thác quá mức} (\textit{overfished}) và \textbf{đang diễn ra tình trạng khai thác quá mức} (\textit{overfishing}) \cite{nefsc2019stripedbass}.
+
+\section{Thách thức quản lý tài nguyên chung và sự chuyển dịch mô hình}
+\label{sec:intro_management}
+
+\subsection{Bi kịch của tài nguyên sở hữu chung (\textit{Tragedy of the Commons})}
+Trong kinh tế học tài nguyên, các ngư trường biển tự nhiên thường là tài sản chung vô chủ hoặc thuộc sở hữu công cộng mở (\textit{common property resources}). Do thiếu quyền sở hữu tài sản tư nhân được xác định rành mạch, từng đơn vị khai thác kinh tế (ngư dân, doanh nghiệp đánh bắt) luôn có xu hướng chạy đua tối đa hóa sản lượng đánh bắt nhằm nâng cao lợi nhuận trước mắt, mà không tính đến chi phí ngoại ứng (\textit{negative externalities}) và thiệt hại dài hạn đối với khả năng tái sinh của nguồn tài nguyên sinh thái. Hiện tượng này dẫn thẳng đến tình trạng suy thoái tài nguyên chung (\textit{overexploitation}) và cạn kiệt sinh học nếu không có sự can thiệp và điều tiết chặt chẽ từ phía nhà nước thông qua các công cụ pháp lý và chính sách kinh tế \cite{finley2011all}.
+
+\subsection{Hạn chế của phương pháp quản lý đơn loài và nhu cầu mô hình hóa đa loài}
+Trong suốt nhiều thập kỷ qua, các cơ quan quản lý nghề cá thường áp dụng các mô hình đánh giá trữ lượng đơn loài (\textit{single-species stock assessment models}). Phương pháp tiếp cận này giả định rằng tốc độ gia tăng sinh khối của một loài chỉ phụ thuộc vào số lượng cá thể nội bộ của chính loài đó và nỗ lực đánh bắt của con người. 
+
+Tuy nhiên, trong một lưới thức ăn biển tương hỗ, sự tương tác sinh thái là không thể tách rời:
+\begin{quote}
+\textit{``Nếu chúng ta khai thác cá mòi dầu ở mức sản lượng tối đa cho phép theo mô hình đơn loài, lượng sinh khối cá mòi dầu còn lại trong nước có thể không đủ để duy trì chuỗi thức ăn của cá vược sọc, từ đó vô tình đẩy quần thể cá vược sọc vào nguy cơ sụp đổ sinh học.''}
+\end{quote}
+Gần đây, các nhà nghiên cứu biển quốc tế đã nhấn mạnh sự cấp thiết phải chuyển đổi sang phương thức \textbf{Quản lý nghề cá dựa trên hệ sinh thái} (\textit{Ecosystem-Based Fisheries Management -- EBFM}) \cite{anstead2021path, howell2021combining}. Nghiên cứu của Howell và cộng sự (2021) \cite{howell2021combining} đã chỉ ra rằng, để bảo đảm nhu cầu dinh dưỡng của các loài săn mồi đỉnh cao, chỉ tiêu khai thác an toàn (Điểm tham chiếu sinh thái -- \textit{Ecological Reference Points, ERP}) cho các loài cá mồi như cá mòi dầu cần phải được cắt giảm ít nhất \textbf{40\%} so với ngưỡng tính toán bằng các mô hình đơn loài thông thường.
+
+\section{Phương pháp tiếp cận mô hình toán học trong đề tài}
+\label{sec:intro_methodology}
+
+Để giải quyết bài toán phức tạp trên một cách khả thi và định lượng, bài báo khoa học của Panayotova và cộng sự (2023) \cite{panayotova2023bioeconomic} đã ứng dụng công cụ mô hình hóa toán học với hệ phương trình vi phân Lotka--Volterra tổng quát mở rộng.
+
+\subsection{Hệ phương trình vi phân Lotka--Volterra hai loài}
+Xét hệ hai loài tương tác gồm con mồi $x(t)$ (cá mòi dầu) và kẻ săn mồi $y(t)$ (cá vược sọc). Động thái quần thể tự nhiên được mô tả qua hệ phương trình vi phân phi tuyến:
+\begin{equation}
+\label{eq:intro_lv_system}
+\left\{
+\begin{aligned}
+\frac{dx}{dt} &= x(r - ax - by), \\
+\frac{dy}{dt} &= y(-e - cy + dx).
+\end{aligned}
+\right.
+\end{equation}
+Trong đó:
+\begin{itemize}
+    \item $r$ là tốc độ tăng trưởng nội tại của con mồi; $e$ là tốc độ tử vong tự nhiên của kẻ săn mồi khi thiếu con mồi.
+    \item $a > 0$ và $c > 0$ là các hệ số tự giới hạn (\textit{self-limitation}) phản ánh sự cạnh tranh nội bộ loài (\textit{intra-species competition}) về không gian sống và thức ăn cục bộ. Giả thiết này khắc phục nhược điểm của mô hình Lotka--Volterra cổ điển (vốn dự báo dao động điều hòa không tắt) bằng cách đưa về động thái logistic tiệm cận thực tế.
+    \item $b > 0$ là tỷ lệ cá mòi dầu bị cá vược sọc tiêu thụ; $d > 0$ biểu thị hiệu quả chuyển đổi dinh dưỡng từ con mồi sang tốc độ gia tăng của kẻ săn mồi.
+\end{itemize}
+
+Mặc dù mô hình \eqref{eq:intro_lv_system} là một sự tinh giản so với hệ sinh thái cực kỳ phức tạp của vịnh Chesapeake (bỏ qua cấu trúc tuổi và các tương tác với các loài sinh vật khác), nó sở hữu những ưu thế toán học vượt trội:
+\begin{enumerate}
+    \item \textbf{Khả năng giải tích chính xác (\textit{analytically tractable}):} Cho phép tìm tường minh các nghiệm cân bằng, phân tích tính ổn định tiệm cận của ma trận Jacobi, tính dương và tính bị chặn của nghiệm.
+    \item \textbf{Mô tả được hành vi dao động lệch pha (\textit{phase-shifted behavior}):} Tái hiện chính xác hiện tượng trễ pha điển hình trong các hệ sinh thái: sự gia tăng của con mồi kích thích sự phát triển của kẻ săn mồi, sau đó áp lực săn mồi gia tăng kéo theo sự suy giảm của con mồi, và chu kỳ lặp lại.
+    \item \textbf{Khả năng tích hợp dữ liệu thực nghiệm:} Số lượng tham số vừa đủ để có thể ước lượng tin cậy từ dữ liệu chuỗi thời gian thực tế mà không bị rơi vào hiện tượng quá khớp (\textit{overfitting}).
+\end{enumerate}
+
+\subsection{Sơ đồ tương tác sinh thái -- kinh tế}
+
+Mối quan hệ qua lại giữa các yếu tố sinh thái, nguồn lợi sinh khối, hoạt động khai thác của con người và cơ chế thị trường kinh tế được tổng hợp trực quan trong Sơ đồ \ref{fig:intro_flowchart}.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[
+    node distance=2.5cm and 3.5cm,
+    block/.style={rectangle, draw=navy, fill=blue!8, rounded corners=3mm, thick, inner sep=8pt, text width=4.5cm, align=center, font=\small\bfseries},
+    harvest/.style={rectangle, draw=red!70!black, fill=red!10, rounded corners=2mm, dashed, thick, inner sep=6pt, text width=3.8cm, align=center, font=\small},
+    market/.style={ellipse, draw=teal!80!black, fill=teal!10, thick, inner sep=6pt, text width=3.8cm, align=center, font=\small\bfseries},
+    flow/.style={->, >=stealth, line width=1.2pt},
+    eco/.style={->, >=stealth, line width=1.5pt, color=navy},
+    harv/.style={->, >=stealth, line width=1.2pt, color=red!70!black, dashed}
+]
+
+% Các khối sinh thái
+\node[block] (prey) {Cá mòi dầu\\(\textit{Atlantic Menhaden})\\$x(t)$ (Con mồi)};
+\node[block, right=of prey] (pred) {Cá vược sọc\\(\textit{Striped Bass})\\$y(t)$ (Săn mồi)};
+
+% Tự giới hạn
+\path[eco] (prey) edge [loop above] node[above, font=\footnotesize] {Tự giới hạn $-ax^2$} (prey);
+\path[eco] (pred) edge [loop above] node[above, font=\footnotesize] {Tự giới hạn $-cy^2$} (pred);
+
+% Tương tác săn mồi
+\draw[eco] (prey) -- node[above, font=\footnotesize, align=center] {Cung cấp thức ăn $(+dxy)$\\Săn bắt tiêu thụ $(-bxy)$} (pred);
+
+% Khai thác
+\node[harvest, below=1.8cm of prey] (h1) {Khai thác cá mòi dầu\\$h_1 = q_1 E_1 x$};
+\node[harvest, below=1.8cm of pred] (h2) {Khai thác cá vược sọc\\$h_2 = q_2 E_2 y$};
+
+\draw[harv] (h1) -- node[right, font=\footnotesize] {Đánh bắt} (prey);
+\draw[harv] (h2) -- node[right, font=\footnotesize] {Đánh bắt} (pred);
+
+% Kinh tế & Thị trường
+\node[market, below=1.5cm of $(h1)!0.5!(h2)$] (market) {Kinh tế \& Thị trường\\Hàm tô kinh tế $\pi(E_1, E_2)$\\$R(E) - C(E)$};
+
+\draw[flow, color=teal!80!black] (h1) |- node[below, pos=0.8, font=\footnotesize] {Doanh thu \& Chi phí} (market);
+\draw[flow, color=teal!80!black] (h2) |- node[below, pos=0.8, font=\footnotesize] {Doanh thu \& Chi phí} (market);
+
+\end{tikzpicture}
+\caption{Sơ đồ tương tác sinh thái -- kinh tế trong hệ hai loài cá mòi dầu và cá vược sọc tại vịnh Chesapeake.}
+\label{fig:intro_flowchart}
+\end{figure}
+
+\subsection{Tích hợp khai thác và mô hình kinh tế sinh thái (Bionomic model)}
+Để nghiên cứu tác động của con người, nhóm tác giả đưa thành phần khai thác vào hệ vi phân dựa trên giả thuyết \textbf{sản lượng đánh bắt trên một đơn vị nỗ lực} (\textit{Catch-Per-Unit-Effort -- CPUE}):
+\begin{equation}
+h_1 = q_1 E_1 x, \quad h_2 = q_2 E_2 y.
+\end{equation}
+Trong đó $E_1, E_2$ là cường độ (nỗ lực) đánh bắt của các tàu thuyền đối với từng loài, và $q_1, q_2$ là các hệ số dễ đánh bắt. Kết hợp với hàm tô kinh tế (\textit{economic rent}) thể hiện lợi nhuận ròng thu được sau khi trừ chi phí đánh bắt:
+\begin{equation}
+\pi(E_1, E_2) = (p_1 q_1 x - c_1) E_1 + (p_2 q_2 y - c_2) E_2,
+\end{equation}
+với $p_i$ là đơn giá thương phẩm trên một đơn vị sinh khối và $c_i$ là chi phí cho một đơn vị nỗ lực khai thác.
+
+\subsection{Khảo sát và đối sánh ba chính sách khai thác chiến lược}
+Nghiên cứu tập trung giải quyết bài toán tối ưu hóa đa mục tiêu thông qua việc so sánh ba chính sách khai thác then chốt:
+\begin{enumerate}
+    \item \textbf{Chính sách Sản lượng bền vững tối đa (MSY -- Maximum Sustainable Yield):}
+    Khái niệm MSY bắt nguồn từ công trình kinh điển năm 1954 của Milner B. Schaefer \cite{schaefer1954some}. Đây là cách tiếp cận nhằm xác định mức nỗ lực khai thác $E_{\mathrm{MSY}}$ để thu được sản lượng sinh khối hàng năm lớn nhất mà vẫn đảm bảo trữ lượng quần thể không bị suy giảm theo thời gian. Bài báo kiểm chứng điều kiện tồn tại của MSY trong bối cảnh hệ hai loài tương tác và chỉ ra những nguy cơ sinh học tiềm ẩn khi áp dụng máy móc MSY đơn loài cho các loài cá mồi.
+    
+    \item \textbf{Chính sách Sản lượng kinh tế tối đa (MEY -- Maximum Economic Yield):}
+    Khác với MSY chỉ quan tâm đến sinh khối vật lý đánh bắt được, MEY nhắm tới việc tối đa hóa lợi nhuận kinh tế thuần túy $\pi(E)$. MEY xem xét yếu tố chi phí cận biên tăng dần khi nguồn cá cạn kiệt. Về mặt lý thuyết, chính sách MEY thường đòi hỏi mức nỗ lực khai thác thấp hơn MSY ($E_{\mathrm{MEY}} < E_{\mathrm{MSY}}$), do đó giúp bảo vệ quần thể cá tốt hơn và tạo ra vùng đệm an toàn trước các biến động ngẫu nhiên.
+    
+    \item \textbf{Chính sách Sản lượng tối đa hóa độ đàn hồi sinh thái (RMY -- Resilience Maximizing Yield):}
+    Độ đàn hồi hay độ hồi phục (\textit{Resilience -- $R$}) là thước đo phản ánh tốc độ tự phục hồi của hệ thống sinh thái quay trở về trạng thái cân bằng sinh học bền vững sau khi chịu một nhiễu loạn môi trường đột ngột \cite{pimm1978feeding}. Theo lý thuyết của Pimm và Lawton (1978), thời gian phục hồi $\tau$ tỷ lệ nghịch với phần thực âm của giá trị riêng chủ đạo ($\lambda_m$) của ma trận Jacobian:
+    \begin{equation}
+    \tau = \frac{-1}{\mathrm{Re}(\lambda_m)}, \quad R = \frac{1}{\tau}.
+    \end{equation}
+    Chính sách RMY ưu tiên tối đa hóa $R$ (tức tối thiểu hóa thời gian $\tau$), đặt sự an toàn và bền vững dài hạn của cấu trúc sinh thái lên trên các mục tiêu kinh tế ngắn hạn.
+\end{enumerate}
+
+\subsection{Phân tích độ nhạy cục bộ (Sensitivity Analysis)}
+Hệ thống các tham số sinh học trong thực tế thường chứa đựng những sai số đo đạc và sự biến động theo thời tiết khí hậu. Để đánh giá xem sự biến động nhỏ của từng tham số mô hình ảnh hưởng như thế nào đến nghiệm trạng thái theo thời gian, đề tài áp dụng **Phương pháp vi phân trực tiếp** (\textit{Direct Differential Method}). Bằng cách thiết lập hệ phương trình vi phân bổ sung cho ma trận độ nhạy $S_{ij} = \frac{\partial u_i}{\partial p_j}$, nghiên cứu xác định được các tham số nhạy cảm nhất, giúp các nhà quản lý tập trung nguồn lực kiểm soát đúng những mắt xích then chốt.
+
+\section{Mục tiêu nghiên cứu và ý nghĩa của đề tài}
+\label{sec:intro_objectives}
+
+\subsection{Mục tiêu cụ thể}
+Trong khuôn khổ môn học \textit{Các mô hình toán ứng dụng}, báo cáo hướng tới các mục tiêu cụ thể sau:
+\begin{enumerate}
+    \item \textbf{Nắm vững phương pháp mô hình hóa sinh thái học:} Hiểu rõ cơ sở toán học và sinh học của mô hình Lotka--Volterra tổng quát, ý nghĩa các tham số và các giả thiết ràng buộc.
+    \item \textbf{Chứng minh chặt chẽ các tính chất toán học:} Chứng minh tính dương và tính bị chặn của nghiệm trong miền bất biến sinh học $\Omega$, tìm nghiệm cân bằng kinh tế sinh thái (bionomic equilibria) và phân tích tính ổn định cục bộ thông qua các giá trị riêng của ma trận Jacobian.
+    \item \textbf{Khai thác dữ liệu thực nghiệm:} Tái hiện quy trình khớp mô hình phi tuyến với dữ liệu chuỗi thời gian giai đoạn 1995--2017 của vịnh Chesapeake, đánh giá các chỉ số sai số thống kê.
+    \item \textbf{So sánh định lượng các chính sách khai thác:} Xác định tường minh công thức nghiệm cho $E_{\mathrm{MSY}}$, $E_{\mathrm{MEY}}$, $E_{\mathrm{RMY}}$ cho các kịch bản đánh bắt khác nhau (chỉ đánh bắt cá săn mồi, chỉ đánh bắt con mồi, đánh bắt hỗn hợp cả hai loài); phân tích sự đánh đổi (\textit{trade-off}) giữa lợi nhuận kinh tế và độ an toàn sinh học.
+    \item \textbf{Thực hiện phân tích độ nhạy:} Đánh giá định lượng mức độ ảnh hưởng của từng tham số đến quỹ đạo nghiệm trạng thái quần thể hai loài.
+\end{enumerate}
+
+\subsection{Ý nghĩa khoa học và thực tiễn}
+\begin{itemize}
+    \item \textbf{Về mặt khoa học:} Báo cáo minh họa sinh động sức mạnh của toán học ứng dụng (cụ thể là lý thuyết phương trình vi phân phi tuyến, hệ động lực và giải tích ma trận) trong việc giải quyết các bài toán liên ngành phức tạp giữa kinh tế và sinh thái học.
+    \item \textbf{Về mặt thực tiễn quản lý:} Kết quả nghiên cứu chứng minh rõ nét sự nguy hiểm của tư duy quản lý đơn loài đối với các loài cá mồi ven biển, đồng thời cung cấp những khuyến nghị có tính khả thi cao nhằm hỗ trợ các nhà hoạch định chính sách nghề cá vịnh Chesapeake cân đối giữa mục tiêu sinh kế và bảo tồn nguồn lợi tự nhiên.
+\end{itemize}
+
+\section{Bố cục của báo cáo}
+\label{sec:intro_outline}
+
+Báo cáo môn học được tổ chức thành 6 chương chính như sau:
+\begin{itemize}
+    \item \textbf{Chương 1 -- Mở đầu:} Trình bày bối cảnh nghiên cứu, tổng quan sinh học về cá mòi dầu và cá vược sọc tại vịnh Chesapeake, thực trạng khai thác, các thách thức quản lý tài nguyên chung, mô hình hóa toán học và mục tiêu của đề tài.
+    \item \textbf{Chương 2 -- Mô hình toán học và dữ liệu thực tế:} Trình bày chi tiết hệ phương trình vi phân Lotka--Volterra tổng quát 2 loài, các giả thiết mô hình, phương pháp bình phương tối thiểu phi tuyến khớp với dữ liệu thời gian 1995--2017, dự báo động thái đến năm 2100 và tính toán độ đàn hồi ban đầu.
+    \item \textbf{Chương 3 -- Mô hình kinh tế sinh thái và phân tích ổn định:} Xây dựng hệ bionomic có xét đến nỗ lực đánh bắt, chứng minh tính dương và tính bị chặn của nghiệm trong tập bất biến $\Omega$, xác định các điều kiện tồn tại điểm cân bằng bionomic và phân tích tính ổn định tiệm cận của hệ thống.
+    \item \textbf{Chương 4 -- Phân tích các chính sách khai thác nghề cá:} Khảo sát chi tiết ba chính sách khai thác MSY, MEY và RMY trong ba kịch bản quản lý (chỉ khai thác kẻ săn mồi, chỉ khai thác con mồi, khai thác đồng thời cả hai loài); phân tích sự đánh đổi giữa lợi ích kinh tế và tính bền vững sinh thái.
+    \item \textbf{Chương 5 -- Phân tích độ nhạy cục bộ:} Ứng dụng phương pháp vi phân trực tiếp để khảo sát tốc độ biến thiên của nghiệm theo 8 tham số động thái, xếp hạng các tham số then chốt chi phối hệ thống.
+    \item \textbf{Chương 6 -- Thảo luận và Kết luận:} Tổng hợp các kết quả chính, thảo luận các hàm ý chính sách đối với quản lý vịnh Chesapeake, đánh giá những hạn chế của mô hình và đề xuất các hướng phát triển trong tương lai.
+\end{itemize}
