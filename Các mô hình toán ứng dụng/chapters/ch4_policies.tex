@@ -1,27 +1,348 @@
 \chapter{PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ}
 \label{ch:policies}
 
-\textit{(Nội dung chi tiết của chương này sẽ được phát triển đầy đủ trong giai đoạn tiếp theo):}
+Chương này phân tích ba chính sách quản lý nghề cá trong nghiên cứu của Panayotova và cộng sự \cite{panayotova2023bioeconomic}: sản lượng bền vững tối đa (Maximum Sustainable Yield -- MSY), sản lượng kinh tế tối đa (Maximum Economic Yield -- MEY) và sản lượng tối đa hóa độ hồi phục sinh thái (Resilience Maximizing Yield -- RMY). Ba chính sách theo đuổi các mục tiêu khác nhau, lần lượt là sản lượng, lợi nhuận ròng và tốc độ hệ sinh thái trở về cân bằng sau nhiễu loạn.
 
-\section{Chính sách Sản lượng bền vững tối đa (MSY)}
-\begin{itemize}
-    \item Tối đa hóa hàm sản lượng đánh bắt $Y(E) = q_1 E x^* + q_2 E y^*$.
-    \item \textbf{Trường hợp 1 (Chỉ khai thác cá vược sọc):} Nỗ lực $E_{\mathrm{MSY}} = \frac{rd - ae}{2aq_2}$. Chứng minh quần thể kẻ săn mồi ở mức MSY bằng 50\% quần thể khi chưa đánh bắt (Định lý 4.1).
-    \item \textbf{Trường hợp 2 (Chỉ khai thác cá mòi dầu):} Điều kiện tồn tại MSY đòi hỏi $\frac{rd - ae}{cr + be} > \frac{d}{2c}$. Đối với hệ sinh thái vịnh Chesapeake, điều kiện này không thỏa mãn, nỗ lực $E_{Y_m} \approx 1.02$ sẽ dẫn tới sự tuyệt chủng của cá vược sọc; do đó chính sách khuyến nghị giảm 50\%: $E_{\mathrm{MSY}} = 0.5$ (Định lý 4.2).
-    \item \textbf{Trường hợp 3 (Khai thác đồng thời cả hai loài):} Điều kiện tồn tại nghiệm bền vững và mức khuyến nghị an toàn sinh thái $E_{\mathrm{MSY}} = 0.5$ (Định lý 4.3).
-\end{itemize}
+Ký hiệu \(x(t)\) là quần thể cá mòi dầu Đại Tây Dương (\textit{Atlantic menhaden}), đóng vai trò con mồi; \(y(t)\) là quần thể cá vược sọc (\textit{striped bass}), đóng vai trò vật ăn thịt. Mô hình có khai thác được viết
+\begin{equation}
+\label{eq:policy_model}
+\begin{cases}
+\dfrac{dx}{dt}=x(r-ax-by)-q_1E_1x,\\[0.4em]
+\dfrac{dy}{dt}=y(-e-cy+dx)-q_2E_2y.
+\end{cases}
+\end{equation}
+Trong đó \(E_1,E_2\) là nỗ lực khai thác hai loài và \(q_1,q_2\) là hệ số khả năng đánh bắt. Các tham số sinh học lấy từ Bảng 1 của bài báo:
+\[
+r=0.513,\quad a=0.026,\quad b=1.765,\quad
+e=1.213,\quad c=0.520,\quad d=9.999.
+\]
+Trong các kịch bản bên dưới, \((\hat{x},\hat{y})\) là điểm cân bằng cùng tồn tại; tính bền vững về mặt sinh học đòi hỏi \(\hat{x}>0\) và \(\hat{y}>0\).
 
-\section{Chính sách Sản lượng kinh tế tối đa (MEY)}
-\begin{itemize}
-    \item Tối đa hóa hàm tô kinh tế ròng $\mathrm{Rent}(E) = R(E) - C(E) = \hat{p} Y(E) - \hat{c} E$.
-    \item Chứng minh tính chất quan trọng: $E_{\mathrm{MEY}} < E_{\mathrm{MSY}}$ khi chỉ đánh bắt cá vược sọc, khẳng định chính sách MEY thân thiện hơn với bảo tồn sinh thái.
-    \item Phân tích nghịch lý kinh tế khi đánh bắt cá mòi dầu hoặc cả hai loài trong vịnh Chesapeake: $E_{\mathrm{MEY}}$ nhận giá trị âm dưới các giả định chi phí thông thường, chứng minh MEY không thể áp dụng độc lập mà cần kết hợp bảo trợ hệ sinh thái.
-\end{itemize}
+\section{Chính sách sản lượng bền vững tối đa (MSY)}
+\label{sec:msy}
 
-\section{Chính sách Sản lượng tối đa hóa độ đàn hồi (RMY)}
+\subsection{Khái niệm và điều kiện bền vững}
+
+MSY là mức sản lượng khai thác lớn nhất có thể duy trì trong dài hạn mà vẫn bảo đảm quần thể ở mức bền vững. Trong mô hình hai loài, tối đa hóa sản lượng không đủ để kết luận một chính sách là bền vững: cả con mồi và vật ăn thịt đều phải có quần thể cân bằng dương. Gọi \(E_{Ym}\) là nỗ lực làm cực đại hàm sản lượng về mặt toán học; \(E_{\mathrm{MSY}}\) chỉ trùng với \(E_{Ym}\) nếu các điều kiện sinh học cũng được thỏa mãn.
+
+\subsection{Trường hợp 1: Chỉ khai thác vật ăn thịt}
+
+Đặt \(E_1=0\) và \(E_2=E\). Sản lượng bass tại cân bằng được cho bởi phương trình (25) trong bài báo:
+\begin{equation}
+\label{eq:msy_predator_yield}
+Y(E)=E\hat{y}(E)
+=\frac{E(rd-ae-aq_2E)}{ac+bd}.
+\tag{25}
+\end{equation}
+Đây là hàm bậc hai quay xuống, có cực đại tại
+\begin{equation}
+\label{eq:msy_predator_effort}
+E_{Ym}=\frac{rd-ae}{2aq_2}.
+\end{equation}
+Các quần thể cân bằng phụ thuộc tuyến tính vào effort:
+\begin{equation}
+\label{eq:msy_predator_equilibrium}
+\hat{x}(E)=\frac{be+rc+bq_2E}{ac+bd},\qquad
+\hat{y}(E)=\frac{rd-ae-aq_2E}{ac+bd}.
+\end{equation}
+Khi effort tăng, quần thể bass cân bằng giảm còn menhaden tăng. Nếu \(rd>ae\), cả hai quần thể đều dương tại \(E_{Ym}\), nên MSY tồn tại và đạt được tại
+\begin{equation}
+\label{eq:msy_predator}
+E_{\mathrm{MSY}}=E_{Ym}=\frac{rd-ae}{2aq_2},\qquad rd>ae.
+\end{equation}
+Với các tham số trong Bảng \ref{tab:model_parameters}, \(rd\approx5.1303\) và \(ae\approx0.0312\), do đó điều kiện \(rd>ae\) được thỏa mãn. Tại mức MSY, quần thể bass cân bằng bằng một nửa mức cân bằng khi không khai thác. Vì vậy, trong kịch bản chỉ khai thác vật ăn thịt, bài báo kết luận MSY có thể đạt được mà vẫn duy trì sự cùng tồn tại của hai loài.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig8_msy_predator.png}
+      {\includegraphics[width=0.92\textwidth]{pictures/ch4/fig8_msy_predator.png}}
+      {\fbox{\parbox[c][3cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 8}\\Sản lượng và các đường cân bằng khi chỉ khai thác bass, \(q_2=1\).}}}
+    \caption{Sản lượng và các đường cân bằng của menhaden và bass khi chỉ khai thác bass (\(q_2=1\)); theo Hình 8 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:msy_predator}
+\end{figure}
+
+\subsection{Trường hợp 2: Chỉ khai thác con mồi}
+
+Đặt \(E_1=E\) và \(E_2=0\). Sản lượng menhaden tại cân bằng được cho bởi phương trình (26):
+\begin{equation}
+\label{eq:msy_prey_yield}
+Y(E)=E\hat{x}(E)
+=\frac{E(cr+be-cq_1E)}{ac+bd}.
+\tag{26}
+\end{equation}
+Cực đại toán học của hàm sản lượng xảy ra tại
+\begin{equation}
+\label{eq:msy_prey_effort}
+E_{Ym}=\frac{cr+be}{2cq_1}.
+\end{equation}
+Các quần thể cân bằng là
+\begin{equation}
+\label{eq:msy_prey_equilibrium}
+\hat{x}(E)=\frac{cr+be-cq_1E}{ac+bd},\qquad
+\hat{y}(E)=\frac{rd-ae-dq_1E}{ac+bd}.
+\end{equation}
+Cả hai loài phải tồn tại tại \(E_{Ym}\). Điều kiện \(\hat{y}(E_{Ym})>0\) dẫn đến
+\begin{equation}
+\label{eq:msy_prey_condition}
+\frac{rd-ae}{cr+be}>\frac{d}{2c}.
+\end{equation}
+Với hệ menhaden--bass, điều kiện này không được thỏa mãn. Vì vậy, khai thác tại cực đại toán học \(E_{Ym}\) sẽ dẫn đến tuyệt chủng bass và không phải là một mức MSY bền vững. Giới hạn để cân bằng bass còn dương là
+\[
+E<E_{\max}=\frac{rd-ae}{dq_1}.
+\]
+Với \(q_1=0.5\), giới hạn này xấp xỉ \(1.02\). Vì quần thể bass rất thấp khi effort tiến sát giới hạn, bài báo đề xuất sử dụng một nửa giới hạn đó:
+\begin{equation}
+\label{eq:msy_prey_recommended}
+E_{\mathrm{MSY}}=\frac{rd-ae}{2dq_1}=0.5
+\qquad (q_1=0.5).
+\end{equation}
+Kết quả cho thấy quản lý khai thác con mồi cần tính đến vai trò của menhaden như nguồn thức ăn thiết yếu cho bass, thay vì chỉ tối đa hóa sản lượng menhaden.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig9_msy_prey.png}
+      {\includegraphics[width=0.8\textwidth]{pictures/ch4/fig9_msy_prey.png}}
+      {\fbox{\parbox[c][3cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 9}\\Sản lượng và các đường cân bằng khi chỉ khai thác menhaden, \(q_1=0.5\).}}}
+    \caption{Sản lượng và các đường cân bằng khi chỉ khai thác menhaden (\(q_1=0.5\)); theo Hình 9 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:msy_prey}
+\end{figure}
+
+\subsection{Trường hợp 3: Khai thác đồng thời cả hai loài}
+
+Xét \(E_1=E_2=E\). Tổng sản lượng khai thác tại cân bằng là tổng sản lượng của hai loài:
+\[
+Y(E)=E(q_1\hat{x}+q_2\hat{y}).
+\]
+Thay các biểu thức cân bằng vào, ta thu được phương trình (27):
+\begin{equation}
+\label{eq:msy_combined_yield}
+Y(E)=\frac{E}{ac+bd}
+\left[
+cr+be+rd-ae-
+(cq_1-bq_2+dq_1+aq_2)E
+\right].
+\tag{27}
+\end{equation}
+Cực đại toán học của hàm sản lượng đạt tại
+\begin{equation}
+\label{eq:msy_combined_effort}
+E_{Ym}=\frac{cr+be+rd-ae}
+{2(cq_1-bq_2+dq_1+aq_2)},
+\end{equation}
+khi hệ số bậc hai bảo đảm hàm sản lượng quay xuống. Các điểm cân bằng có dạng
+\begin{equation}
+\label{eq:msy_combined_equilibrium}
+\begin{aligned}
+\hat{x}(E)&=\frac{cr+be-(cq_1-bq_2)E}{ac+bd},\\
+\hat{y}(E)&=\frac{rd-ae-(dq_1+aq_2)E}{ac+bd}.
+\end{aligned}
+\end{equation}
+Theo Định lý 4.3 của bài báo, điều kiện để cân bằng cùng tồn tại là:
 \begin{itemize}
-    \item Đánh giá tác động của nỗ lực khai thác lên độ hồi phục $R$ và thời gian cân bằng $\tau$.
-    \item \textbf{Đánh bắt cá vược sọc:} Độ đàn hồi tăng tuyến tính theo nỗ lực trong miền khảo sát ($E_{\mathrm{RMY}} = 10$).
-    \item \textbf{Đánh bắt cá mòi dầu:} Độ đàn hồi giảm đơn điệu ngặt theo $E_1$, đạt cực đại tại $E_1 = 0$; bất kỳ nỗ lực đánh bắt cá mòi dầu nào cũng phải trả giá bằng sự suy giảm độ bền vững sinh thái.
-    \item \textbf{Đánh bắt kết hợp hai loài:} Sự đánh đổi gay gắt giữa sản lượng và độ ổn định hệ thống.
+    \item Nếu \(cq_1>bq_2\), cần
+    \[
+    E_{\mathrm{MSY}}<
+    \min\left\{
+    \frac{cr+be}{cq_1-bq_2},
+    \frac{rd-ae}{dq_1+aq_2}
+    \right\}.
+    \]
+    \item Nếu \(cq_1<bq_2\), cần
+    \[
+    E_{\mathrm{MSY}}<\frac{rd-ae}{dq_1+aq_2}.
+    \]
 \end{itemize}
+Với bộ tham số được sử dụng cho hệ menhaden--bass, bài báo xét trường hợp \(cq_1<bq_2\). Khi \(q_1=0.5\) và \(q_2=1\), giới hạn effort xấp xỉ \(1.0146\). Vì cực đại toán học không bảo đảm quần thể bass còn dương, tác giả đề xuất mức khai thác thận trọng \(E_{\mathrm{MSY}}=0.5\).
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig7_msy_general.png}
+      {\includegraphics[width=0.8\textwidth]{pictures/ch4/fig7_msy_general.png}}
+      {\fbox{\parbox[c][2.6cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 7}\\Minh họa tổng quát về phân tích MSY cho hệ hai loài.}}}
+    \caption{Trường hợp tổng quát của phân tích MSY trong hệ hai loài; theo Hình 7 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:msy_general}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig10_msy_combined.png}
+      {\includegraphics[width=0.8\textwidth]{pictures/ch4/fig10_msy_combined.png}}
+      {\fbox{\parbox[c][3cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 10}\\Sản lượng và cân bằng khi khai thác đồng thời hai loài, \(q_1=0.5,\ q_2=1\).}}}
+    \caption{Sản lượng và các đường cân bằng khi khai thác đồng thời menhaden và bass (\(q_1=0.5,q_2=1\)); theo Hình 10 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:msy_combined}
+\end{figure}
+
+\subsection{Nhận xét về MSY}
+
+Ba trường hợp cho thấy việc tối đa hóa sản lượng phải được đặt trong điều kiện duy trì cả hai loài. Khi chỉ khai thác bass, MSY đạt được tại cực đại của hàm sản lượng nếu \(rd>ae\). Khi khai thác menhaden hoặc đồng thời khai thác hai loài, effort làm cực đại sản lượng có thể khiến bass tuyệt chủng. Do đó, trong các kịch bản sau, bài báo khuyến nghị effort thận trọng \(E_{\mathrm{MSY}}=0.5\) với các hệ số catchability được dùng trong phân tích.
+
+\section{Chính sách sản lượng kinh tế tối đa (MEY)}
+\label{sec:mey}
+
+\subsection{Hàm lợi nhuận ròng}
+
+Sản lượng kinh tế tối đa (\textit{Maximum Economic Yield}, MEY) lựa chọn effort để tối đa hóa lợi nhuận ròng. Bài báo định nghĩa doanh thu \(R(E)=\hat{p}Y(E)\) và chi phí \(C(E)=\hat{c}E\), trong đó \(\hat{p}\) là giá bán trên một đơn vị sản lượng và \(\hat{c}\) là chi phí trên một đơn vị effort. Hàm tô kinh tế (lợi nhuận ròng) là
+\begin{equation}
+\label{eq:rent_definition}
+\operatorname{Rent}(E)=R(E)-C(E)=\hat{p}Y(E)-\hat{c}E.
+\end{equation}
+Mô hình chi phí tuyến tính này không tính đến các khoản chi phí cố định không phụ thuộc effort.
+
+\subsection{Trường hợp 1: Chỉ khai thác vật ăn thịt}
+
+Dùng hàm sản lượng (25), ta có
+\begin{equation}
+\label{eq:rent_predator}
+\operatorname{Rent}(E)=
+\frac{\hat{p}(rd-ae)}{ac+bd}E
+-\frac{\hat{p}aq_2}{ac+bd}E^2-\hat{c}E.
+\tag{28}
+\end{equation}
+Giải điều kiện đạo hàm bằng 0 thu được effort MEY:
+\begin{equation}
+\label{eq:mey_predator}
+E_{\mathrm{MEY}}=
+\frac{\hat{p}(rd-ae)-\hat{c}(ac+bd)}
+{2\hat{p}aq_2}.
+\tag{29}
+\end{equation}
+Nghiệm này dương nếu
+\[
+\frac{rd-ae}{ac+bd}>\frac{\hat{c}}{\hat{p}}.
+\]
+So sánh với \(E_{\mathrm{MSY}}=(rd-ae)/(2aq_2)\), ta có
+\begin{equation}
+\label{eq:mey_less_msy}
+E_{\mathrm{MEY}}=E_{\mathrm{MSY}}-
+\frac{\hat{c}(ac+bd)}{2\hat{p}aq_2}
+<E_{\mathrm{MSY}},
+\tag{30}
+\end{equation}
+khi chi phí dương và MEY tồn tại. Vì vậy, khi chỉ khai thác bass, MEY cần effort thấp hơn MSY. Khi giá bán tăng hoặc chi phí đơn vị giảm, effort MEY tiến gần effort MSY.
+
+\subsection{Trường hợp 2: Chỉ khai thác con mồi}
+
+Hàm lợi nhuận ròng khi chỉ khai thác menhaden là
+\begin{equation}
+\label{eq:rent_prey}
+\operatorname{Rent}(E)=
+\frac{\hat{p}(cr+be)}{ac+bd}E
+-\frac{\hat{p}cq_1}{ac+bd}E^2-\hat{c}E.
+\end{equation}
+Từ điều kiện tối ưu, ta có
+\begin{equation}
+\label{eq:mey_prey}
+E_{\mathrm{MEY}}=
+\frac{\hat{p}(cr+be)-\hat{c}(ac+bd)}
+{2\hat{p}cq_1}.
+\tag{31}
+\end{equation}
+Nếu điều kiện sinh học để MSY đạt tại cực đại sản lượng được thỏa mãn, thì
+\begin{equation}
+\label{eq:mey_prey_compare}
+E_{\mathrm{MEY}}=E_{\mathrm{MSY}}-
+\frac{\hat{c}(ac+bd)}{2\hat{p}cq_1}
+<E_{\mathrm{MSY}}.
+\tag{32}
+\end{equation}
+Tuy nhiên, điều kiện \eqref{eq:msy_prey_condition} không thỏa mãn với các tham số của hệ menhaden--bass. Hơn nữa, bài báo giả sử \(\hat{p}=2\hat{c}\) để đơn giản hóa và thu được \(E_{\mathrm{MEY}}<0\). Effort âm không có ý nghĩa thực tiễn, do đó không phải một chính sách khai thác khả thi. Tác giả quay lại mức khai thác thận trọng \(E_{\mathrm{MSY}}=0.5\).
+
+\subsection{Trường hợp 3: Khai thác đồng thời cả hai loài}
+
+Với \(E_1=E_2=E\), hàm lợi nhuận là
+\begin{equation}
+\label{eq:rent_combined}
+\begin{aligned}
+\operatorname{Rent}(E)
+={}&\frac{\hat{p}(cr+be+rd-ae)}{ac+bd}E\\
+&-\frac{\hat{p}(cq_1-bq_2+dq_1+aq_2)}{ac+bd}E^2-\hat{c}E.
+\end{aligned}
+\end{equation}
+Giải phương trình đạo hàm bằng 0, ta thu được
+\begin{equation}
+\label{eq:mey_combined}
+E_{\mathrm{MEY}}=
+\frac{\hat{p}(cr+be+rd-ae)-\hat{c}(ac+bd)}
+{2\hat{p}(cq_1-bq_2+dq_1+aq_2)}.
+\tag{33}
+\end{equation}
+Tùy theo các tham số, MEY có thể lớn hơn hoặc nhỏ hơn MSY. Với các tham số của hệ và giả thiết \(\hat{p}=2\hat{c}\) được sử dụng trong bài báo, effort MEY thu được là âm, do đó không phải nghiệm khai thác khả thi.
+
+\subsection{Nhận xét về MEY}
+
+MEY đưa chi phí khai thác vào bài toán tối ưu và có thể giảm effort so với MSY. Tuy nhiên, tính khả thi của nghiệm phụ thuộc cả tham số sinh học lẫn giả thiết giá bán và chi phí. Kết luận về nghiệm MEY âm trong bài báo chỉ áp dụng dưới các giả thiết kinh tế đã chọn; không nên khái quát thành kết luận rằng MEY luôn không khả thi trong mọi nghề cá.
+
+\section{Chính sách sản lượng tối đa hóa độ hồi phục sinh thái (RMY)}
+\label{sec:rmy}
+
+\subsection{Độ hồi phục và thời gian trở về cân bằng}
+
+Độ hồi phục (\textit{resilience}) mô tả tốc độ hệ sinh thái trở về cân bằng sinh học sau một nhiễu loạn nhỏ. Bài báo liên hệ resilience \(R\) với thời gian trở về cân bằng \(\tau\):
+\[
+R=\frac{1}{\tau}=-\operatorname{Re}(\lambda_m),
+\]
+trong đó \(\lambda_m\) là trị riêng chi phối tốc độ trở về cân bằng của ma trận Jacobian tại điểm cân bằng. Chính sách RMY lựa chọn effort làm cực đại \(R\), thay vì cực đại sản lượng hoặc lợi nhuận. Khi một loài tuyệt chủng, resilience được xem là bằng 0; các đường thẳng đứng nét đứt trong Hình \ref{fig:rmy_predator}--\ref{fig:rmy_combined_q1} đánh dấu ngưỡng này.
+
+\subsection{Trường hợp 1: Chỉ khai thác vật ăn thịt}
+
+Với kịch bản chỉ khai thác bass, bài báo xét \(0\leq E_2\leq10\) và các hệ số \(q_2=0.2,0.5,0.8\). Trong miền khảo sát, các đường resilience tăng tuyến tính, trong khi đường sản lượng là các parabol không âm quay xuống. Vì giới hạn effort được đặt bằng 10, resilience đạt cực đại tại biên
+\[
+E_{\mathrm{RMY}}=10.
+\]
+Đây là kết luận trong miền khảo sát của bài báo, không có nghĩa rằng effort lớn tùy ý luôn an toàn.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig11_rmy_predator.png}
+      {\includegraphics[width=0.96\textwidth]{pictures/ch4/fig11_rmy_predator.png}}
+      {\fbox{\parbox[c][3cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 11}\\Sản lượng và resilience khi chỉ khai thác bass; \(q_2=0.2,0.5,0.8\).}}}
+    \caption{Sản lượng và resilience khi chỉ khai thác bass; theo Hình 11 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:rmy_predator}
+\end{figure}
+
+\subsection{Trường hợp 2: Chỉ khai thác con mồi}
+
+Với kịch bản chỉ khai thác menhaden, bài báo xét \(q_1=0.2,0.5,0.8\). Các đường resilience giảm nghiêm ngặt khi effort tăng, nên resilience đạt cực đại khi không khai thác:
+\[
+E_{\mathrm{RMY}}=0.
+\]
+Mặc dù effort dương có thể làm tăng sản lượng và doanh thu, điều đó phải đánh đổi bằng sự suy giảm khả năng hồi phục của hệ. Kết quả nhấn mạnh vai trò của menhaden như nguồn thức ăn quan trọng cho bass.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig12_rmy_prey.png}
+      {\includegraphics[width=0.96\textwidth]{pictures/ch4/fig12_rmy_prey.png}}
+      {\fbox{\parbox[c][3cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 12}\\Sản lượng và resilience khi chỉ khai thác menhaden; \(q_1=0.2,0.5,0.8\).}}}
+    \caption{Sản lượng và resilience khi chỉ khai thác menhaden; theo Hình 12 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:rmy_prey}
+\end{figure}
+
+\subsection{Trường hợp 3: Khai thác đồng thời cả hai loài}
+
+Hình \ref{fig:rmy_combined_q2} xét \(q_2=0.2,0.5,0.8\), lần lượt với \(q_1=0.5\) và \(q_1=0.25\). Hình \ref{fig:rmy_combined_q1} xét \(q_1=0.1,0.3,0.5\), với \(q_2=1\) và \(q_2=0.5\). Trong cả hai nhóm kịch bản, các đường resilience đều giảm nghiêm ngặt theo effort. Vì vậy,
+\[
+E_{\mathrm{RMY}}=0.
+\]
+Tăng effort có thể đem lại sản lượng cao hơn, nhưng đồng thời làm giảm khả năng hồi phục của hệ. Các đường thẳng đứng nét đứt biểu thị effort tại đó \(R=0\), tức hệ không còn khả năng phục hồi theo tiêu chí nghiên cứu do một trong hai loài đã tuyệt chủng. Dấu sao biểu thị cực đại resilience và điểm tương ứng trên đường sản lượng. Bài báo cũng cho biết resilience ban đầu khi không khai thác tương ứng với thời gian trở về cân bằng khoảng 13 năm.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig13_rmy_combined_q2.png}
+      {\includegraphics[width=0.96\textwidth]{pictures/ch4/fig13_rmy_combined_q2.png}}
+      {\fbox{\parbox[c][3cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 13}\\Khai thác đồng thời hai loài, thay đổi \(q_2\) với \(q_1=0.5,0.25\).}}}
+    \caption{Sản lượng và resilience khi khai thác đồng thời hai loài, thay đổi \(q_2\); theo Hình 13 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:rmy_combined_q2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch4/fig14_rmy_combined_q1.png}
+      {\includegraphics[width=0.96\textwidth]{pictures/ch4/fig14_rmy_combined_q1.png}}
+      {\fbox{\parbox[c][3cm][c]{0.86\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 14}\\Khai thác đồng thời hai loài, thay đổi \(q_1\) với \(q_2=1,0.5\).}}}
+    \caption{Sản lượng và resilience khi khai thác đồng thời hai loài, thay đổi \(q_1\); theo Hình 14 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:rmy_combined_q1}
+\end{figure}
+
+\subsection{So sánh các chính sách}
+
+MSY ưu tiên sản lượng nhưng phải thỏa mãn điều kiện tồn tại của cả hai quần thể. MEY tối đa hóa lợi nhuận ròng và có thể dẫn đến effort thấp hơn MSY, song nghiệm phụ thuộc vào các giả thiết kinh tế. RMY ưu tiên khả năng hồi phục: trong miền khảo sát, chính sách này chọn \(E=10\) khi chỉ khai thác bass, nhưng chọn \(E=0\) khi chỉ khai thác menhaden hoặc khi khai thác đồng thời hai loài. Kết quả cho thấy không có một mục tiêu duy nhất phù hợp cho mọi kịch bản; quyết định quản lý cần cân bằng sản lượng, lợi ích kinh tế và rủi ro sinh thái.

@@ -1,25 +1,182 @@
 \chapter{PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}
 \label{ch:sensitivity}
 
-\textit{(Nội dung chi tiết của chương này sẽ được phát triển đầy đủ trong giai đoạn tiếp theo):}
+Phân tích độ nhạy được sử dụng để đánh giá mức độ ảnh hưởng của những thay đổi nhỏ trong các tham số đến nghiệm của hệ phương trình vi phân theo thời gian. Trong nghiên cứu của Panayotova và cộng sự \cite{panayotova2023bioeconomic}, phương pháp vi phân trực tiếp (\textit{direct differential method}) được dùng để xác định các tham số mà quần thể Atlantic menhaden và striped bass nhạy cảm nhất. Kết quả này giúp giải thích vì sao một số thay đổi nhỏ trong tốc độ tăng trưởng hoặc cường độ khai thác có thể gây ra tác động khác nhau lên hai loài.
 
-\section{Phương pháp vi phân trực tiếp (Direct Differential Method)}
-\begin{itemize}
-    \item Thiết lập hệ phương trình vi phân mở rộng gồm 2 phương trình trạng thái và các phương trình cho véctơ độ nhạy:
-    \begin{equation}
-    \frac{d}{dt}\left(\frac{\partial u_i}{\partial p_j}\right) = J \cdot S_j + F_j,
-    \end{equation}
-    với véctơ 8 tham số $p = (r, a, b, E_1, e, c, d, E_2)$.
-    \item Tính ma trận Jacobian $J(x, y)$ và ma trận đạo hàm riêng của vế phải $F$.
-\end{itemize}
+\section{Phương pháp vi phân trực tiếp}
+\label{sec:direct_sensitivity}
 
-\section{Chỉ số độ nhạy tương đối và xếp hạng tham số}
-\begin{itemize}
-    \item Tính chuẩn Euclidean của ma trận độ nhạy tương đối:
-    \begin{equation}
-    \|\bar{S}_{ij}\|_2 = \sqrt{\sum_{k=1}^N \left(\frac{\partial u_i}{\partial p_j}(t_k) \frac{p_j}{u_i(t_k)}\right)^2}.
-    \end{equation}
-    \item \textbf{Đối với cá vược sọc:} Nhạy cảm nhất với tốc độ tăng trưởng nội tại của cá mòi dầu $r$ ($\|\cdot\|_2 \approx 1.0080$), hệ số săn bắt $b$ ($\approx 1.0004$) và nỗ lực đánh bắt cá mòi dầu $E_1$ ($1.9647 E_1/q_1$).
-    \item \textbf{Đối với cá mòi dầu:} Nhạy cảm nhất với hiệu suất chuyển hóa dinh dưỡng $d$ ($\approx 0.9985$), tỷ lệ tử vong tự nhiên của kẻ săn mồi $e$ ($\approx 0.8886$) và nỗ lực đánh bắt cá vược sọc $E_2$ ($0.7328 E_2/q_2$).
-    \item Thảo luận ý nghĩa thực nghiệm đối với các nhà quản lý sinh thái.
-\end{itemize}
+\subsection{Thiết lập hệ phương trình độ nhạy}
+
+Viết mô hình dưới dạng tổng quát
+\begin{equation}
+\label{eq:sens_general}
+\frac{du}{dt}=f(u,p),
+\tag{34}
+\end{equation}
+trong đó \(u=u(t,p)=(x(t,p),y(t,p))^\mathsf{T}\) là vector trạng thái và \(p=(p_1,\ldots,p_n)\) là vector tham số. Mục tiêu là tìm tốc độ thay đổi của nghiệm theo tham số \(p_j\), tức \(\partial u/\partial p_j\).
+
+Đặt vector độ nhạy đối với tham số \(p_j\) là
+\[
+S_j=\frac{\partial u}{\partial p_j}.
+\]
+Lấy đạo hàm hai vế của hệ \eqref{eq:sens_general} theo \(p_j\), ta thu được phương trình vi phân độ nhạy:
+\begin{equation}
+\label{eq:sens_ode}
+\frac{d}{dt}\left(\frac{\partial u}{\partial p_j}\right)
+=J(u)S_j+F_j,
+\tag{35}
+\end{equation}
+trong đó \(J(u)=\partial f/\partial u\) là ma trận Jacobian của hệ theo biến trạng thái và \(F_j=\partial f/\partial p_j\) là đạo hàm của vế phải theo tham số \(p_j\).
+
+Đối với mô hình có khai thác, Jacobian là
+\begin{equation}
+\label{eq:sens_jacobian}
+J(x,y)=
+\begin{pmatrix}
+r-2ax-by-q_1E_1 & -bx\\
+dy & -e-2cy+dx-q_2E_2
+\end{pmatrix}.
+\end{equation}
+Bài báo sắp xếp tám tham số theo thứ tự
+\[
+p=(r,a,b,E_1,e,c,d,E_2).
+\]
+Do đó, ma trận độ nhạy \(S\) gồm đạo hàm của cả hai biến trạng thái theo từng tham số:
+\begin{equation}
+\label{eq:sens_matrix}
+S=
+\begin{pmatrix}
+\dfrac{\partial x}{\partial r}&
+\dfrac{\partial x}{\partial a}&
+\dfrac{\partial x}{\partial b}&
+\dfrac{\partial x}{\partial E_1}&
+\dfrac{\partial x}{\partial e}&
+\dfrac{\partial x}{\partial c}&
+\dfrac{\partial x}{\partial d}&
+\dfrac{\partial x}{\partial E_2}\\[0.6em]
+\dfrac{\partial y}{\partial r}&
+\dfrac{\partial y}{\partial a}&
+\dfrac{\partial y}{\partial b}&
+\dfrac{\partial y}{\partial E_1}&
+\dfrac{\partial y}{\partial e}&
+\dfrac{\partial y}{\partial c}&
+\dfrac{\partial y}{\partial d}&
+\dfrac{\partial y}{\partial E_2}
+\end{pmatrix}.
+\tag{36}
+\end{equation}
+
+Đạo hàm của vế phải theo vector tham số, xét trực tiếp từ mô hình có các hệ số khả năng đánh bắt \(q_1,q_2\), có dạng
+\begin{equation}
+\label{eq:sens_F}
+F=\frac{\partial f}{\partial p}=
+\begin{pmatrix}
+x&-x^2&-xy&-q_1x&0&0&0&0\\
+0&0&0&0&-y&-y^2&xy&-q_2y
+\end{pmatrix}.
+\tag{37}
+\end{equation}
+Trong công thức (37) được in trong bài báo, hai phần tử ứng với đạo hàm theo \(E_1,E_2\) được viết lần lượt là \(-x\) và \(-y\); biểu thức trên giữ tường minh \(q_1,q_2\) theo phương trình mô hình. Hai cách viết trùng nhau khi \(q_1=q_2=1\), hoặc khi hệ số catchability đã được gộp vào biến effort.
+
+Với tám tham số, mỗi tham số tạo ra hai phương trình độ nhạy, tương ứng với \(x\) và \(y\). Vì thế, giải đồng thời hai phương trình trạng thái và 16 phương trình độ nhạy tương đương với giải một hệ gồm 18 phương trình vi phân. Cách tiếp cận này cho phép theo dõi trực tiếp \(\partial x/\partial p_j\) và \(\partial y/\partial p_j\) theo thời gian, thay vì chỉ so sánh các mô phỏng độc lập.
+
+\subsection{Ví dụ: độ nhạy theo tham số \texorpdfstring{$r$}{r}}
+
+Để minh họa, xét độ nhạy của hai quần thể theo tốc độ tăng trưởng nội tại \(r\) của menhaden. Đặt
+\[
+s_{11}=\frac{\partial x}{\partial r},
+\qquad
+s_{21}=\frac{\partial y}{\partial r}.
+\]
+Kết hợp mô hình trạng thái với cột đầu tiên của ma trận \(F\), ta được hệ
+\begin{equation}
+\label{eq:sens_r_example}
+\begin{cases}
+\dfrac{dx}{dt}=x(r-ax-by)-q_1E_1x,\\[0.35em]
+\dfrac{dy}{dt}=y(-e-cy+dx)-q_2E_2y,\\[0.35em]
+\dfrac{ds_{11}}{dt}=(r-2ax-by-q_1E_1)s_{11}-bx\,s_{21}+x,\\[0.35em]
+\dfrac{ds_{21}}{dt}=dy\,s_{11}+(-e-2cy+dx-q_2E_2)s_{21}.
+\end{cases}
+\end{equation}
+Các phương trình độ nhạy còn lại được xây dựng tương tự bằng cách sử dụng các cột tương ứng của \(F\). Khi tham số được giữ cố định trong mô phỏng và điều kiện đầu không phụ thuộc tham số, điều kiện đầu của các biến độ nhạy thường được đặt bằng 0.
+
+\section{Độ nhạy tương đối và chỉ số độ nhạy}
+\label{sec:relative_sensitivity}
+
+Các tham số trong mô hình có đơn vị và thang đo khác nhau. Đạo hàm tuyệt đối vì thế không phải lúc nào cũng thích hợp để so sánh trực tiếp độ ảnh hưởng giữa các tham số. Bài báo định nghĩa độ nhạy tương đối:
+\begin{equation}
+\label{eq:relative_sensitivity}
+\bar{S}_{ij}(t)=
+\frac{\partial u_i}{\partial p_j}(t)\frac{p_j}{u_i(t)}.
+\end{equation}
+Đại lượng này phản ánh mức thay đổi tương đối của biến trạng thái \(u_i\) khi tham số \(p_j\) thay đổi tương đối. Chỉ số độ nhạy của tham số được tính bằng chuẩn Euclid của các giá trị độ nhạy tương đối tại \(N\) thời điểm lấy mẫu:
+\begin{equation}
+\label{eq:sensitivity_norm}
+\left\|\bar{S}_{ij}\right\|_2
+=
+\sqrt{\sum_{k=1}^{N}
+\left[
+\frac{\partial u_i}{\partial p_j}(t_k)
+\frac{p_j}{u_i(t_k)}
+\right]^2}.
+\end{equation}
+Trong bài báo, các thời điểm được chọn thuộc giai đoạn \(2050<t<2100\), khi quần thể đã tiến gần trạng thái ổn định. Chỉ số càng lớn thì biến trạng thái tương ứng càng nhạy với tham số đó trong phạm vi mô hình và bộ tham số đang xét.
+
+Cần phân biệt hai kết quả được trình bày trong bài báo: Hình \ref{fig:sensitivity_rates} biểu diễn các đạo hàm tuyệt đối \(\partial x/\partial p_j\) và \(\partial y/\partial p_j\) theo thời gian; Bảng \ref{tab:sensitivity_indices} xếp hạng các tham số dựa trên chuẩn của độ nhạy tương đối.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch5/fig15_sensitivity.png}
+      {\includegraphics[width=0.96\textwidth]{pictures/ch5/fig15_sensitivity.png}}
+      {\fbox{\parbox[c][4cm][c]{0.88\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 15}\\Độ nhạy của bass (đồ thị trên) và menhaden (đồ thị dưới) theo các tham số.}}}
+    \caption{Tốc độ thay đổi của quần thể bass và menhaden theo các tham số của mô hình; theo Hình 15 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:sensitivity_rates}
+\end{figure}
+
+\section{Kết quả và diễn giải sinh học}
+\label{sec:sensitivity_results}
+
+Bảng 2 trong bài báo cung cấp các chuẩn độ nhạy tương đối của hai quần thể. Các giá trị dưới đây được trình bày theo thứ tự và ký hiệu tham số của bảng gốc.
+
+\begin{table}[htbp]
+\centering
+\caption{Chỉ số độ nhạy tương đối của menhaden và bass (Bảng 2 trong bài báo \cite{panayotova2023bioeconomic}).}
+\label{tab:sensitivity_indices}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lrlr}
+\toprule
+\multicolumn{2}{c}{\textbf{Menhaden}} & \multicolumn{2}{c}{\textbf{Bass}}\\
+\cmidrule(r){1-2}\cmidrule(l){3-4}
+Tham số & Chỉ số & Tham số & Chỉ số\\
+\midrule
+\(d\) & \(0.9985\) & \(r\) & \(1.0080\)\\
+\(e\) & \(0.8886\) & \(b\) & \(1.0004\)\\
+\(c\) & \(0.1100\) & \(e\) & \(0.0133\)\\
+\(b\) & \(0.1098\) & \(d\) & \(0.0093\)\\
+\(r\) & \(0.1079\) & \(a\) & \(0.0069\)\\
+\(a\) & \(0.0008\) & \(c\) & \(0.0029\)\\
+\(E_2\) & \(0.7328E_2q_2\) & \(E_1\) & \(1.9647E_1q_1\)\\
+\(E_1\) & \(0.2103E_1q_1\) & \(E_2\) & \(0.0110E_2q_2\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Theo Bảng 2, bass nhạy nhất với tham số \(r\), tốc độ tăng trưởng nội tại của menhaden, với chỉ số \(1.0080\); tiếp theo là tham số \(b\), mô tả tác động của bass lên menhaden, với chỉ số \(1.0004\). Hình \ref{fig:sensitivity_perturbations} cho thấy một thay đổi nhỏ làm tăng \(r\) khiến trạng thái ổn định của bass tăng đáng kể, từ khoảng \(0.29\) lên \(0.34\). Điều này phản ánh sự phụ thuộc của quần thể predator vào nguồn thức ăn là prey.
+
+Đối với menhaden, tham số nhạy nhất là \(d\), biểu thị tác động của việc tiêu thụ con mồi lên tăng trưởng của bass, với chỉ số \(0.9985\). Bài báo nhận xét rằng giảm nhẹ \(d\) làm trạng thái ổn định của menhaden tăng lên, trong khi trạng thái ổn định của bass tương đối ít thay đổi. Tham số nhạy tiếp theo của menhaden là \(e\), tỷ lệ tử vong tự nhiên của bass, với chỉ số \(0.8886\).
+
+Các chỉ số liên quan đến khai thác cho thấy tác động không đối xứng giữa hai loài. Menhaden nhạy với effort khai thác bass \(E_2\), trong khi bass nhạy hơn với effort khai thác menhaden \(E_1\). Cụ thể, Bảng \ref{tab:sensitivity_indices} ghi nhận hệ số gắn với \(E_1q_1\) ở bass là \(1.9647E_1q_1\), lớn hơn đáng kể hệ số gắn với \(E_2q_2\) ở bass là \(0.0110E_2q_2\). Tương tự, chỉ số của menhaden liên quan đến \(E_2q_2\) là \(0.7328E_2q_2\), trong khi chỉ số liên quan đến \(E_1q_1\) là \(0.2103E_1q_1\). Điều này phù hợp với diễn giải sinh học: khai thác con mồi có thể ảnh hưởng mạnh đến vật ăn thịt phụ thuộc vào con mồi đó, còn việc giảm áp lực săn mồi có thể làm tăng quần thể prey.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{pictures/ch5/fig16_parameter_perturbations.png}
+      {\includegraphics[width=0.96\textwidth]{pictures/ch5/fig16_parameter_perturbations.png}}
+      {\fbox{\parbox[c][4cm][c]{0.88\textwidth}{\centering\textbf{VỊ TRÍ CHÈN HÌNH 16}\\Diễn biến quần thể menhaden (đỏ) và bass (xanh) khi thay đổi nhỏ các tham số.}}}
+    \caption{Diễn biến theo thời gian của hai quần thể dưới các nhiễu loạn nhỏ của tham số; theo Hình 16 trong bài báo \cite{panayotova2023bioeconomic}.}
+    \label{fig:sensitivity_perturbations}
+\end{figure}
+
+\section{Kết luận của phân tích độ nhạy}
+
+Phân tích độ nhạy cho thấy phản ứng của hai loài không giống nhau. Quần thể bass nhạy nhất với tốc độ tăng trưởng của menhaden \(r\), trong khi menhaden nhạy nhất với hệ số \(d\) mô tả ảnh hưởng của tiêu thụ con mồi lên bass. Các tham số khai thác cũng thể hiện quan hệ tương tác: khai thác menhaden ảnh hưởng mạnh đến bass, còn khai thác bass có thể làm tăng trạng thái cân bằng của menhaden. Vì vậy, việc lựa chọn hạn ngạch và effort cần dựa trên tương tác giữa các loài, không chỉ dựa vào sản lượng của từng loài riêng lẻ \cite{panayotova2023bioeconomic}.

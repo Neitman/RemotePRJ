@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  12 OCT 2026 23:37
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  13 OCT 2026 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1439,18 +1439,46 @@ File: fig2_model_prediction.pdf Graphic file (type pdf)
 
 ] [19
 
-] [20
+]
+File: pictures/ch4/fig8_msy_predator.png Graphic file (type bmp)
+<pictures/ch4/fig8_msy_predator.png>
+File: pictures/ch4/fig9_msy_prey.png Graphic file (type bmp)
+<pictures/ch4/fig9_msy_prey.png>
+ [20
 
-] [21
+]
+File: pictures/ch4/fig10_msy_combined.png Graphic file (type bmp)
+<pictures/ch4/fig10_msy_combined.png>
+ [21
 
-] [22
+]
+File: pictures/ch4/fig11_rmy_predator.png Graphic file (type bmp)
+<pictures/ch4/fig11_rmy_predator.png>
+File: pictures/ch4/fig12_rmy_prey.png Graphic file (type bmp)
+<pictures/ch4/fig12_rmy_prey.png>
+ [22
 
-] [23
+]
+File: pictures/ch5/fig15_sensitivity.png Graphic file (type bmp)
+<pictures/ch5/fig15_sensitivity.png>
+ [23
+
+]
+File: pictures/ch5/fig16_parameter_perturbations.png Graphic file (type bmp)
+<pictures/ch5/fig16_parameter_perturbations.png>
+ [24
+
+] [25
+
+] [26
+
+]
+[27
 
 ]
 File: logo_hus.png Graphic file (type bmp)
 <logo_hus.png>
- [24
+ [28
 
 ]
 \tf@nav=\write6
@@ -1467,16 +1495,20 @@ File: logo_hus.png Graphic file (type bmp)
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: 2D71CCC9FBE2D960B6518E52752CCCAA;1245.
+(rerunfilecheck)             Checksum: 570AE8760ED44EF69C8C5BC4B017DE37;1807.
  ) 
 Here is how much of TeX's memory you used:
- 33647 strings out of 402987
- 737951 string characters out of 5448524
- 1233803 words of memory out of 5000000
- 61757 multiletter control sequences out of 15000+600000
+ 33769 strings out of 402987
+ 742432 string characters out of 5448524
+ 1235647 words of memory out of 5000000
+ 61870 multiletter control sequences out of 15000+600000
  636290 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,19n,123p,420b,1367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on slide.pdf (24 pages).
+Output written on slide.pdf (28 pages).

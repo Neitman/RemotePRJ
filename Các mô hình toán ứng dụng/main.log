@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  12 OCT 2026 23:39
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  13 OCT 2026 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1173,15 +1173,43 @@ Chương 3.
 Chương 4.
 [24
 
-]) (chapters/ch5_sensitivity.tex [25]
-Chương 5.
-) (chapters/ch6_conclusion.tex [26
-
 ]
-Chương 6.
-[27
+File: pictures/ch4/fig8_msy_predator.png Graphic file (type bmp)
+<pictures/ch4/fig8_msy_predator.png>
+ [25]
+File: pictures/ch4/fig9_msy_prey.png Graphic file (type bmp)
+<pictures/ch4/fig9_msy_prey.png>
+ [26] [27]
+File: pictures/ch4/fig7_msy_general.png Graphic file (type bmp)
+<pictures/ch4/fig7_msy_general.png>
+File: pictures/ch4/fig10_msy_combined.png Graphic file (type bmp)
+<pictures/ch4/fig10_msy_combined.png>
+ [28] [29] [30]
+File: pictures/ch4/fig11_rmy_predator.png Graphic file (type bmp)
+<pictures/ch4/fig11_rmy_predator.png>
+ [31]
+File: pictures/ch4/fig12_rmy_prey.png Graphic file (type bmp)
+<pictures/ch4/fig12_rmy_prey.png>
+File: pictures/ch4/fig13_rmy_combined_q2.png Graphic file (type bmp)
+<pictures/ch4/fig13_rmy_combined_q2.png>
+File: pictures/ch4/fig14_rmy_combined_q1.png Graphic file (type bmp)
+<pictures/ch4/fig14_rmy_combined_q1.png>
+) [32] [33]
+(chapters/ch5_sensitivity.tex [34]
+Chương 5.
+[35
 
-]) [28] (main.bbl
+] [36]
+File: pictures/ch5/fig15_sensitivity.png Graphic file (type bmp)
+<pictures/ch5/fig15_sensitivity.png>
+ [37] [38]
+File: pictures/ch5/fig16_parameter_perturbations.png Graphic file (type bmp)
+<pictures/ch5/fig16_parameter_perturbations.png>
+) (chapters/ch6_conclusion.tex [39] [40]
+Chương 6.
+[41
+
+]) [42] (main.bbl
 Underfull \hbox (badness 3919) in paragraph at lines 29--34
 []\TU/TimesNewRoman(0)/m/n/12 Chesapeake Bay Foundation.  Atlantic menhaden: Th
 e most important fish in
@@ -1207,7 +1235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--48
 ]\TU/TimesNewRoman(0)/m/n/12 ,
  []
 
-[29
+[43
 
 ]
 Underfull \hbox (badness 1325) in paragraph at lines 134--139
@@ -1222,21 +1250,21 @@ Underfull \hbox (badness 1668) in paragraph at lines 141--146
  of populations important to
  []
 
-[30]) [31] (main.aux)
+[44]) [45] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 753335FD05FA36BA4DACB3083034775D;20083.
+(rerunfilecheck)             Checksum: 86A904745A7C88123C954C4D48F286CB;25564.
  ) 
 Here is how much of TeX's memory you used:
- 29875 strings out of 402987
- 627834 string characters out of 5448524
- 1144525 words of memory out of 5000000
- 58118 multiletter control sequences out of 15000+600000
- 636221 words of font info for 104 fonts, out of 8000000 for 9000
+ 30030 strings out of 402987
+ 632696 string characters out of 5448524
+ 1154171 words of memory out of 5000000
+ 58256 multiletter control sequences out of 15000+600000
+ 636245 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,14n,103p,939b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (40 pages).
+Output written on main.pdf (54 pages).

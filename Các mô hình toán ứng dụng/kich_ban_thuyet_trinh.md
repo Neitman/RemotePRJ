@@ -4,7 +4,7 @@
 * **Giảng viên hướng dẫn:** TS. Nguyễn Trọng Hiếu  
 * **Nhóm sinh viên thực hiện (K68A2):** Tạ Tiến Nam – Tạ Văn Nghĩa – Trần Đức Kiên  
 * **Định dạng:** Thuyết trình nhanh, súc tích (~15 giây / slide)  
-* **Tổng thời lượng:** ~5.5 – 6 phút (+ Q&A thảo luận)  
+* **Tổng thời lượng:** ~6.5 – 7.0 phút (+ Q&A thảo luận)  
 * **Tiêu chí trọng tâm:** Tập trung vào **Mục đích – Ý nghĩa sinh thái – Kết quả thực tiễn – Khuyến nghị chính sách**; lược bỏ các diễn giải biến đổi toán học chi tiết.
 
 ---
@@ -15,7 +15,7 @@
 | :--- | :--- | :---: | :---: | :---: |
 | **Phần 1** | Bối cảnh Vịnh Chesapeake & Đặt vấn đề quản lý | Slide 1 – 7 | **Tạ Tiến Nam** | ~1.5 – 2.0 phút |
 | **Phần 2** | Mô hình sinh thái, Khớp dữ liệu thực tế & Dự báo | Slide 8 – 15 | **Tạ Văn Nghĩa** | ~2.0 phút |
-| **Phần 3** | Độ đàn hồi phục hồi, Chính sách khai thác & Hàm ý quản lý | Slide 16 – 24 | **Trần Đức Kiên** | ~2.5 phút |
+| **Phần 3** | Độ đàn hồi phục hồi, Chính sách khai thác (Ch.4), Phân tích độ nhạy (Ch.5) & Khuyến nghị EBFM (Ch.6) | Slide 16 – 28 | **Trần Đức Kiên** | ~3.0 – 3.5 phút |
 
 ---
 
@@ -35,7 +35,7 @@
 * **Thời lượng:** ~15s
 * **Người nói:** Tạ Tiến Nam
 * **Mục đích:** Khái quát lộ trình 5 phần của bài báo cáo.
-> *"Bài báo cáo của nhóm gồm 5 nội dung chính: Khởi đầu từ bối cảnh sinh thái Vịnh Chesapeake; tiếp đến là thiết lập mô hình Lotka–Volterra mở rộng; thứ ba là đối chứng dữ liệu 23 năm thực tế; thứ tư là phân tích độ đàn hồi phục hồi 13 năm; và cuối cùng là đánh giá 3 chính sách khai thác thực tiễn."*
+> *"Bài báo cáo của nhóm gồm 5 nội dung chính: Khởi đầu từ bối cảnh sinh thái Vịnh Chesapeake; tiếp đến là thiết lập mô hình Lotka–Volterra mở rộng; thứ ba là đối chứng dữ liệu 23 năm thực tế; thứ tư là phân tích độ đàn hồi phục hồi 13 năm; và cuối cùng là đánh giá 3 chính sách khai thác thực tiễn cùng phân tích độ nhạy cục bộ."*
 
 ---
 
@@ -139,7 +139,7 @@
 * **Thời lượng:** ~15s
 * **Người nói:** Tạ Văn Nghĩa $\to$ chuyển giao cho Trần Đức Kiên
 * **Ý nghĩa ứng dụng:** Con số nền tảng cho quản lý.
-> *"Tại điểm cân bằng dừng, trữ lượng cá mòi dầu đạt **136.3 triệu con** và cá vược sọc đạt **288.6 triệu con**. Đây chính là mốc chuẩn sinh thái tự nhiên của vịnh. Tiếp theo, bạn Trần Đức Kiên sẽ trình bày về khả năng tự phục hồi của hệ thống và các chính sách khai thác."*
+> *"Tại điểm cân bằng dừng, trữ lượng cá mòi dầu đạt **136.3 triệu con** và cá vược sọc đạt **288.6 triệu con**. Đây chính là mốc chuẩn sinh thái tự nhiên của vịnh. Tiếp theo, bạn Trần Đức Kiên sẽ trình bày về khả năng tự phục hồi của hệ thống, các chính sách khai thác và phân tích độ nhạy."*
 
 ---
 
@@ -175,15 +175,47 @@
 
 ---
 
-### SLIDE 20: MỞ RỘNG BIONOMIC: SO SÁNH 3 CHIẾN LƯỢC KHAI THÁC
+### SLIDE 20: CHÍNH SÁCH SẢN LƯỢNG BỀN VỮNG TỐI ĐA (MSY)
 * **Thời lượng:** ~15s
 * **Người nói:** Trần Đức Kiên
-* **Ứng dụng chính sách then chốt:** Bác bỏ MSY đơn loài.
-> *"So sánh 3 chính sách cho thấy: Nếu khai thác tối đa sản lượng (MSY) cá mòi theo kiểu đơn loài, **đàn cá vược sọc sẽ bị tuyệt chủng vì đói**! Để cả hai loài cùng tồn tại bền vững, mô hình khuyến nghị bắt buộc phải **cắt giảm 50% hạn ngạch khai thác cá mòi dầu**."*
+* **Ứng dụng chính sách:** Phân tích kịch bản MSY đơn loài.
+> *"Khi tối đa hóa sản lượng MSY: Chỉ bắt cá vược thì quần thể vẫn an toàn ở mức 50%. Nhưng nếu chỉ bắt cá mòi với nỗ lực toán học $E \approx 4.6$, cá vược sẽ tuyệt chủng ngay khi $E > 1.02$! Do đó, chính sách bắt buộc phải giới hạn nỗ lực an toàn $E_{\mathrm{MSY}} = 0.5$."*
 
 ---
 
-### SLIDE 21: TỔNG KẾT CÁC KẾT QUẢ CHÍNH ĐẠT ĐƯỢC CỦA ĐỀ TÀI
+### SLIDE 21: KHAI THÁC KẾT HỢP HAI LOÀI & CHÍNH SÁCH KINH TẾ (MEY)
+* **Thời lượng:** ~15s
+* **Người nói:** Trần Đức Kiên
+* **Ý nghĩa kinh tế – sinh thái:** So sánh MSY và MEY.
+> *"Khai thác kết hợp cả hai loài đòi hỏi nỗ lực không vượt quá $1.01$ để bảo vệ cá vược. Đáng chú ý, chính sách kinh tế MEY cho nỗ lực tối ưu luôn nhỏ hơn MSY, chứng minh quản lý tối đa hóa lợi nhuận kinh tế lại thân thiện với bảo tồn sinh thái hơn so với chạy theo sản lượng."*
+
+---
+
+### SLIDE 22: CHÍNH SÁCH TỐI ĐA HÓA ĐỘ HỒI PHỤC SINH THÁI (RMY)
+* **Thời lượng:** ~15s
+* **Người nói:** Trần Đức Kiên
+* **Cảnh báo sinh thái:** Nguy cơ từ khai thác cá mồi.
+> *"Chính sách RMY hướng tới tối đa hóa tốc độ phục hồi hệ thống. Kết quả cho thấy: Bắt cá vược giúp tăng độ đàn hồi, nhưng bất kỳ nỗ lực đánh bắt cá mòi nào cũng làm suy giảm nghiêm ngặt độ đàn hồi sinh thái toàn vịnh. Muốn vịnh phục hồi nhanh nhất, nỗ lực bắt cá mòi phải bằng 0!"*
+
+---
+
+### SLIDE 23: PHÂN TÍCH ĐỘ NHẠY CỤC BỘ: PHƯƠNG PHÁP VI PHÂN TRỰC TIẾP (DDM)
+* **Thời lượng:** ~15s
+* **Người nói:** Trần Đức Kiên
+* **Phương pháp toán học & Ứng dụng:** Hệ 18 phương trình vi phân.
+> *"Chương 5 áp dụng phương pháp vi phân trực tiếp DDM, tích phân đồng thời hệ 18 phương trình vi phân để đánh giá độ nhạy của 2 loài theo 8 tham số. Đồ thị Hình 15 chứng minh các dao động độ nhạy đều tắt dần và hội tụ ổn định theo thời gian."*
+
+---
+
+### SLIDE 24: XẾP HẠNG ĐỘ NHẠY TƯƠNG ĐỐI & TÁC ĐỘNG BẤT ĐỐI XỨNG
+* **Thời lượng:** ~15s
+* **Người nói:** Trần Đức Kiên
+* **Phát hiện cốt lõi:** Tính bất đối xứng 178 lần.
+> *"Chuẩn độ nhạy tại Bảng 2 phát hiện tính chất bất đối xứng sâu sắc: Cá vược nhạy cảm với việc đánh bắt cá mòi gấp tới **178 lần** so với việc đánh bắt chính nó! Điều này chứng minh đanh thép rằng tư duy quản lý đơn loài cá mồi sẽ hủy diệt trực tiếp quần thể cá vược."*
+
+---
+
+### SLIDE 25: TỔNG KẾT CÁC KẾT QUẢ CHÍNH ĐẠT ĐƯỢC CỦA ĐỀ TÀI (CHƯƠNG 6)
 * **Thời lượng:** ~15s
 * **Người nói:** Trần Đức Kiên
 * **Tổng kết:** 4 đóng góp cốt lõi.
@@ -191,7 +223,7 @@
 
 ---
 
-### SLIDE 22: HÀM Ý CHÍNH SÁCH QUẢN LÝ CHO VỊNH CHESAPEAKE
+### SLIDE 26: HÀM Ý CHÍNH SÁCH QUẢN LÝ CHO VỊNH CHESAPEAKE
 * **Thời lượng:** ~15s
 * **Người nói:** Trần Đức Kiên
 * **Ứng dụng thực tiễn:** Khuyến nghị hành động cụ thể.
@@ -199,7 +231,7 @@
 
 ---
 
-### SLIDE 23: ĐÁNH GIÁ HẠN CHẾ & HƯỚNG PHÁT TRIỂN TIẾP THEO
+### SLIDE 27: ĐÁNH GIÁ HẠN CHẾ & HƯỚNG PHÁT TRIỂN TIẾP THEO
 * **Thời lượng:** ~15s
 * **Người nói:** Trần Đức Kiên
 * **Mở rộng nghiên cứu:** Hướng đi tương lai.
@@ -207,7 +239,7 @@
 
 ---
 
-### SLIDE 24: KẾT LUẬN & HỎI ĐÁP (Q&A)
+### SLIDE 28: KẾT LUẬN & HỎI ĐÁP (Q&A)
 * **Thời lượng:** ~15s
 * **Người nói:** Trần Đức Kiên (đại diện nhóm)
 * **Kết thúc:** Cảm ơn và mở màn Q&A.
@@ -219,6 +251,9 @@
 
 * **Hỏi: Tại sao lại đề xuất cắt giảm 50% hạn ngạch cá mòi dầu?**  
   $\rightarrow$ **Đáp:** Vì nếu đánh bắt cá mòi ở mức tối đa sản lượng đơn loài ($E \approx 1.02$), sinh khối cá mòi còn lại không đủ cung cấp thức ăn tối thiểu, khiến cá vược suy dinh dưỡng và tuyệt chủng. Cắt giảm 50% ($E = 0.5$) là ngưỡng tối ưu để giữ cá vược không bị suy giảm quá 50% quần thể.
+
+* **Hỏi: Tại sao cá vược lại nhạy với đánh bắt cá mòi gấp 178 lần so với đánh bắt chính nó?**  
+  $\rightarrow$ **Đáp:** Vì cá vược là loài săn mồi chuyên biệt phụ thuộc nặng nề vào sinh khối cá mòi để sinh tồn. Giảm nguồn thức ăn mồi vừa làm giảm khả năng sinh sản của cá vược, vừa gây suy dinh dưỡng kéo dài. Ngược lại, cá vược có mật độ tự nhiên thấp hơn và tỷ lệ tử vong tự nhiên lớn, nên nỗ lực đánh bắt trực tiếp có biên độ tác động sinh khối tương đối nhỏ hơn nhiều so với cú sốc đứt gãy nguồn cung thức ăn.
 
 * **Hỏi: Con số 13 năm hồi phục có ý nghĩa gì trong thực tế?**  
   $\rightarrow$ **Đáp:** Nghĩa là khả năng tự phục hồi của vịnh rất chậm trước các cú sốc môi trường. Các nhà quản lý không thể điều chỉnh tăng hạn ngạch tùy tiện theo từng năm mà phải có chính sách ổn định đa niên hạn.

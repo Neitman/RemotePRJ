@@ -53,14 +53,33 @@
 \contentsline {section}{\numberline {3.3}Điều kiện tồn tại các điểm cân bằng bionomic}{22}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Tác động của khai thác lên tính ổn định tiệm cận}{23}{section.3.4}%
 \contentsline {chapter}{\numberline {4}PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Chính sách Sản lượng bền vững tối đa (MSY)}{24}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Chính sách Sản lượng kinh tế tối đa (MEY)}{24}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Chính sách Sản lượng tối đa hóa độ đàn hồi (RMY)}{25}{section.4.3}%
-\contentsline {chapter}{\numberline {5}PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Phương pháp vi phân trực tiếp (Direct Differential Method)}{26}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Chỉ số độ nhạy tương đối và xếp hạng tham số}{26}{section.5.2}%
-\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{27}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Tổng kết các kết quả đạt được}{27}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Hàm ý chính sách quản lý cho vịnh Chesapeake}{27}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Đánh giá hạn chế và hướng phát triển tiếp theo}{28}{section.6.3}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{29}{section.6.3}%
+\contentsline {section}{\numberline {4.1}Chính sách sản lượng bền vững tối đa (MSY)}{24}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Khái niệm và điều kiện bền vững}{24}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{25}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Trường hợp 2: Chỉ khai thác con mồi}{25}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{26}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Nhận xét về MSY}{28}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Chính sách sản lượng kinh tế tối đa (MEY)}{28}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Hàm lợi nhuận ròng}{28}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{29}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Trường hợp 2: Chỉ khai thác con mồi}{30}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{30}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Nhận xét về MEY}{31}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Chính sách sản lượng tối đa hóa độ hồi phục sinh thái (RMY)}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Độ hồi phục và thời gian trở về cân bằng}{31}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{31}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Trường hợp 2: Chỉ khai thác con mồi}{31}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{32}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}So sánh các chính sách}{34}{subsection.4.3.5}%
+\contentsline {chapter}{\numberline {5}PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Phương pháp vi phân trực tiếp}{35}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Thiết lập hệ phương trình độ nhạy}{35}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Ví dụ: độ nhạy theo tham số $r$}{36}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Độ nhạy tương đối và chỉ số độ nhạy}{37}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Kết quả và diễn giải sinh học}{37}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Kết luận của phân tích độ nhạy}{39}{section.5.4}%
+\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Tổng kết các kết quả đạt được}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hàm ý chính sách quản lý cho vịnh Chesapeake}{41}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Đánh giá hạn chế và hướng phát triển tiếp theo}{42}{section.6.3}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{43}{section.6.3}%

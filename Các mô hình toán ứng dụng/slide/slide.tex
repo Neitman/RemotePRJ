@@ -855,55 +855,196 @@
 \end{frame}
 
 % ==============================================================================
-% PHẦN 5: CHÍNH SÁCH KHAI THÁC, TỔNG KẾT & KẾT LUẬN (CHƯƠNG 6)
+% PHẦN 4: PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ (CHƯƠNG 4)
 % ==============================================================================
-\section{Chính sách khai thác \& Khuyến nghị quản lý}
+\section{Chính sách khai thác nghề cá (Chương 4)}
 
 % ------------------------------------------------------------------------------
-% SLIDE 20: TỔNG QUAN 3 CHÍNH SÁCH KHAI THÁC (TÓM TẮT CHƯƠNG 3, 4, 5)
+% SLIDE 20: CHÍNH SÁCH SẢN LƯỢNG BỀN VỮNG TỐI ĐA (MSY)
 % ------------------------------------------------------------------------------
-\begin{frame}{Mở rộng Bionomic: So sánh 3 Chiến lược Khai thác}
-  \begin{block}{\textbf{Hệ phương trình kinh tế sinh thái (Bionomic Model)}}
-    \footnotesize
-    Tích hợp đánh bắt CPUE $h_i = q_i E_i u_i$ và hàm tô kinh tế $\pi(E_1, E_2) = (p_1 q_1 x - c_1)E_1 + (p_2 q_2 y - c_2)E_2$.
-  \end{block}
-
-  \vspace{0.1cm}
-
+\begin{frame}{Chính sách Sản lượng bền vững tối đa (MSY)}
   \begin{columns}[t]
-    \begin{column}{0.32\textwidth}
-      \begin{tcolorbox}[colback=white, colframe=OceanNavy, arc=1.5mm, title=\textbf{1. Chính sách MSY}]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\textbf{1. Chỉ khai thác cá vược ($E_1 = 0, E_2 = E$)}}
         \scriptsize
-        \textbf{Sản lượng tối đa}\\
-        $\max Y(E) = \sum q_i E_i u_i^*$\\
-        \textbf{Cảnh báo:} MSY đơn loài cá mòi dầu ($E_{Y_m} \approx 1.02$) khiến cá vược \textbf{tuyệt chủng}!\\
-        $\blacktriangleright$ \textbf{Khuyến nghị:} Cắt giảm 50\% hạn ngạch ($E_{\mathrm{MSY}} = 0.5$).
-      \end{tcolorbox}
+        $\bullet$ Sản lượng: $Y(E) = \frac{E(rd - ae - aq_2 E)}{ac + bd}$.\\
+        $\bullet$ Cực đại: $E_{\mathrm{MSY}} = \frac{rd - ae}{2aq_2} \approx 98.4$ ($q_2 = 1$).\\
+        $\bullet$ Quần thể bass ở mức MSY bằng \textbf{50\%} khi chưa đánh bắt $\implies$ Hai loài đồng tồn tại bền vững.
+      \end{block}
+      
+      \vspace{0.05cm}
+      \centering
+      \includegraphics[height=2.3cm, keepaspectratio]{pictures/ch4/fig8_msy_predator.png}\\[1pt]
+      {\tiny \textit{Hình 8: Chỉ khai thác bass ($E_2$)}}
     \end{column}
 
-    \begin{column}{0.32\textwidth}
-      \begin{tcolorbox}[colback=white, colframe=OceanBlue, arc=1.5mm, title=\textbf{2. Chính sách MEY}]
+    \begin{column}{0.49\textwidth}
+      \begin{alertblock}{\textbf{2. Chỉ khai thác cá mòi ($E_1 = E, E_2 = 0$)}}
         \scriptsize
-        \textbf{Lợi nhuận kinh tế tối đa}\\
-        $\max \pi(E) = R(E) - C(E)$\\
-        Tính chất: $E_{\mathrm{MEY}} < E_{\mathrm{MSY}}$ khi chỉ đánh bắt cá vược.\\
-        Thân thiện với sinh thái nhưng khó áp dụng đơn lẻ nếu giá và chi phí không cân xứng.
-      \end{tcolorbox}
+        $\bullet$ Cực đại toán học: $E_{Ym} = \frac{cr + be}{2cq_1} \approx 4.6$.\\
+        $\bullet$ \textbf{Cảnh báo tuyệt chủng:} Điều kiện $\frac{rd-ae}{cr+be} > \frac{d}{2c}$ không thỏa mãn; cá vược tuyệt chủng khi $E > 1.02$!\\
+        $\blacktriangleright$ \textbf{Khuyến nghị an toàn:} $E_{\mathrm{MSY}} = 0.5$ (giảm 50\% nỗ lực).
+      \end{alertblock}
+
+      \vspace{0.05cm}
+      \centering
+      \includegraphics[height=2.3cm, keepaspectratio]{pictures/ch4/fig9_msy_prey.png}\\[1pt]
+      {\tiny \textit{Hình 9: Chỉ khai thác menhaden ($E_1$)}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 21: KHAI THÁC KẾT HỢP HAI LOÀI & CHÍNH SÁCH MEY
+% ------------------------------------------------------------------------------
+\begin{frame}{Khai thác kết hợp hai loài \& Chính sách MEY}
+  \begin{columns}[t]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\textbf{Khai thác đồng thời 2 loài ($E_1 = E_2 = E$)}}
+        \scriptsize
+        $\bullet$ Tổng sản lượng: $Y(E) = E(q_1\hat{x} + q_2\hat{y})$.\\
+        $\bullet$ Ngưỡng an toàn để cá vược còn tồn tại:
+        $$E < \frac{rd - ae}{dq_1 + aq_2} \approx 1.0146 \quad (q_1=0.5, q_2=1)$$
+        $\bullet$ Cực đại toán học làm suy kiệt cá vược $\implies$ Khuyến nghị thận trọng: \textbf{$E_{\mathrm{MSY}} = 0.5$}.
+      \end{block}
+
+      \vspace{0.05cm}
+      \centering
+      \includegraphics[height=2.0cm, keepaspectratio]{pictures/ch4/fig10_msy_combined.png}\\[1pt]
+      {\tiny \textit{Hình 10: Khai thác đồng thời menhaden \& bass}}
     \end{column}
 
-    \begin{column}{0.32\textwidth}
-      \begin{tcolorbox}[colback=white, colframe=OceanTeal, arc=1.5mm, title=\textbf{3. Chính sách RMY}]
+    \begin{column}{0.49\textwidth}
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, title={\textbf{Sản lượng kinh tế tối đa (MEY)}}]
         \scriptsize
-        \textbf{Tối đa hóa độ đàn hồi}\\
-        $\max R(E) = -\mathrm{Re}(\lambda_m)$\\
-        Đánh bắt cá mòi làm $R$ \textbf{giảm đơn điệu} theo $E_1$. Bất kỳ đánh bắt cá mòi nào cũng làm suy giảm khả năng phục hồi của hệ thống!
+        $\bullet$ Hàm tô kinh tế: $\operatorname{Rent}(E) = \hat{p}Y(E) - \hat{c}E$.\\[2pt]
+        $\bullet$ \textbf{Chỉ bắt cá vược sọc:}
+        $$E_{\mathrm{MEY}} = E_{\mathrm{MSY}} - \frac{\hat{c}(ac+bd)}{2\hat{p}aq_2} < E_{\mathrm{MSY}}$$
+        $\implies$ \textbf{MEY thân thiện với bảo tồn hơn MSY!}\\[2pt]
+        $\bullet$ \textbf{Bắt cá mòi hoặc cả 2 loài:} Dưới giả định chuẩn ($\hat{p}=2\hat{c}$), $E_{\mathrm{MEY}} < 0$.\\
+        $\implies$ Thị trường tự do không tự điều tiết, cần chính sách hỗ trợ bảo tồn.
       \end{tcolorbox}
     \end{column}
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
-% SLIDE 21: TỔNG KẾT KẾT QUẢ ĐẠT ĐƯỢC (CHƯƠNG 6)
+% SLIDE 22: CHÍNH SÁCH TỐI ĐA HÓA ĐỘ HỒI PHỤC SINH THÁI (RMY)
+% ------------------------------------------------------------------------------
+\begin{frame}{Chính sách Tối đa hóa độ hồi phục sinh thái (RMY)}
+  \vspace*{-0.1cm}
+  \begin{block}{\textbf{Mục tiêu quản lý RMY}}
+    \scriptsize
+    Tối đa hóa tốc độ phục hồi hệ thống: $R(E) = 1/\tau = -\operatorname{Re}(\lambda_m)$. Khi 1 loài tuyệt chủng $\implies R = 0$ (đường đứt đoạn).
+  \end{block}
+
+  \vspace{0.08cm}
+  \begin{columns}[t]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\textbf{Chỉ khai thác cá vược ($E_2$)}}
+        \scriptsize
+        $\bullet$ $R$ tăng tuyến tính theo nỗ lực $\implies E_{\mathrm{RMY}} = 10$.\\
+        $\bullet$ Giảm cạnh tranh nội bộ cá vược, thúc đẩy tốc độ phục hồi trong miền khảo sát.
+      \end{block}
+      \vspace{0.04cm}
+      \centering
+      \includegraphics[height=2.3cm, keepaspectratio]{pictures/ch4/fig11_rmy_predator.png}\\[1pt]
+      {\tiny \textit{Hình 11: Sản lượng \& Resilience khi chỉ bắt bass}}
+    \end{column}
+
+    \begin{column}{0.49\textwidth}
+      \begin{alertblock}{\textbf{Chỉ bắt cá mòi ($E_1$) hoặc cả 2 loài}}
+        \scriptsize
+        $\bullet$ $R$ \textbf{giảm nghiêm ngặt} theo nỗ lực $\implies E_{\mathrm{RMY}} = 0$.\\
+        $\bullet$ \textbf{Cảnh báo:} Bất kỳ nỗ lực đánh bắt cá mòi nào cũng làm suy giảm độ đàn hồi sinh thái của toàn vịnh!
+      \end{alertblock}
+      \vspace{0.04cm}
+      \centering
+      \includegraphics[height=2.3cm, keepaspectratio]{pictures/ch4/fig12_rmy_prey.png}\\[1pt]
+      {\tiny \textit{Hình 12: Sản lượng \& Resilience khi chỉ bắt menhaden}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% PHẦN 5: PHÂN TÍCH ĐỘ NHẠY CỤC BỘ (CHƯƠNG 5)
+% ==============================================================================
+\section{Phân tích độ nhạy cục bộ (Chương 5)}
+
+% ------------------------------------------------------------------------------
+% SLIDE 23: PHƯƠNG PHÁP VI PHÂN TRỰC TIẾP (DDM)
+% ------------------------------------------------------------------------------
+\begin{frame}{Phân tích độ nhạy cục bộ: Phương pháp vi phân trực tiếp (DDM)}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Hệ 18 phương trình vi phân}}
+        \scriptsize
+        $\bullet$ Vector trạng thái: $u = (x, y)^\mathsf{T}$.\\
+        $\bullet$ Vector 8 tham số:\\
+        $p = (r, a, b, E_1, e, c, d, E_2)$.\\[2pt]
+        $\bullet$ PT vi phân đạo hàm độ nhạy:
+        $$\frac{d}{dt}\left(\frac{\partial u}{\partial p_j}\right) = J(u) S_j + F_j$$
+        $\bullet$ $J(u) = \partial f/\partial u$ (Jacobian hệ thống).\\
+        $\bullet$ $F_j = \partial f/\partial p_j$ (đạo hàm riêng theo tham số).\\
+        $\bullet$ Tích phân đồng thời 2 PT trạng thái + 16 PT độ nhạy theo thời gian (1995--2100).
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.51\textwidth}
+      \centering
+      \includegraphics[height=4.6cm, keepaspectratio]{pictures/ch5/fig15_sensitivity.png}\\[2pt]
+      {\tiny \textit{Hình 15: Tốc độ thay đổi của Bass \& Menhaden theo 8 tham số}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 24: KẾT QUẢ XẾP HẠNG ĐỘ NHẠY TƯƠNG ĐỐI & TÁC ĐỘNG BẤT ĐỐI XỨNG
+% ------------------------------------------------------------------------------
+\begin{frame}{Xếp hạng độ nhạy tương đối \& Tác động bất đối xứng}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \begin{block}{\textbf{Độ nhạy chuẩn hóa $\|\bar{S}_{ij}\|_2$ (Bảng 2 bài báo)}}
+        \scriptsize
+        \renewcommand{\arraystretch}{0.95}
+        \setlength{\tabcolsep}{3pt}
+        \begin{tabularx}{\linewidth}{lXlX}
+          \toprule
+          \multicolumn{2}{c}{\textbf{Menhaden (Mồi)}} & \multicolumn{2}{c}{\textbf{Bass (Săn mồi)}}\\
+          \midrule
+          $d$ & \textbf{0.9985} & $r$ & \textbf{1.0080}\\
+          $e$ & \textbf{0.8886} & $b$ & \textbf{1.0004}\\
+          $E_2$ & \textbf{$0.7328E_2q_2$} & $E_1$ & \textbf{$1.9647E_1q_1$}\\
+          $E_1$ & $0.2103E_1q_1$ & $E_2$ & $0.0110E_2q_2$\\
+          \bottomrule
+        \end{tabularx}
+      \end{block}
+
+      \vspace{0.08cm}
+      \begin{tcolorbox}[colback=red!5, colframe=red!75!black, arc=1.2mm, left=2mm, right=2mm, top=1mm, bottom=1mm]
+        \scriptsize
+        \textbf{Tính chất bất đối xứng sâu sắc:}\\[1pt]
+        $\blacktriangleright$ Bass nhạy với đánh bắt mòi ($1.965$) gấp \textbf{178 lần} đánh bắt chính bass ($0.011$)!\\
+        $\blacktriangleright$ Quản lý đơn loài cá mồi đe dọa trực tiếp cá vược.
+      \end{tcolorbox}
+    \end{column}
+
+    \begin{column}{0.44\textwidth}
+      \centering
+      \includegraphics[height=3.8cm, keepaspectratio]{pictures/ch5/fig16_parameter_perturbations.png}\\[1pt]
+      {\tiny \textit{Hình 16: Quần thể dưới nhiễu loạn tham số}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% PHẦN 6: TỔNG KẾT & KHUYẾN NGHỊ QUẢN LÝ (CHƯƠNG 6)
+% ==============================================================================
+\section{Tổng kết \& Khuyến nghị quản lý (Chương 6)}
+
+
+
+% ------------------------------------------------------------------------------
+% SLIDE 25: TỔNG KẾT KẾT QUẢ ĐẠT ĐƯỢC (CHƯƠNG 6)
 % ------------------------------------------------------------------------------
 \begin{frame}{Tổng kết các kết quả chính đạt được của đề tài (Chương 6)}
   \begin{columns}[t]
@@ -954,7 +1095,7 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-% SLIDE 22: HÀM Ý CHÍNH SÁCH QUẢN LÝ CHO VỊNH CHESAPEAKE (CHƯƠNG 6)
+% SLIDE 26: HÀM Ý CHÍNH SÁCH QUẢN LÝ CHO VỊNH CHESAPEAKE (CHƯƠNG 6)
 % ------------------------------------------------------------------------------
 \begin{frame}{Hàm ý chính sách quản lý cho Vịnh Chesapeake (Chương 6)}
   \begin{columns}[t]
@@ -996,7 +1137,7 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-% SLIDE 23: HẠN CHẾ & HƯỚNG PHÁT TRIỂN TIẾP THEO (CHƯƠNG 6)
+% SLIDE 27: HẠN CHẾ & HƯỚNG PHÁT TRIỂN TIẾP THEO (CHƯƠNG 6)
 % ------------------------------------------------------------------------------
 \begin{frame}{Đánh giá hạn chế \& Hướng phát triển tiếp theo (Chương 6)}
   \begin{columns}[t]
@@ -1025,7 +1166,7 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-% SLIDE 24: KẾT LUẬN & HỎI ĐÁP (Q&A)
+% SLIDE 28: KẾT LUẬN & HỎI ĐÁP (Q&A)
 % ------------------------------------------------------------------------------
 \begin{frame}[plain]
   \begin{tikzpicture}[remember picture, overlay]
