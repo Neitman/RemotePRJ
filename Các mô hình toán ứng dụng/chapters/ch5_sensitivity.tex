@@ -1,6 +1,30 @@
 \chapter{PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}
 \label{ch:sensitivity}
 
+% \textit{(Nội dung chi tiết của chương này sẽ được phát triển đầy đủ trong giai đoạn tiếp theo):}
+
+% \section{Phương pháp vi phân trực tiếp (Direct Differential Method)}
+% \begin{itemize}
+%     \item Thiết lập hệ phương trình vi phân mở rộng gồm 2 phương trình trạng thái và các phương trình cho véctơ độ nhạy:
+%     \begin{equation}
+%     \frac{d}{dt}\left(\frac{\partial u_i}{\partial p_j}\right) = J \cdot S_j + F_j,
+%     \end{equation}
+%     với véctơ 8 tham số $p = (r, a, b, E_1, e, c, d, E_2)$.
+%     \item Tính ma trận Jacobian $J(x, y)$ và ma trận đạo hàm riêng của vế phải $F$.
+% \end{itemize}
+
+% \section{Chỉ số độ nhạy tương đối và xếp hạng tham số}
+% \begin{itemize}
+%     \item Tính chuẩn Euclidean của ma trận độ nhạy tương đối:
+%     \begin{equation}
+%     \|\bar{S}_{ij}\|_2 = \sqrt{\sum_{k=1}^N \left(\frac{\partial u_i}{\partial p_j}(t_k) \frac{p_j}{u_i(t_k)}\right)^2}.
+%     \end{equation}
+%     \item \textbf{Đối với cá vược sọc:} Nhạy cảm nhất với tốc độ tăng trưởng nội tại của cá mòi dầu $r$ ($\|\cdot\|_2 \approx 1.0080$), hệ số săn bắt $b$ ($\approx 1.0004$) và nỗ lực đánh bắt cá mòi dầu $E_1$ ($1.9647 E_1/q_1$).
+%     \item \textbf{Đối với cá mòi dầu:} Nhạy cảm nhất với hiệu suất chuyển hóa dinh dưỡng $d$ ($\approx 0.9985$), tỷ lệ tử vong tự nhiên của kẻ săn mồi $e$ ($\approx 0.8886$) và nỗ lực đánh bắt cá vược sọc $E_2$ ($0.7328 E_2/q_2$).
+%     \item Thảo luận ý nghĩa thực nghiệm đối với các nhà quản lý sinh thái.
+% \end{itemize}
+
+
 Phân tích độ nhạy được sử dụng để đánh giá mức độ ảnh hưởng của những thay đổi nhỏ trong các tham số đến nghiệm của hệ phương trình vi phân theo thời gian. Trong nghiên cứu của Panayotova và cộng sự \cite{panayotova2023bioeconomic}, phương pháp vi phân trực tiếp (\textit{direct differential method}) được dùng để xác định các tham số mà quần thể Atlantic menhaden và striped bass nhạy cảm nhất. Kết quả này giúp giải thích vì sao một số thay đổi nhỏ trong tốc độ tăng trưởng hoặc cường độ khai thác có thể gây ra tác động khác nhau lên hai loài.
 
 \section{Phương pháp vi phân trực tiếp}
@@ -81,7 +105,7 @@ Trong công thức (37) được in trong bài báo, hai phần tử ứng với
 
 Với tám tham số, mỗi tham số tạo ra hai phương trình độ nhạy, tương ứng với \(x\) và \(y\). Vì thế, giải đồng thời hai phương trình trạng thái và 16 phương trình độ nhạy tương đương với giải một hệ gồm 18 phương trình vi phân. Cách tiếp cận này cho phép theo dõi trực tiếp \(\partial x/\partial p_j\) và \(\partial y/\partial p_j\) theo thời gian, thay vì chỉ so sánh các mô phỏng độc lập.
 
-\subsection{Ví dụ: độ nhạy theo tham số \texorpdfstring{$r$}{r}}
+\subsection{Ví dụ: độ nhạy theo tham số \(r\)}
 
 Để minh họa, xét độ nhạy của hai quần thể theo tốc độ tăng trưởng nội tại \(r\) của menhaden. Đặt
 \[
@@ -180,3 +204,4 @@ Các chỉ số liên quan đến khai thác cho thấy tác động không đ�
 \section{Kết luận của phân tích độ nhạy}
 
 Phân tích độ nhạy cho thấy phản ứng của hai loài không giống nhau. Quần thể bass nhạy nhất với tốc độ tăng trưởng của menhaden \(r\), trong khi menhaden nhạy nhất với hệ số \(d\) mô tả ảnh hưởng của tiêu thụ con mồi lên bass. Các tham số khai thác cũng thể hiện quan hệ tương tác: khai thác menhaden ảnh hưởng mạnh đến bass, còn khai thác bass có thể làm tăng trạng thái cân bằng của menhaden. Vì vậy, việc lựa chọn hạn ngạch và effort cần dựa trên tương tác giữa các loài, không chỉ dựa vào sản lượng của từng loài riêng lẻ \cite{panayotova2023bioeconomic}.
+

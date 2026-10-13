@@ -1,8 +1,9 @@
 \babel@toc {vietnamese}{}\relax 
 \beamer@sectionintoc {1}{Bối cảnh nghiên cứu \& Đặt vấn đề}{3}{0}{1}
 \beamer@sectionintoc {2}{Mô hình Lotka--Volterra mở rộng}{8}{0}{2}
-\beamer@sectionintoc {3}{Dữ liệu thực tế \& Khớp tham số}{11}{0}{3}
-\beamer@sectionintoc {4}{Phân tích độ đàn hồi sinh thái}{16}{0}{4}
-\beamer@sectionintoc {5}{Chính sách khai thác nghề cá (Chương 4)}{20}{0}{5}
-\beamer@sectionintoc {6}{Phân tích độ nhạy cục bộ (Chương 5)}{23}{0}{6}
-\beamer@sectionintoc {7}{Tổng kết \& Khuyến nghị quản lý (Chương 6)}{25}{0}{7}
+\beamer@sectionintoc {3}{Dữ liệu thực tế \& Khớp tham số}{10}{0}{3}
+\beamer@sectionintoc {4}{Phân tích độ đàn hồi sinh thái}{14}{0}{4}
+\beamer@sectionintoc {5}{Mô hình sinh học--kinh tế \& Phân tích ổn định }{17}{0}{5}
+\beamer@sectionintoc {6}{Chính sách khai thác nghề cá (Chương 4)}{23}{0}{6}
+\beamer@sectionintoc {7}{Phân tích độ nhạy cục bộ (Chương 5)}{27}{0}{7}
+\beamer@sectionintoc {8}{Tổng kết \& Khuyến nghị quản lý (Chương 6)}{30}{0}{8}

@@ -9,6 +9,14 @@
 % --- TOÁN HỌC VÀ KÝ HIỆU ---
 \usepackage{amsmath, amssymb, amsthm, mathtools}
 
+% Sửa lỗi đứt đoạn dấu suy ra/tương đương do xung đột fontspec với ký hiệu ghép TeX
+\renewcommand{\implies}{\ensuremath{\Rightarrow}}
+\renewcommand{\Longrightarrow}{\Rightarrow}
+\renewcommand{\impliedby}{\ensuremath{\Leftarrow}}
+\renewcommand{\Longleftarrow}{\Leftarrow}
+\renewcommand{\iff}{\ensuremath{\Leftrightarrow}}
+\renewcommand{\Longleftrightarrow}{\Leftrightarrow}
+
 % --- BẢNG BIỂU & HÌNH ẢNH ---
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -173,48 +181,53 @@
 % SLIDE 2: MỤC LỤC NỘI DUNG BÁO CÁO (AGENDA)
 % ------------------------------------------------------------------------------
 \begin{frame}{Mục lục nội dung báo cáo}
-  \vspace*{-0.1cm}
+  \vspace*{-0.15cm}
   \begin{columns}[t]
     \begin{column}{0.48\textwidth}
-      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{1. Bối cảnh nghiên cứu \& Đặt vấn đề}}]
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, boxrule=0.7pt, top=1.0mm, bottom=1.0mm, left=2mm, right=2mm, title={\textbf{1. Bối cảnh nghiên cứu \& Đặt vấn đề}}]
         \scriptsize
         $\blacktriangleright$ Hệ sinh thái Vịnh Chesapeake \& 2 loài cá\\
         $\blacktriangleright$ Khủng hoảng khai thác \& Chuyển dịch EBFM
       \end{tcolorbox}
       
-      \vspace{0.15cm}
+      \vspace{0.12cm}
       
-      \begin{tcolorbox}[colback=OceanLight, colframe=OceanBlue, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{2. Mô hình Lotka--Volterra mở rộng}}]
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanBlue, arc=1.5mm, boxrule=0.7pt, top=1.0mm, bottom=1.0mm, left=2mm, right=2mm, title={\textbf{2. Mô hình sinh thái \& Khớp tham số}}]
         \scriptsize
-        $\blacktriangleright$ Hệ phương trình vi phân phi tuyến 2 loài\\
-        $\blacktriangleright$ Ý nghĩa 6 tham số \& Cơ chế tự giới hạn
+        $\blacktriangleright$ Hệ Lotka--Volterra mở rộng \& Khớp NLS 23 năm\\
+        $\blacktriangleright$ Điểm dừng tự nhiên $Q$ \& Độ đàn hồi sinh thái
       \end{tcolorbox}
 
-      \vspace{0.15cm}
+      \vspace{0.12cm}
       
-      \begin{tcolorbox}[colback=OceanLight, colframe=OceanTeal, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{3. Dữ liệu thực tế \& Khớp tham số}}]
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanTeal, arc=1.5mm, boxrule=0.7pt, top=1.0mm, bottom=1.0mm, left=2mm, right=2mm, title={\textbf{3. Mô hình sinh học--kinh tế (Chương 3)}}]
         \scriptsize
-        $\blacktriangleright$ Chuỗi số liệu 23 năm \& Hồi quy phi tuyến NLS\\
-        $\blacktriangleright$ Đồ thị khớp (Fig. 1) \& Dự báo đến 2100 (Fig. 2)\\
-        $\blacktriangleright$ Điểm cân bằng dừng tự nhiên $Q(x^*, y^*)$
+        $\blacktriangleright$ Hàm CPUE, lợi nhuận $\pi$ \& Bị chặn trong $\Omega$\\
+        $\blacktriangleright$ 4 điểm cân bằng bionomic \& Thời gian hồi phục $\tau$
       \end{tcolorbox}
     \end{column}
 
     \begin{column}{0.48\textwidth}
-      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy!70!OceanBlue, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{4. Phân tích độ đàn hồi sinh học}}]
-        \scriptsize
-        $\blacktriangleright$ Ma trận Jacobian \& Tính ổn định tiệm cận\\
-        $\blacktriangleright$ Cặp giá trị riêng phức \& Thời gian phục hồi 13 năm\\
-        $\blacktriangleright$ Cảnh báo sức chống chịu mong manh của Vịnh
-      \end{tcolorbox}
-      
-      \vspace{0.25cm}
-
-      \begin{tcolorbox}[colback=OceanLight, colframe=CoralAlert!90!OceanNavy, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{5. Chính sách khai thác \& Khuyến nghị}}]
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy!75!OceanBlue, arc=1.5mm, boxrule=0.7pt, top=1.0mm, bottom=1.0mm, left=2mm, right=2mm, title={\textbf{4. Chính sách khai thác nghề cá}}]
         \scriptsize
         $\blacktriangleright$ Đánh giá 3 chính sách: MSY, MEY và RMY\\
-        $\blacktriangleright$ Bác bỏ MSY đơn loài $\implies$ Cắt giảm 50\% hạn ngạch\\
-        $\blacktriangleright$ Khuyến nghị quản lý EBFM cho Vịnh Chesapeake
+        $\blacktriangleright$ Động lực chuyển tiếp \& Nguy cơ đổ vỡ sinh thái
+      \end{tcolorbox}
+      
+      \vspace{0.12cm}
+
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanTeal!80!OceanNavy, arc=1.5mm, boxrule=0.7pt, top=1.0mm, bottom=1.0mm, left=2mm, right=2mm, title={\textbf{5. Phân tích độ nhạy cục bộ (DDM)}}]
+        \scriptsize
+        $\blacktriangleright$ Phương pháp đạo hàm trực tiếp DDM theo 6 tham số\\
+        $\blacktriangleright$ Bất đối xứng nhạy cảm giữa loài mồi và thú ăn thịt
+      \end{tcolorbox}
+
+      \vspace{0.12cm}
+
+      \begin{tcolorbox}[colback=OceanLight, colframe=CoralAlert!90!OceanNavy, arc=1.5mm, boxrule=0.7pt, top=1.0mm, bottom=1.0mm, left=2mm, right=2mm, title={\textbf{6. Tổng kết \& Khuyến nghị quản lý}}]
+        \scriptsize
+        $\blacktriangleright$ Bác bỏ MSY đơn loài $\implies$ Khuyến nghị EBFM\\
+        $\blacktriangleright$ 4 giải pháp quản lý nghề cá bền vững tại Vịnh
       \end{tcolorbox}
     \end{column}
   \end{columns}
@@ -278,29 +291,66 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-% SLIDE 4: ĐẶC ĐIỂM HAI LOÀI NGHIÊN CỨU
+% SLIDE 4A: CÁ MÒI DẦU (MENHADEN)
 % ------------------------------------------------------------------------------
-\begin{frame}{Hai loài sinh vật trọng yếu trong hệ sinh thái Vịnh}
-  \begin{columns}[t]
-    \begin{column}{0.49\textwidth}
-      \begin{block}{\textbf{Cá mòi dầu (\textit{Brevoortia tyrannus})}}
+\begin{frame}{Hai loài sinh vật trọng yếu: Cá mòi dầu (\textit{Brevoortia tyrannus})}
+  \begin{columns}[c]
+    \begin{column}{0.44\textwidth}
+      \begin{tcolorbox}[colback=white, colframe=OceanNavy!30, arc=2mm, boxrule=0.8pt, width=\linewidth, halign=center, top=1.5mm, bottom=1.5mm]
+        \includegraphics[width=\linewidth, height=3.6cm, keepaspectratio]{images/ca_moi_dau.jpg}\\[4pt]
+        {\footnotesize \textbf{Cá mòi dầu Đại Tây Dương} (\textit{Menhaden})}
+      \end{tcolorbox}
+
+      \vspace{0.1cm}
+      
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, top=1.2mm, bottom=1.2mm]
+        \scriptsize
+        $\blacktriangleright$ \textbf{Vai trò mô hình:} Quần thể con mồi $x(t)$\\
+        $\blacktriangleright$ \textbf{Biệt danh:} \textit{``Loài cá quan trọng nhất đại dương''}
+      \end{tcolorbox}
+    \end{column}
+
+    \begin{column}{0.54\textwidth}
+      \begin{block}{\textbf{Đặc điểm sinh học \& Vai trò sinh thái}}
         \footnotesize
-        \textbf{\color{OceanNavy}``Loài cá quan trọng nhất trong vịnh Chesapeake''}
         \begin{itemize}
-          \item \textbf{Sinh học:} Dài $\sim 45$ cm, bơi thành đàn khổng lồ tại tầng mặt ven bờ; sinh sản quanh năm.
+          \setlength{\itemsep}{3pt}
+          \item \textbf{Sinh học:} Dài $\sim 45\text{ cm}$, bơi thành đàn khổng lồ tại tầng mặt ven bờ; sinh sản quanh năm.
           \item \textbf{Ăn lọc (\textit{Filter-feeder}):} Tiêu thụ tảo phù du, \textbf{chống phú dưỡng hóa}, giữ sạch nước vịnh.
           \item \textbf{Nền tảng chuỗi thức ăn:} Thức ăn của cá vược sọc, cá xanh, cá mập cát, chim ưng biển (\textit{Osprey}).
           \item \textbf{Kinh tế:} Làm bột cá, mồi câu cua xanh, ép dầu giàu axit béo \textbf{Omega-3} (EPA/DHA) giá trị cao.
         \end{itemize}
       \end{block}
     \end{column}
+  \end{columns}
+\end{frame}
 
-    \begin{column}{0.49\textwidth}
-      \begin{exampleblock}{\textbf{Cá vược sọc (\textit{Morone saxatilis})}}
+% ------------------------------------------------------------------------------
+% SLIDE 4B: CÁ VƯỢC SỌC (STRIPED BASS)
+% ------------------------------------------------------------------------------
+\begin{frame}{Hai loài sinh vật trọng yếu: Cá vược sọc (\textit{Morone saxatilis})}
+  \begin{columns}[c]
+    \begin{column}{0.44\textwidth}
+      \begin{tcolorbox}[colback=white, colframe=OceanTeal!40, arc=2mm, boxrule=0.8pt, width=\linewidth, halign=center, top=1.5mm, bottom=1.5mm]
+        \includegraphics[width=\linewidth, height=3.6cm, keepaspectratio]{images/ca_vuoc_soc.jpg}\\[4pt]
+        {\footnotesize \textbf{Cá vược sọc} (\textit{Striped Bass / Rockfish})}
+      \end{tcolorbox}
+
+      \vspace{0.1cm}
+
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanTeal, arc=1.5mm, top=1.2mm, bottom=1.2mm]
+        \scriptsize
+        $\blacktriangleright$ \textbf{Vai trò mô hình:} Quần thể kẻ săn mồi $y(t)$\\
+        $\blacktriangleright$ \textbf{Biểu tượng:} \textit{Kẻ săn mồi đỉnh cao \& Chỉ thị sức khỏe vịnh}
+      \end{tcolorbox}
+    \end{column}
+
+    \begin{column}{0.54\textwidth}
+      \begin{exampleblock}{\textbf{Đặc điểm sinh học \& Tầm quan trọng nghề cá}}
         \footnotesize
-        \textbf{\color{OceanTeal}Kẻ săn mồi đỉnh cao -- Biểu tượng của Vịnh}
         \begin{itemize}
-          \item \textbf{Sinh học:} Kích thước lớn ($60 - 90$ cm, $5 - 15$ kg), di cư ngược dòng (\textit{anadromous}) vào sông đẻ trứng.
+          \setlength{\itemsep}{3pt}
+          \item \textbf{Sinh học:} Kích thước lớn ($60 - 90\text{ cm}$, $5 - 15\text{ kg}$), di cư ngược dòng (\textit{anadromous}) vào sông đẻ trứng.
           \item \textbf{Tập tính săn mồi:} Cá mòi dầu chiếm tỷ trọng áp đảo trong khẩu phần sinh khối và năng lượng trao đổi chất.
           \item \textbf{Nghề cá thương mại:} Cung cấp thịt cá thương phẩm cao cấp cho chuỗi nhà hàng trên toàn quốc.
           \item \textbf{Nghề cá giải trí:} Ngành câu cá thu hút hàng trăm nghìn cần thủ, đóng góp \textbf{hàng tỷ USD vào GDP}.
@@ -373,53 +423,10 @@
     \end{column}
   \end{columns}
 
-  \vspace{0.25cm}
-  \begin{center}
-    \large \textbf{Mục tiêu đề tài:} \textit{Sử dụng mô hình hóa toán học để định lượng chính xác sự tương tác sinh thái và đánh giá các chính sách khai thác bền vững.}
-  \end{center}
+  
 \end{frame}
 
-% ------------------------------------------------------------------------------
-% SLIDE 7: SƠ ĐỒ TƯƠNG TÁC SINH THÁI - KINH TẾ
-% ------------------------------------------------------------------------------
-\begin{frame}{Sơ đồ cấu trúc tương tác Sinh thái -- Kinh tế trong đề tài}
-  \centering
-  \begin{tikzpicture}[
-      node distance=1.6cm and 3.2cm,
-      block/.style={rectangle, draw=OceanNavy, fill=OceanLight, rounded corners=3mm, line width=1.2pt, inner sep=6pt, text width=4.2cm, align=center, font=\small\bfseries},
-      harvest/.style={rectangle, draw=CoralAlert, fill=CoralAlert!10, rounded corners=2mm, dashed, line width=1pt, inner sep=5pt, text width=3.6cm, align=center, font=\footnotesize},
-      market/.style={ellipse, draw=OceanTeal, fill=OceanTeal!12, line width=1.2pt, inner sep=5pt, text width=4.5cm, align=center, font=\small\bfseries},
-      eco/.style={->, >=stealth, line width=1.4pt, color=OceanNavy},
-      harv/.style={->, >=stealth, line width=1.2pt, color=CoralAlert, dashed},
-      flow/.style={->, >=stealth, line width=1.2pt, color=OceanTeal}
-  ]
 
-  % Khối sinh thái
-  \node[block] (prey) {Cá mòi dầu (\textit{Menhaden})\\$x(t)$ (Con mồi)};
-  \node[block, right=of prey] (pred) {Cá vược sọc (\textit{Bass})\\$y(t)$ (Săn mồi)};
-
-  % Tự giới hạn
-  \path[eco] (prey) edge [loop above] node[above, font=\scriptsize] {Tự giới hạn $-ax^2$} (prey);
-  \path[eco] (pred) edge [loop above] node[above, font=\scriptsize] {Tự giới hạn $-cy^2$} (pred);
-
-  % Tương tác săn bắt
-  \draw[eco] (prey) -- node[above, font=\scriptsize, align=center] {Cung cấp thức ăn $(+dxy)$\\Bị săn bắt tiêu thụ $(-bxy)$} (pred);
-
-  % Hoạt động khai thác
-  \node[harvest, below=1.1cm of prey] (h1) {Khai thác cá mòi dầu\\$h_1 = q_1 E_1 x$};
-  \node[harvest, below=1.1cm of pred] (h2) {Khai thác cá vược sọc\\$h_2 = q_2 E_2 y$};
-
-  \draw[harv] (h1) -- node[right, font=\tiny] {Đánh bắt} (prey);
-  \draw[harv] (h2) -- node[right, font=\tiny] {Đánh bắt} (pred);
-
-  % Thị trường kinh tế
-  \node[market, below=0.9cm of $(h1)!0.5!(h2)$] (market) {Thị trường \& Tô kinh tế\\Hàm lợi nhuận ròng $\pi(E_1, E_2)$\\$\sum (p_i q_i u_i - c_i) E_i$};
-
-  \draw[flow] (h1) |- node[below, pos=0.8, font=\scriptsize] {Doanh thu \& Chi phí} (market);
-  \draw[flow] (h2) |- node[below, pos=0.8, font=\scriptsize] {Doanh thu \& Chi phí} (market);
-
-  \end{tikzpicture}
-\end{frame}
 
 % ==============================================================================
 % PHẦN 2: MÔ HÌNH TOÁN HỌC LOTKA--VOLTERRA TỔNG QUÁT (CHƯƠNG 2)
@@ -427,71 +434,45 @@
 \section{Mô hình Lotka--Volterra mở rộng}
 
 % ------------------------------------------------------------------------------
-% SLIDE 8: HỆ PHƯƠNG TRÌNH VI PHÂN LOTKA--VOLTERRA MỞ RỘNG
+% SLIDE 8: HỆ PHƯƠNG TRÌNH & Ý NGHĨA THAM SỐ LOTKA--VOLTERRA MỞ RỘNG
 % ------------------------------------------------------------------------------
-\begin{frame}{Hệ phương trình vi phân Lotka--Volterra tổng quát}
+\begin{frame}{Hệ phương trình vi phân Lotka--Volterra \& Ý nghĩa tham số}
+  \vspace*{-0.2cm}
   \begin{block}{\textbf{Mô hình Lotka--Volterra mở rộng 2 loài (Panayotova et al., 2023)}}
-    Tốc độ biến thiên sinh khối con mồi $x(t)$ và kẻ săn mồi $y(t)$ được mô tả qua hệ phương trình vi phân:
+    \footnotesize
+    Tốc độ biến thiên sinh khối con mồi $x(t)$ (cá mòi dầu) và kẻ săn mồi $y(t)$ (cá vược sọc):
     \begin{equation}
     \label{eq:lv_system}
     \left\{
     \begin{aligned}
-    \frac{dx}{dt} &= x(r - ax - by), \\
-    \frac{dy}{dt} &= y(-e - cy + dx).
+    \frac{dx}{dt} &= x(\mathbf{r} - \mathbf{a}x - \mathbf{b}y) \\
+    \frac{dy}{dt} &= y(-\mathbf{e} - \mathbf{c}y + \mathbf{d}x)
     \end{aligned}
     \right.
     \end{equation}
   \end{block}
 
-  \vspace{0.15cm}
+  \vspace{0.05cm}
 
-  \begin{columns}[t]
-    \begin{column}{0.49\textwidth}
-      \begin{block}{\textbf{Khắc phục hạn chế mô hình cổ điển}}
-        \footnotesize
-        \begin{itemize}
-          \item Mô hình cổ điển (không có $-ax^2, -cy^2$) dự báo dao động điều hòa đóng không tắt (kém thực tế).
-          \item Số hạng \textbf{tự giới hạn logistic} ($-ax^2$ và $-cy^2$) phản ánh sức chứa hữu hạn của vịnh, tạo ra sự ổn định tiệm cận.
-        \end{itemize}
-      \end{block}
-    \end{column}
-
-    \begin{column}{0.49\textwidth}
-      \begin{exampleblock}{\textbf{Ý nghĩa động lực học riêng lẻ}}
-        \footnotesize
-        \begin{itemize}
-          \item Khi vắng kẻ săn mồi ($y=0$): $\dot{x} = x(r - ax)$, quần thể cá mòi dầu hội tụ về sức chứa $K_x = r/a$.
-          \item Khi vắng con mồi ($x=0$): $\dot{y} = y(-e - cy) \le -ey$, quần thể cá vược suy giảm theo hàm mũ về 0.
-        \end{itemize}
-      \end{exampleblock}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-% ------------------------------------------------------------------------------
-% SLIDE 9: Ý NGHĨA SINH HỌC CỦA CÁC THAM SỐ
-% ------------------------------------------------------------------------------
-\begin{frame}{Ý nghĩa sinh học của 6 tham số mô hình}
   \begin{center}
-  \footnotesize
-  \begin{tabularx}{0.98\textwidth}{c l c X}
+  \scriptsize
+  \renewcommand{\arraystretch}{1.10}
+  \begin{tabularx}{\textwidth}{c l X}
     \toprule
-    \textbf{Tham số} & \textbf{Ý nghĩa sinh học} & \textbf{Đơn vị thứ nguyên} & \textbf{Vai trò trong hệ sinh thái} \\
+    \textbf{Tham số} & \textbf{Ý nghĩa sinh học} & \textbf{Vai trò trong hệ sinh thái} \\
     \midrule
-    $r > 0$ & Tốc độ tăng trưởng nội tại con mồi & $\text{năm}^{-1}$ & Khả năng sinh sản tối đa của cá mòi dầu khi mật độ thấp \\
-    $a > 0$ & Hệ số tự giới hạn cá mòi dầu & $\text{năm}^{-1} \cdot (\text{tỷ con})^{-1}$ & Cạnh tranh nội bộ về thức ăn (tảo phù du) và không gian ven bờ \\
-    $b > 0$ & Hệ số săn bắt của cá vược sọc & $\text{năm}^{-1} \cdot (\text{tỷ con})^{-1}$ & Tỷ lệ cá mòi dầu bị tiêu thụ trên mỗi đơn vị gặp gỡ giữa 2 loài \\
-    $e > 0$ & Tỷ lệ tử vong tự nhiên kẻ săn mồi & $\text{năm}^{-1}$ & Mức chết tự nhiên của cá vược sọc khi hoàn toàn thiếu thức ăn \\
-    $c > 0$ & Hệ số tự giới hạn cá vược sọc & $\text{năm}^{-1} \cdot (\text{tỷ con})^{-1}$ & Cạnh tranh bãi đẻ nước ngọt \& mật độ quần thể nội bộ loài \\
-    $d > 0$ & Hiệu quả chuyển đổi sinh khối & $\text{năm}^{-1} \cdot (\text{tỷ con})^{-1}$ & Năng lượng tiêu thụ cá mòi dầu chuyển hóa thành cá thể mới \\
+    \multicolumn{3}{l}{\textbf{\color{OceanNavy}$\blacktriangleright$ Tham số thuộc phương trình con mồi $x(t)$ (Cá mòi dầu):}} \\
+    $r > 0$ & Tốc độ tăng trưởng nội tại & Khả năng sinh sản tối đa của cá mòi dầu khi mật độ thấp \\
+    $a > 0$ & Hệ số tự giới hạn logistic & Cạnh tranh nội bộ về thức ăn (tảo phù du) và không gian ven bờ \\
+    $b > 0$ & Hệ số săn bắt của cá vược sọc & Tỷ lệ cá mòi dầu bị tiêu thụ trên mỗi đơn vị gặp gỡ giữa 2 loài \\
+    \midrule
+    \multicolumn{3}{l}{\textbf{\color{OceanNavy}$\blacktriangleright$ Tham số thuộc phương trình kẻ săn mồi $y(t)$ (Cá vược sọc):}} \\
+    $e > 0$ & Tỷ lệ tử vong tự nhiên & Mức chết tự nhiên của cá vược sọc khi hoàn toàn thiếu thức ăn \\
+    $c > 0$ & Hệ số tự giới hạn mật độ & Cạnh tranh bãi đẻ nước ngọt và mật độ quần thể nội bộ loài \\
+    $d > 0$ & Hiệu quả chuyển hóa sinh khối & Năng lượng tiêu thụ cá mòi dầu chuyển hóa thành cá thể mới \\
     \bottomrule
   \end{tabularx}
   \end{center}
-
-  \vspace{0.1cm}
-  \begin{alertblock}{\footnotesize \textbf{Quy ước chuẩn hóa thứ nguyên:}}
-    Sinh khối $x(t)$ và $y(t)$ được chuẩn hóa theo đơn vị \textbf{tỷ cá thể} ($10^9$ con). Do đó các hệ số tương tác $a, b, c, d$ mang thứ nguyên $\text{năm}^{-1} \cdot (\text{tỷ con})^{-1}$.
-  \end{alertblock}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -516,9 +497,9 @@
       \begin{exampleblock}{\textbf{Ưu thế vượt trội của mô hình}}
         \footnotesize
         \begin{itemize}
-          \item \textbf{Khả thi giải tích (\textit{Analytically tractable}):} Số lượng tham số vừa đủ để giải tích tường minh các điểm cân bằng, Jacobi và tính ổn định.
-          \item \textbf{Tái hiện dao động trễ pha (\textit{Phase-shift}):} Mô tả chính xác quy luật dao động bùng nổ -- suy giảm tự nhiên giữa 2 loài.
-          \item \textbf{Tránh hiện tượng quá khớp (\textit{Overfitting}):} Quy mô 6 tham số là tối ưu để khớp tin cậy với chuỗi dữ liệu 23 năm thực tế.
+          \item \textit{Analytically tractable}: Số lượng tham số vừa đủ để giải tích tường minh các điểm cân bằng, Jacobi và tính ổn định.
+          \item \textit{Phase-shift}: Mô tả chính xác quy luật dao động bùng nổ -- suy giảm tự nhiên giữa 2 loài.
+          \item \textit{Overfitting}: Quy mô 6 tham số là tối ưu để khớp tin cậy với chuỗi dữ liệu 23 năm thực tế.
         \end{itemize}
       \end{exampleblock}
     \end{column}
@@ -531,72 +512,49 @@
 \section{Dữ liệu thực tế \& Khớp tham số}
 
 % ------------------------------------------------------------------------------
-% SLIDE 11: DỮ LIỆU THỰC TẾ & PHƯƠNG PHÁP NLS
+% SLIDE 11: NGUỒN DỮ LIỆU THỰC NGHIỆM & BỘ THAM SỐ TỐI ƯU
 % ------------------------------------------------------------------------------
-\begin{frame}{Nguồn dữ liệu thực nghiệm \& Phương pháp bình phương tối thiểu (NLS)}
-  \begin{columns}[t]
-    \begin{column}{0.50\textwidth}
+\begin{frame}{Nguồn dữ liệu thực nghiệm \& Bộ tham số tối ưu}
+  \begin{columns}[c]
+    \begin{column}{0.46\textwidth}
       \begin{block}{\textbf{Nguồn dữ liệu thực tế (ASMFC)}}
         \footnotesize
         \begin{itemize}
-          \item Chuỗi số liệu ước lượng độ phong phú cá thể (\textit{abundance}) trong \textbf{23 năm (1995 -- 2017)}.
+          \setlength{\itemsep}{3pt}
+          \item Chuỗi số liệu độ phong phú cá thể (\textit{abundance}) trong \textbf{23 năm (1995 -- 2017)}.
           \item \textbf{Cá mòi dầu:} SEDAR 69 -- Benchmark Stock Assessment (2019).
           \item \textbf{Cá vược sọc:} 2022 ASMFC Stock Assessment Update Report.
           \item Chuẩn hóa chia cho $10^9$ (\textbf{tỷ con}) để tối ưu tính toán số học.
         \end{itemize}
       \end{block}
-    \end{column}
 
-    \begin{column}{0.48\textwidth}
-      \begin{block}{\textbf{Phương pháp hồi quy phi tuyến (NLS)}}
-        \footnotesize
-        Tìm $\theta = (r, a, b, e, c, d)^T \in (0, 10]^6$ cực tiểu hóa hàm mục tiêu sai số bình phương:
-        \begin{equation}
-        \min_{\theta} \sum_{k=1}^{23} \left[ \left(x(t_k; \theta) - x_k^{\mathrm{obs}}\right)^2 + \left(y(t_k; \theta) - y_k^{\mathrm{obs}}\right)^2 \right]
-        \end{equation}
-        \begin{itemize}
-          \item Ràng buộc $\theta_i \le 10$ giải quyết bài toán quá xác định (\textit{over-determined}).
-          \item Giá trị $r = 0.513$ trùng khớp ước lượng sinh học độc lập của Drew et al. (2021).
-        \end{itemize}
-      \end{block}
-    \end{column}
-  \end{columns}
-\end{frame}
+      \vspace{0.15cm}
 
-% ------------------------------------------------------------------------------
-% SLIDE 12: BẢNG THAM SỐ TỐI ƯU & SAI SỐ KHỚP
-% ------------------------------------------------------------------------------
-\begin{frame}{Bộ tham số tối ưu \& Đánh giá độ chính xác}
-  \begin{columns}[c]
-    \begin{column}{0.58\textwidth}
-      \centering
-      \footnotesize
-      \begin{tabular}{c l c}
-        \toprule
-        \textbf{Tham số} & \textbf{Ý nghĩa sinh học} & \textbf{Giá trị tối ưu} \\
-        \midrule
-        $r$ & Tăng trưởng cá mòi dầu & $\mathbf{0.513}\ \text{năm}^{-1}$ \\
-        $a$ & Tự giới hạn cá mòi dầu & $\mathbf{0.026}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
-        $b$ & Hệ số săn bắt cá mòi dầu & $\mathbf{1.765}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
-        $e$ & Tử vong tự nhiên cá vược & $\mathbf{1.213}\ \text{năm}^{-1}$ \\
-        $c$ & Tự giới hạn cá vược sọc & $\mathbf{0.520}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
-        $d$ & Hiệu quả chuyển hóa dinh dưỡng & $\mathbf{9.999}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
-        \bottomrule
-      \end{tabular}
-    \end{column}
-
-    \begin{column}{0.40\textwidth}
-      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=2mm, title=\textbf{Sai số chuẩn phần dư ($S$)}]
-        \footnotesize
-        \begin{equation*}
-        S = \sqrt{\frac{1}{2N - p} \sum_{k=1}^N \Delta_k^2} = \mathbf{0.11}
-        \end{equation*}
-        với $2N = 46$ điểm quan sát, $p = 6$ tham số.
-        
-        \vspace{0.15cm}
-        \textbf{Ý nghĩa:}\\
-        Sai lệch trung bình giữa mô hình và thực tế chỉ là \textbf{0.11 tỷ cá thể} ($110$ triệu con). Mô hình có độ khớp xuất sắc với dữ liệu lịch sử vịnh!
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, top=1.2mm, bottom=1.2mm]
+        \scriptsize
+        $\blacktriangleright$ \textbf{Phương pháp ước lượng:} Hồi quy phi tuyến bình phương tối thiểu (NLS).\\
+        $\blacktriangleright$ \textbf{Độ chính xác:} Sai số chuẩn phần dư $S = \mathbf{0.11}$ tỷ con (mô hình khớp xuất sắc dữ liệu thực tế).
       \end{tcolorbox}
+    \end{column}
+
+    \begin{column}{0.52\textwidth}
+      \begin{block}{\textbf{Bộ tham số tối ưu từ khớp NLS}}
+        \centering
+        \footnotesize
+        \renewcommand{\arraystretch}{1.12}
+        \begin{tabular}{c l c}
+          \toprule
+          \textbf{Tham số} & \textbf{Ý nghĩa sinh học} & \textbf{Giá trị tối ưu} \\
+          \midrule
+          $r$ & Tăng trưởng cá mòi dầu & $\mathbf{0.513}\ \text{năm}^{-1}$ \\
+          $a$ & Tự giới hạn cá mòi dầu & $\mathbf{0.026}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
+          $b$ & Hệ số săn bắt cá mòi dầu & $\mathbf{1.765}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
+          $e$ & Tử vong tự nhiên cá vược & $\mathbf{1.213}\ \text{năm}^{-1}$ \\
+          $c$ & Tự giới hạn cá vược sọc & $\mathbf{0.520}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
+          $d$ & Chuyển hóa dinh dưỡng & $\mathbf{9.999}\ \text{năm}^{-1}\cdot\text{tỷ}^{-1}$ \\
+          \bottomrule
+        \end{tabular}
+      \end{block}
     \end{column}
   \end{columns}
 \end{frame}
@@ -639,10 +597,10 @@
       \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=2mm, title=\textbf{Đặc điểm quỹ đạo dài hạn}]
         \footnotesize
         \begin{itemize}
-          \item \textbf{Dao động tắt dần (\textit{Damped}):} Biên độ dao động giảm dần theo thời gian nhờ hiệu ứng tự giới hạn logistic.
-          \item \textbf{Hội tụ sau năm 2050:} Quỹ đạo hai quần thể tiến về trạng thái cân bằng dừng tự nhiên (\textit{steady-state}):
+          \item  Biên độ dao động giảm dần theo thời gian.
+          \item  Quỹ đạo hai quần thể tiến về trạng thái cân bằng dừng tự nhiên
           $$Q = (x^*, y^*)$$
-          \item Không xuất hiện chu trình giới hạn (\textit{limit cycle}) hay hỗn loạn (\textit{chaos}).
+          \item Không xuất hiện tuần hoàn hay hỗn loạn.
         \end{itemize}
       \end{tcolorbox}
     \end{column}
@@ -652,10 +610,10 @@
 % ------------------------------------------------------------------------------
 % SLIDE 15: ĐIỂM CÂN BẰNG DỪNG TỰ NHIÊN
 % ------------------------------------------------------------------------------
-\begin{frame}{Tính toán Trạng thái cân bằng dừng đồng tồn tại $Q(x^*, y^*)$}
-  \begin{block}{\textbf{Thiết lập hệ phương trình cân bằng dừng}}
+\begin{frame}{Tính toán trạng thái cân bằng }
+  \begin{block}{\textbf{Thiết lập hệ phương trình ở trạng thái cân bằng}}
     \footnotesize
-    Tại điểm cân bằng đồng tồn tại tự nhiên ($x^* > 0, y^* > 0$), đạo hàm theo thời gian bằng 0:
+    Tại điểm cân bằng  ($x^*, y^*$), đạo hàm theo thời gian bằng 0:
     \begin{equation}
     \left\{
     \begin{aligned}
@@ -718,13 +676,13 @@
     \begin{column}{0.50\textwidth}
       \begin{block}{\textbf{Định nghĩa theo Pimm \& Lawton (1978)}}
         \footnotesize
-        \textbf{Độ đàn hồi sinh học ($R$)} là tốc độ mà một hệ sinh thái tự ổn định và phục hồi trở về trạng thái cân bằng bền vững ban đầu sau một cú sốc hoặc nhiễu loạn môi trường đột ngột.
+        \textbf{Độ đàn hồi sinh học ($R$)} là tốc độ mà một hệ sinh thái tự ổn định và phục hồi trở về trạng thái cân bằng.
         \begin{equation}
         \tau = \frac{-1}{\mathrm{Re}(\lambda_m)} \quad \Longleftrightarrow \quad R = \frac{1}{\tau} = -\mathrm{Re}(\lambda_m)
         \end{equation}
         \begin{itemize}
-          \item $\lambda_m$: Giá trị riêng chủ đạo (\textit{leading eigenvalue}) có phần thực lớn nhất (gần trục ảo nhất) của ma trận Jacobian.
-          \item $\tau$: Thời gian hồi phục (\textit{return time to equilibrium}).
+          \item $\lambda_m$: Giá trị riêng có phần thực lớn nhất của ma trận Jacobian.
+          \item $\tau$: Thời gian hồi phục .
         \end{itemize}
       \end{block}
     \end{column}
@@ -820,42 +778,235 @@
   \end{columns}
 \end{frame}
 
-% ------------------------------------------------------------------------------
-% SLIDE 19: Ý NGHĨA SINH THÁI CỦA THỜI GIAN 13 NĂM
-% ------------------------------------------------------------------------------
-\begin{frame}{Ý nghĩa sinh thái sâu sắc của chỉ số độ đàn hồi}
-  \begin{center}
-    \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=2mm, width=0.96\textwidth, title={\textbf{Thông điệp cảnh báo từ chu kỳ hồi phục 13 năm}}]
-      \footnotesize
-      Nếu hệ sinh thái tự nhiên của Vịnh Chesapeake chịu một cú sốc môi trường lớn (rét kỷ lục, tràn dầu, ô nhiễm nguồn nước hoặc dịch bệnh), hệ thống phải mất \textbf{khoảng 13 năm} để các dao động số lượng dập tắt và tự phục hồi về trạng thái cân bằng tự nhiên!
-    \end{tcolorbox}
-  \end{center}
 
-  \begin{columns}[t]
+% ==============================================================================
+% PHẦN 4: MÔ HÌNH SINH HỌC--KINH TẾ VÀ PHÂN TÍCH ỔN ĐỊNH (CHƯƠNG 3)
+% ==============================================================================
+\section{Mô hình sinh học--kinh tế \& Phân tích ổn định }
+
+% ------------------------------------------------------------------------------
+% SLIDE 20: MÔ HÌNH SINH HỌC--KINH TẾ MỞ RỘNG (CHƯƠNG 3)
+% ------------------------------------------------------------------------------
+\begin{frame}{Mô hình sinh học--kinh tế mở rộng }
+  \begin{columns}[c]
     \begin{column}{0.48\textwidth}
-      \begin{alertblock}{\textbf{Độ nhạy cảm cao \& Hồi phục chậm}}
+      \begin{block}{\textbf{Hệ phương trình vi phân có khai thác}}
         \footnotesize
-        \begin{itemize}
-          \item 13 năm là khoảng thời gian rất dài đối với chu kỳ quản lý kinh tế thủy sản.
-          \item Cho thấy sức chống chịu tự nhiên của Vịnh tương đối chậm và mong manh trước các cú sốc.
-        \end{itemize}
-      \end{alertblock}
+        Mở rộng mô hình Lotka--Volterra bằng cách bổ sung hoạt động khai thác của con người:
+        \begin{equation}
+        \label{eq:ch3_bionomic_system}
+        \left\{
+        \begin{aligned}
+        \frac{dx}{dt} &= x(r - ax - by) - q_1 E_1 x, \\
+        \frac{dy}{dt} &= y(-e - cy + dx) - q_2 E_2 y.
+        \end{aligned}
+        \right.
+        \end{equation}
+        $\bullet$ \textbf{Giả thiết CPUE} (\textit{Catch Per Unit Effort}):\\
+        Sản lượng đánh bắt trên một đơn vị thời gian:
+        $$h_1 = q_1 E_1 x, \qquad h_2 = q_2 E_2 y$$
+      \end{block}
     \end{column}
 
-    \begin{column}{0.48\textwidth}
-      \begin{block}{\textbf{Cảnh báo chính sách khai thác}}
+    \begin{column}{0.50\textwidth}
+      \begin{block}{\textbf{Hàm lợi nhuận kinh tế ròng ($\pi$)}}
         \footnotesize
-        \begin{itemize}
-          \item Đánh bắt quá mức dễ đẩy hệ sinh thái vượt qua \textbf{ngưỡng chịu đựng sinh học} (\textit{tipping point}).
-          \item Cần duy trì trữ lượng dự phòng đệm an toàn lớn cho đàn cá mòi dầu.
-        \end{itemize}
+        Tổng lợi nhuận từ hoạt động khai thác hải sản:
+        $$\pi(E_1, E_2) = (p_1 q_1 x - c_1)E_1 + (p_2 q_2 y - c_2)E_2$$
+        $\bullet$ Doanh thu: $p_1 q_1 E_1 x + p_2 q_2 E_2 y$\\
+        $\bullet$ Chi phí: $c_1 E_1 + c_2 E_2$
       \end{block}
+
+      \vspace{0.1cm}
+
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, top=1.2mm, bottom=1.2mm, title={\textbf{Ý nghĩa các tham số kinh tế}}]
+        \footnotesize
+        $\bullet$ $E_1, E_2$: Cường độ khai thác Menhaden và Bass.\\
+        $\bullet$ $q_1, q_2$: Hệ số khả năng đánh bắt (\textit{catchability}).\\
+        $\bullet$ $p_1, p_2$: Giá bán trên một đơn vị sinh khối.\\
+        $\bullet$ $c_1, c_2$: Chi phí trên đơn vị nỗ lực khai thác.
+      \end{tcolorbox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 21: TÍNH CHẤT ĐỊNH TÍNH CỦA NGHIỆM: TÍNH KHÔNG ÂM & BỊ CHẶN
+% ------------------------------------------------------------------------------
+\begin{frame}{Tính chất định tính của nghiệm: Tính không âm \& Bị chặn}
+  \vspace*{-0.25cm}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{1. Tính không âm của quần thể ($x, y \ge 0$)}}
+        \footnotesize
+        Tích phân hệ vi phân cho nghiệm dạng mũ ($x_0, y_0 > 0$):\\
+        $\bullet$ $x(t) = x(0)\exp\left(\int_0^t [r - ax - by - q_1 E_1]\,ds\right) \ge 0$\\
+        $\bullet$ $y(t) = y(0)\exp\left(\int_0^t [-e - cy + dx - q_2 E_2]\,ds\right) \ge 0$\\[1pt]
+        $\implies$ Quần thể luôn dương trong miền $\mathbb{R}^2_+$ với mọi $t \ge 0$.
+      \end{block}
+
+      \vspace{0.05cm}
+
+      \begin{block}{\textbf{2. Tính bị chặn toàn cục \& Miền $\Omega$}}
+        \footnotesize
+        $\bullet$ Đặt $w(t) = x(t) + \frac{y(t)}{\gamma}$ với $\gamma = \frac{d}{b}$.\\
+        $\bullet$ Bất đẳng thức: $\frac{dw}{dt} + \delta w \le \frac{r^2}{4a}$ ($\delta = \min\{q_1 E_1, q_2 E_2, e\}$).\\
+        $\bullet$ Lấy tích phân $\implies \limsup_{t \to \infty} w(t) \le L = \frac{r^2}{4a\delta}$.\\[1pt]
+        $\implies$ Quần thể bị chặn trong miền bất biến:
+        $$\Omega = \left\{ (x, y) \in \mathbb{R}^2_+ \;\middle|\; x \le \frac{r}{a}, \; x + \frac{y}{\gamma} \le L \right\}$$
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.50\textwidth}
+      \centering
+      \includegraphics[width=\linewidth, height=4.1cm, keepaspectratio]{pictures/ch3/region_omega.png}\\[3pt]
+      {\scriptsize \textit{Hình 3.1: Minh họa miền bất biến sinh thái $\Omega$ của hệ thống}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 22: XÁC ĐỊNH CÁC ĐIỂM CÂN BẰNG SINH HỌC--KINH TẾ
+% ------------------------------------------------------------------------------
+\begin{frame}{Xác định các điểm cân bằng sinh học--kinh tế}
+  \vspace*{-0.25cm}
+  \begin{block}{\textbf{Điều kiện cân bằng sinh học--kinh tế (Bionomic Equilibrium)}}
+    \footnotesize
+    Trạng thái dừng động học quần thể đồng thời lợi nhuận kinh tế triệt tiêu:
+    $\frac{dx}{dt} = 0, \quad \frac{dy}{dt} = 0, \quad \pi(E_1, E_2) = 0$.
+  \end{block}
+
+  \vspace{0.05cm}
+
+  \begin{center}
+  \scriptsize
+  \renewcommand{\arraystretch}{1.02}
+  \begin{tabularx}{\textwidth}{l X X}
+    \toprule
+    \textbf{Trường hợp} & \textbf{Tọa độ điểm cân bằng} & \textbf{Điều kiện tồn tại} \\
+    \midrule
+    \textbf{$P_1$:} Chỉ bắt Bass & $x_B = \frac{r}{a} - \frac{bc_2}{ap_2q_2}, \quad y_B = \frac{c_2}{p_2q_2}$ & $\frac{r}{a} > \frac{bc_2}{ap_2q_2}$ \\
+    ($E_1 = 0, E_2 > 0$) & $E_{2B} = -\frac{e}{q_2} - \frac{cc_2}{p_2q_2^2} + \frac{d}{q_2}\left(\frac{r}{a} - \frac{bc_2}{ap_2q_2}\right)$ & và $E_{2B} > 0$ \\
+    \midrule
+    \textbf{$P_2$:} Chỉ bắt Menhaden & $x_B = \frac{c_1}{p_1q_1}, \quad y_B = \frac{dc_1}{cp_1q_1} - \frac{e}{c}$ & $\frac{dc_1}{cp_1q_1} > \frac{e}{c}$ \\
+    ($E_1 > 0, E_2 = 0$) & $E_{1B} = \frac{r}{q_1} - \frac{ac_1}{p_1q_1^2} - \frac{b}{q_1}\left(\frac{dc_1}{cp_1q_1} - \frac{e}{c}\right)$ & và $E_{1B} > 0$ \\
+    \midrule
+    \textbf{$P_3$:} Không khai thác & $x^* = \frac{rc+be}{ac+bd}, \quad y^* = \frac{rd-ae}{ac+bd}$ & $rd > ae$ \\
+    ($E_1 = 0, E_2 = 0$) & (Trạng thái cân bằng dừng tự nhiên $Q$) & (Điểm dừng sinh thái) \\
+    \midrule
+    \textbf{$P_4$:} Khai thác cả 2 loài & $x_B = \frac{c_1}{p_1q_1}, \quad y_B = \frac{c_2}{p_2q_2}$ & $E_{1B} > 0$ \\
+    ($E_1 > 0, E_2 > 0$) & $E_{1B}, E_{2B}$ tính tường minh từ hệ Cramer & và $E_{2B} > 0$ \\
+    \bottomrule
+  \end{tabularx}
+  \end{center}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 23: PHÂN TÍCH TÍNH ỔN ĐỊNH & NGƯỠNG KHAI THÁC TỚI HẠN
+% ------------------------------------------------------------------------------
+\begin{frame}{Phân tích tính ổn định \& Ngưỡng khai thác tới hạn ($E_{\mathrm{crit}}$)}
+  \begin{columns}[t]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Ma trận Jacobian dưới khai thác}}
+        \footnotesize
+        Tại điểm cân bằng cùng tồn tại $(\hat{x}, \hat{y})$:
+        $$J(\hat{x}, \hat{y}) = \begin{pmatrix} -a\hat{x} & -b\hat{x} \\ d\hat{y} & -c\hat{y} \end{pmatrix}$$
+        $\bullet$ Vết ma trận:
+        $$\operatorname{tr}(J) = -(a\hat{x} + c\hat{y}) < 0$$
+        $\bullet$ Định thức:
+        $$\det(J) = (ac + bd)\hat{x}\hat{y} > 0$$
+      \end{block}
+
+      \vspace{0.1cm}
+
+      \begin{exampleblock}{\textbf{Tiêu chuẩn Routh--Hurwitz}}
+        \footnotesize
+        $\operatorname{tr}(J) < 0$ và $\det(J) > 0 \implies$ Mọi trị riêng có phần thực âm.\\
+        $\implies$ Điểm cân bằng cùng tồn tại $(\hat{x}, \hat{y})$ \textbf{luôn ổn định tiệm cận} trong miền tồn tại.
+      \end{exampleblock}
+    \end{column}
+
+    \begin{column}{0.50\textwidth}
+      \begin{alertblock}{\textbf{Ngưỡng khai thác tới hạn ($E_{\mathrm{crit}}$)}}
+        \footnotesize
+        Điều kiện để cá vược không bị tuyệt chủng ($\hat{y} > 0$):
+        \begin{itemize}
+          \setlength{\itemsep}{2pt}
+          \item \textbf{Chỉ bắt Bass:} $E_2 < E_{2,\mathrm{crit}} = \frac{rd - ae}{aq_2} \approx \mathbf{196.8}$
+          \item \textbf{Chỉ bắt Menhaden:} $E_1 < E_{1,\mathrm{crit}} = \frac{rd - ae}{dq_1} \approx \mathbf{1.02}$
+          \item \textbf{Bắt đồng thời:} $E < E_{\mathrm{crit}} = \frac{rd - ae}{dq_1 + aq_2} \approx \mathbf{1.015}$
+        \end{itemize}
+      \end{alertblock}
+
+      \vspace{0.1cm}
+
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, top=1.2mm, bottom=1.2mm]
+        \footnotesize
+        Khi $E \to E_{\mathrm{crit}}^-$, thời gian phục hồi $\tau(E) \to +\infty$ (sụp đổ sức chống chịu của hệ sinh thái).
+      \end{tcolorbox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 24: MINH HỌA SỐ: CHÂN DUNG PHA DƯỚI 4 CHẾ ĐỘ KHAI THÁC
+% ------------------------------------------------------------------------------
+\begin{frame}{Minh họa số: Chân dung pha dưới 4 chế độ khai thác}
+  \begin{columns}[c]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \includegraphics[width=\linewidth, height=4.6cm, keepaspectratio]{pictures/ch3/phase_potrait.png}\\[3pt]
+      {\scriptsize \textit{Hình 3.2: Chân dung pha: (a) chỉ bắt Bass; (b) chỉ bắt Menhaden; (c) không khai thác; (d) bắt đồng thời}}
+    \end{column}
+
+    \begin{column}{0.42\textwidth}
+      \begin{block}{\textbf{Đặc điểm quỹ đạo nghiệm}}
+        \footnotesize
+        $\bullet$ Quỹ đạo xoắn ốc hội tụ về điểm cân bằng cùng tồn tại $(\hat{x}, \hat{y})$ từ mọi điều kiện ban đầu $x(0) > 0, y(0) > 0$.\\
+        $\bullet$ Minh chứng trực quan tính \textbf{ổn định tiệm cận} của hệ động lực dưới khai thác.
+      \end{block}
+
+      \vspace{0.1cm}
+
+      \begin{exampleblock}{\textbf{Dịch chuyển tâm cân bằng}}
+        \footnotesize
+        $\bullet$ \textbf{Khai thác Bass (a):} Tâm xoắn dịch sang phải (sinh khối Menhaden tăng do giảm săn bắt).\\
+        $\bullet$ \textbf{Khai thác Menhaden (b):} Tâm xoắn dịch mạnh xuống dưới (Bass cạn thức ăn).
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 25: MINH HỌA SỐ: THỜI GIAN HỒI PHỤC THEO CƯỜNG ĐỘ KHAI THÁC
+% ------------------------------------------------------------------------------
+\begin{frame}{Minh họa số: Thời gian hồi phục $\tau$ theo cường độ khai thác}
+  \begin{columns}[c]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \includegraphics[width=\linewidth, height=4.6cm, keepaspectratio]{pictures/ch3/return_time.png}\\[3pt]
+      {\scriptsize \textit{Hình 3.3: Thời gian hồi phục $\tau$: (a) chỉ Bass; (b) chỉ Menhaden; (c) đồng thời; (d) đường chuẩn hóa}}
+    \end{column}
+
+    \begin{column}{0.42\textwidth}
+      \begin{block}{\textbf{Quy luật biến thiên của $\tau$}}
+        \footnotesize
+        $\bullet$ \textbf{Chỉ bắt Bass (a):} $\tau$ ban đầu giảm (nhờ giảm cạnh tranh nội bộ bãi đẻ), sau đó tăng vọt tới vô hạn khi $E_2 \to E_{2,\mathrm{crit}}$.\\
+        $\bullet$ \textbf{Chỉ bắt Menhaden (b) \& Đồng thời (c):} $\tau$ tăng đơn điệu ngay từ đầu và bùng nổ tới $+\infty$ khi chạm $E_{\mathrm{crit}} \approx 1.02$.
+      \end{block}
+
+      \vspace{0.1cm}
+
+      \begin{alertblock}{\textbf{Vùng tuyệt chủng (Màu xanh)}}
+        \footnotesize
+        Khi vượt quá $E_{\mathrm{crit}}$, Striped Bass bị tuyệt chủng hoàn toàn, liên kết 2 loài bị phá vỡ.
+      \end{alertblock}
     \end{column}
   \end{columns}
 \end{frame}
 
 % ==============================================================================
-% PHẦN 4: PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ (CHƯƠNG 4)
+% PHẦN 5: PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ (CHƯƠNG 4)
 % ==============================================================================
 \section{Chính sách khai thác nghề cá (Chương 4)}
 
@@ -929,41 +1080,39 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-% SLIDE 22: CHÍNH SÁCH TỐI ĐA HÓA ĐỘ HỒI PHỤC SINH THÁI (RMY)
+% SLIDE 22A: CHÍNH SÁCH RMY - CHỈ KHAI THÁC CÁ VƯỢC (BASS)
 % ------------------------------------------------------------------------------
-\begin{frame}{Chính sách Tối đa hóa độ hồi phục sinh thái (RMY)}
-  \vspace*{-0.1cm}
-  \begin{block}{\textbf{Mục tiêu quản lý RMY}}
-    \scriptsize
-    Tối đa hóa tốc độ phục hồi hệ thống: $R(E) = 1/\tau = -\operatorname{Re}(\lambda_m)$. Khi 1 loài tuyệt chủng $\implies R = 0$ (đường đứt đoạn).
+\begin{frame}{Chính sách RMY: Kịch bản chỉ khai thác cá vược ($E_1 = 0, E_2 = E$)}
+  \vspace*{-0.15cm}
+  \begin{block}{\textbf{Mục tiêu RMY \& Động thái hồi phục sinh thái}}
+    \footnotesize
+    $\bullet$ \textbf{Mục tiêu RMY:} Tối đa hóa tốc độ phục hồi hệ thống: $R(E) = 1/\tau = -\operatorname{Re}(\lambda_m)$.\\[2pt]
+    $\bullet$ \textbf{Quy luật:} $R$ tăng tuyến tính theo nỗ lực khai thác cá vược $\implies E_{\mathrm{RMY}} = 10$.\\
+    $\bullet$ \textbf{Cơ chế:} Đánh bắt cá vược làm giảm cạnh tranh nội bộ bãi đẻ, thúc đẩy tốc độ hồi phục toàn vịnh.
   \end{block}
 
   \vspace{0.08cm}
-  \begin{columns}[t]
-    \begin{column}{0.49\textwidth}
-      \begin{block}{\textbf{Chỉ khai thác cá vược ($E_2$)}}
-        \scriptsize
-        $\bullet$ $R$ tăng tuyến tính theo nỗ lực $\implies E_{\mathrm{RMY}} = 10$.\\
-        $\bullet$ Giảm cạnh tranh nội bộ cá vược, thúc đẩy tốc độ phục hồi trong miền khảo sát.
-      \end{block}
-      \vspace{0.04cm}
-      \centering
-      \includegraphics[height=2.3cm, keepaspectratio]{pictures/ch4/fig11_rmy_predator.png}\\[1pt]
-      {\tiny \textit{Hình 11: Sản lượng \& Resilience khi chỉ bắt bass}}
-    \end{column}
+  \centering
+  \includegraphics[width=0.86\textwidth, height=4.2cm, keepaspectratio]{pictures/ch4/fig11_rmy_predator.png}\\[2pt]
+  {\scriptsize \textit{Hình 11: Đường cong sản lượng và Độ đàn hồi sinh thái $R$ theo nỗ lực $E$ khi chỉ đánh bắt cá vược}}
+\end{frame}
 
-    \begin{column}{0.49\textwidth}
-      \begin{alertblock}{\textbf{Chỉ bắt cá mòi ($E_1$) hoặc cả 2 loài}}
-        \scriptsize
-        $\bullet$ $R$ \textbf{giảm nghiêm ngặt} theo nỗ lực $\implies E_{\mathrm{RMY}} = 0$.\\
-        $\bullet$ \textbf{Cảnh báo:} Bất kỳ nỗ lực đánh bắt cá mòi nào cũng làm suy giảm độ đàn hồi sinh thái của toàn vịnh!
-      \end{alertblock}
-      \vspace{0.04cm}
-      \centering
-      \includegraphics[height=2.3cm, keepaspectratio]{pictures/ch4/fig12_rmy_prey.png}\\[1pt]
-      {\tiny \textit{Hình 12: Sản lượng \& Resilience khi chỉ bắt menhaden}}
-    \end{column}
-  \end{columns}
+% ------------------------------------------------------------------------------
+% SLIDE 22B: CHÍNH SÁCH RMY - KHAI THÁC CÁ MÒI HOẶC CẢ 2 LOÀI
+% ------------------------------------------------------------------------------
+\begin{frame}{Chính sách RMY: Kịch bản khai thác cá mòi hoặc cả 2 loài}
+  \vspace*{-0.15cm}
+  \begin{alertblock}{\textbf{Cảnh báo sụp đổ độ đàn hồi sinh thái khi đánh bắt cá mòi dầu ($E_1 > 0$)}}
+    \footnotesize
+    $\bullet$ \textbf{Quy luật:} Tốc độ hồi phục $R$ \textbf{giảm nghiêm ngặt} theo nỗ lực đánh bắt cá mòi $\implies E_{\mathrm{RMY}} = 0$.\\[2pt]
+    $\bullet$ \textbf{Nguy cơ tuyệt chủng:} Đánh bắt cá mòi làm cạn kiệt thức ăn của cá vược. Khi $E_1 \ge E_{\mathrm{crit}} \approx 1.02$, cá vược tuyệt chủng và $R = 0$ (đoạn đứt nét trên đồ thị).\\
+    $\blacktriangleright$ \textbf{Khuyến nghị RMY:} Tuyệt đối không đánh bắt cá mòi ở mức tối đa để bảo toàn sức chống chịu sinh thái.
+  \end{alertblock}
+
+  \vspace{0.08cm}
+  \centering
+  \includegraphics[width=0.86\textwidth, height=4.2cm, keepaspectratio]{pictures/ch4/fig12_rmy_prey.png}\\[2pt]
+  {\scriptsize \textit{Hình 12: Sản lượng và Độ đàn hồi sinh thái $R$ khi đánh bắt cá mòi (đường đứt đoạn biểu thị cá vược tuyệt chủng)}}
 \end{frame}
 
 % ==============================================================================
@@ -999,14 +1148,24 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-% SLIDE 24: KẾT QUẢ XẾP HẠNG ĐỘ NHẠY TƯƠNG ĐỐI & TÁC ĐỘNG BẤT ĐỐI XỨNG
+% SLIDE 24: QUỸ ĐẠO QUẦN THỂ DƯỚI 8 KỊCH BẢN NHIỄU LOẠN THAM SỐ (HÌNH 16)
+% ------------------------------------------------------------------------------
+\begin{frame}{Quỹ đạo quần thể dưới 8 kịch bản nhiễu loạn tham số (Hình 16)}
+  \centering
+  \vspace{-0.1cm}
+  \includegraphics[width=0.98\linewidth, height=0.75\textheight, keepaspectratio]{pictures/ch5/fig16_parameter_perturbations.png}\\[2pt]
+  {\scriptsize \textit{Hình 16: Động thái quần thể Menhaden (đỏ) \& Bass (xanh) dưới nhiễu loạn $\pm 10\%$ của 8 tham số ($r, a, b, E_1, e, c, d, E_2$)}}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SLIDE 25: KẾT QUẢ XẾP HẠNG ĐỘ NHẠY TƯƠNG ĐỐI & TÁC ĐỘNG BẤT ĐỐI XỨNG
 % ------------------------------------------------------------------------------
 \begin{frame}{Xếp hạng độ nhạy tương đối \& Tác động bất đối xứng}
   \begin{columns}[c]
-    \begin{column}{0.54\textwidth}
-      \begin{block}{\textbf{Độ nhạy chuẩn hóa $\|\bar{S}_{ij}\|_2$ (Bảng 2 bài báo)}}
-        \scriptsize
-        \renewcommand{\arraystretch}{0.95}
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\textbf{Độ nhạy chuẩn hóa $\|\bar{S}_{ij}\|_2$}}
+        \footnotesize
+        \renewcommand{\arraystretch}{1.02}
         \setlength{\tabcolsep}{3pt}
         \begin{tabularx}{\linewidth}{lXlX}
           \toprule
@@ -1014,25 +1173,36 @@
           \midrule
           $d$ & \textbf{0.9985} & $r$ & \textbf{1.0080}\\
           $e$ & \textbf{0.8886} & $b$ & \textbf{1.0004}\\
+          $c$ & $0.1100$        & $e$ & $0.0133$\\
+          $b$ & $0.1098$        & $d$ & $0.0093$\\
+          $r$ & $0.1079$        & $a$ & $0.0069$\\
+          $a$ & $0.0008$        & $c$ & $0.0029$\\
+          \midrule
           $E_2$ & \textbf{$0.7328E_2q_2$} & $E_1$ & \textbf{$1.9647E_1q_1$}\\
-          $E_1$ & $0.2103E_1q_1$ & $E_2$ & $0.0110E_2q_2$\\
+          $E_1$ & $0.2103E_1q_1$          & $E_2$ & $0.0110E_2q_2$\\
           \bottomrule
-        \end{tabularx}
+        \end{tabularx}\\[3pt]
+        \centering{\scriptsize \textit{(Nguồn: Bảng 2 bài báo Panayotova \& Hu, 2023)}}\par
       \end{block}
-
-      \vspace{0.08cm}
-      \begin{tcolorbox}[colback=red!5, colframe=red!75!black, arc=1.2mm, left=2mm, right=2mm, top=1mm, bottom=1mm]
-        \scriptsize
-        \textbf{Tính chất bất đối xứng sâu sắc:}\\[1pt]
-        $\blacktriangleright$ Bass nhạy với đánh bắt mòi ($1.965$) gấp \textbf{178 lần} đánh bắt chính bass ($0.011$)!\\
-        $\blacktriangleright$ Quản lý đơn loài cá mồi đe dọa trực tiếp cá vược.
-      \end{tcolorbox}
     \end{column}
 
-    \begin{column}{0.44\textwidth}
-      \centering
-      \includegraphics[height=3.8cm, keepaspectratio]{pictures/ch5/fig16_parameter_perturbations.png}\\[1pt]
-      {\tiny \textit{Hình 16: Quần thể dưới nhiễu loạn tham số}}
+    \begin{column}{0.49\textwidth}
+      \begin{tcolorbox}[colback=red!5, colframe=red!75!black, arc=1.5mm, left=2.5mm, right=2.5mm, top=1.8mm, bottom=1.8mm]
+        \small
+        \textbf{Tính chất bất đối xứng sâu sắc:}\\[3pt]
+        \footnotesize
+        $\blacktriangleright$ Bass nhạy với đánh bắt mòi ($1.965E_1q_1$) gấp \textbf{178 lần} đánh bắt chính bass ($0.011E_2q_2$)!\\
+        $\blacktriangleright$ Khai thác quá mức con mồi sẽ tàn phá kẻ săn mồi nhanh hơn nhiều so với đánh bắt trực tiếp.\\
+        $\blacktriangleright$ Quản lý đơn loài cá mồi đe dọa trực tiếp cá vược.
+      \end{tcolorbox}
+
+      \vspace{0.12cm}
+      \begin{block}{\textbf{Hàm ý quản lý sinh thái (EBFM)}}
+        \footnotesize
+        $\bullet$ \textbf{Nhạy cảm cao:} Tham số nền tảng ($r, b, E_1$ với Bass; $d, e, E_2$ với Menhaden).\\
+        $\bullet$ \textbf{Ít nhạy cảm:} Hệ số tương tác cạnh tranh ($a, c$).\\
+        $\bullet$ \textbf{Kết luận:} Bắt buộc quản lý tích hợp đa loài, lấy bảo tồn cá mồi làm then chốt.
+      \end{block}
     \end{column}
   \end{columns}
 \end{frame}

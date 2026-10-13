@@ -1,6 +1,6 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{Danh mục hình vẽ}{vi}{chapter*.2}%
-\contentsline {chapter}{Danh mục ký hiệu và từ viết tắt}{vii}{chapter*.3}%
+\contentsline {chapter}{Danh mục hình vẽ}{vii}{chapter*.2}%
+\contentsline {chapter}{Danh mục ký hiệu và từ viết tắt}{viii}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}MỞ ĐẦU}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Bối cảnh nghiên cứu và hệ sinh thái vịnh Chesapeake}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Đặc điểm sinh học và vai trò của các loài sinh vật nghiên cứu}{2}{section.1.2}%
@@ -47,39 +47,50 @@
 \contentsline {subsection}{\numberline {2.4.2}Thiết lập ma trận Jacobian và giá trị riêng của hệ thống}{19}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Tính toán giá trị số cụ thể}{20}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Ý nghĩa sinh thái của thời gian hồi phục}{20}{subsection.2.4.4}%
-\contentsline {chapter}{\numberline {3}MÔ HÌNH KINH TẾ SINH THÁI VÀ PHÂN TÍCH ỔN ĐỊNH}{22}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Mô hình kinh tế sinh thái (Bionomic Model)}{22}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Chứng minh tính dương và tính bị chặn của nghiệm}{22}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Điều kiện tồn tại các điểm cân bằng bionomic}{22}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Tác động của khai thác lên tính ổn định tiệm cận}{23}{section.3.4}%
-\contentsline {chapter}{\numberline {4}PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Chính sách sản lượng bền vững tối đa (MSY)}{24}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Khái niệm và điều kiện bền vững}{24}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{25}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Trường hợp 2: Chỉ khai thác con mồi}{25}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{26}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Nhận xét về MSY}{28}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}Chính sách sản lượng kinh tế tối đa (MEY)}{28}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Hàm lợi nhuận ròng}{28}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{29}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Trường hợp 2: Chỉ khai thác con mồi}{30}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{30}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Nhận xét về MEY}{31}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Chính sách sản lượng tối đa hóa độ hồi phục sinh thái (RMY)}{31}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Độ hồi phục và thời gian trở về cân bằng}{31}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{31}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Trường hợp 2: Chỉ khai thác con mồi}{31}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{32}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}So sánh các chính sách}{34}{subsection.4.3.5}%
-\contentsline {chapter}{\numberline {5}PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}{35}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Phương pháp vi phân trực tiếp}{35}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Thiết lập hệ phương trình độ nhạy}{35}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Ví dụ: độ nhạy theo tham số $r$}{36}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Độ nhạy tương đối và chỉ số độ nhạy}{37}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Kết quả và diễn giải sinh học}{37}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Kết luận của phân tích độ nhạy}{39}{section.5.4}%
-\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{41}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Tổng kết các kết quả đạt được}{41}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Hàm ý chính sách quản lý cho vịnh Chesapeake}{41}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Đánh giá hạn chế và hướng phát triển tiếp theo}{42}{section.6.3}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{43}{section.6.3}%
+\contentsline {chapter}{\numberline {3}MÔ HÌNH SINH HỌC--KINH TẾ VÀ PHÂN TÍCH ỔN ĐỊNH}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mô hình sinh học--kinh tế mở rộng}{22}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Mô hình sinh học--kinh tế}{22}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Tính chất của nghiệm}{23}{subsection.3.1.2}%
+\contentsline {subsubsection}{Tính không âm}{23}{subsubsection*.11}%
+\contentsline {subsubsection}{Tính bị chặn}{24}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {3.1.3}Xác định các điểm cân bằng của mô hình}{27}{subsection.3.1.3}%
+\contentsline {subsubsection}{Trường hợp 1: Chỉ khai thác cá Striped Bass (Vật săn mồi)}{28}{subsubsection*.13}%
+\contentsline {subsubsection}{Trường hợp 2: Chỉ khai thác cá Atlantic Menhaden (con mồi)}{29}{subsubsection*.14}%
+\contentsline {subsubsection}{Trường hợp 3: Không khai thác cả hai loài}{29}{subsubsection*.15}%
+\contentsline {subsubsection}{Trường hợp 4: Khai thác đồng thời cả hai loài}{30}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {3.1.4}Phân tích tính ổn định và khả năng phục hồi của hệ sinh thái}{31}{subsection.3.1.4}%
+\contentsline {subsubsection}{Trường hợp 1: Chỉ khai thác cá Striped Bass (Vật săn mồi)}{32}{subsubsection*.17}%
+\contentsline {subsubsection}{Trường hợp 2: Chỉ khai thác cá Atlantic Menhaden (con mồi)}{32}{subsubsection*.18}%
+\contentsline {subsubsection}{Trường hợp 3: Khai thác đồng thời cả hai loài}{33}{subsubsection*.19}%
+\contentsline {subsubsection}{Minh họa số}{34}{subsubsection*.20}%
+\contentsline {chapter}{\numberline {4}PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Chính sách sản lượng bền vững tối đa (MSY)}{37}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Khái niệm và điều kiện bền vững}{37}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{38}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Trường hợp 2: Chỉ khai thác con mồi}{38}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{39}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Nhận xét về MSY}{41}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Chính sách sản lượng kinh tế tối đa (MEY)}{41}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Hàm lợi nhuận ròng}{41}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{42}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Trường hợp 2: Chỉ khai thác con mồi}{43}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{43}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Nhận xét về MEY}{44}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Chính sách sản lượng tối đa hóa độ hồi phục sinh thái (RMY)}{44}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Độ hồi phục và thời gian trở về cân bằng}{44}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Trường hợp 1: Chỉ khai thác vật ăn thịt}{44}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Trường hợp 2: Chỉ khai thác con mồi}{44}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Trường hợp 3: Khai thác đồng thời cả hai loài}{45}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}So sánh các chính sách}{47}{subsection.4.3.5}%
+\contentsline {chapter}{\numberline {5}PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}{48}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Phương pháp vi phân trực tiếp}{48}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Thiết lập hệ phương trình độ nhạy}{48}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Ví dụ: độ nhạy theo tham số $r$}{49}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Độ nhạy tương đối và chỉ số độ nhạy}{50}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Kết quả và diễn giải sinh học}{50}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Kết luận của phân tích độ nhạy}{52}{section.5.4}%
+\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{54}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Tổng kết các kết quả đạt được}{54}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hàm ý chính sách quản lý cho vịnh Chesapeake}{54}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Đánh giá hạn chế và hướng phát triển tiếp theo}{55}{section.6.3}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{56}{section.6.3}%
