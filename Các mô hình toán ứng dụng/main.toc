@@ -44,23 +44,23 @@
 \contentsline {subsection}{\numberline {2.3.3}Tính toán điểm cân bằng dừng}{17}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Phân tích độ đàn hồi sinh thái (Resilience) của hệ thống}{18}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Khái niệm độ đàn hồi theo Pimm và Lawton (1978)}{18}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Thiết lập ma trận Jacobian và giá trị riêng của hệ thống}{18}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Tính toán giá trị số cụ thể}{19}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.2}Thiết lập ma trận Jacobian và giá trị riêng của hệ thống}{19}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Tính toán giá trị số cụ thể}{20}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Ý nghĩa sinh thái của thời gian hồi phục}{20}{subsection.2.4.4}%
-\contentsline {chapter}{\numberline {3}MÔ HÌNH KINH TẾ SINH THÁI VÀ PHÂN TÍCH ỔN ĐỊNH}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Mô hình kinh tế sinh thái (Bionomic Model)}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Chứng minh tính dương và tính bị chặn của nghiệm}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Điều kiện tồn tại các điểm cân bằng bionomic}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Tác động của khai thác lên tính ổn định tiệm cận}{22}{section.3.4}%
-\contentsline {chapter}{\numberline {4}PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Chính sách Sản lượng bền vững tối đa (MSY)}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Chính sách Sản lượng kinh tế tối đa (MEY)}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Chính sách Sản lượng tối đa hóa độ đàn hồi (RMY)}{24}{section.4.3}%
-\contentsline {chapter}{\numberline {5}PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Phương pháp vi phân trực tiếp (Direct Differential Method)}{25}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Chỉ số độ nhạy tương đối và xếp hạng tham số}{25}{section.5.2}%
-\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{26}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Tổng kết các kết quả đạt được}{26}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Hàm ý chính sách quản lý cho vịnh Chesapeake}{26}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Đánh giá hạn chế và hướng phát triển tiếp theo}{27}{section.6.3}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{28}{section.6.3}%
+\contentsline {chapter}{\numberline {3}MÔ HÌNH KINH TẾ SINH THÁI VÀ PHÂN TÍCH ỔN ĐỊNH}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mô hình kinh tế sinh thái (Bionomic Model)}{22}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Chứng minh tính dương và tính bị chặn của nghiệm}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Điều kiện tồn tại các điểm cân bằng bionomic}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Tác động của khai thác lên tính ổn định tiệm cận}{23}{section.3.4}%
+\contentsline {chapter}{\numberline {4}PHÂN TÍCH CÁC CHÍNH SÁCH KHAI THÁC NGHỀ CÁ}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Chính sách Sản lượng bền vững tối đa (MSY)}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Chính sách Sản lượng kinh tế tối đa (MEY)}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Chính sách Sản lượng tối đa hóa độ đàn hồi (RMY)}{25}{section.4.3}%
+\contentsline {chapter}{\numberline {5}PHÂN TÍCH ĐỘ NHẠY CỤC BỘ}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Phương pháp vi phân trực tiếp (Direct Differential Method)}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Chỉ số độ nhạy tương đối và xếp hạng tham số}{26}{section.5.2}%
+\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Tổng kết các kết quả đạt được}{27}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hàm ý chính sách quản lý cho vịnh Chesapeake}{27}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Đánh giá hạn chế và hướng phát triển tiếp theo}{28}{section.6.3}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{29}{section.6.3}%

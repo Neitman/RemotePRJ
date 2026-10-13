@@ -1,1 +1,6 @@
 \babel@toc {vietnamese}{}\relax 
+\beamer@sectionintoc {1}{Bối cảnh nghiên cứu \& Đặt vấn đề}{3}{0}{1}
+\beamer@sectionintoc {2}{Mô hình Lotka--Volterra mở rộng}{8}{0}{2}
+\beamer@sectionintoc {3}{Dữ liệu thực tế \& Khớp tham số}{11}{0}{3}
+\beamer@sectionintoc {4}{Phân tích độ đàn hồi sinh thái}{16}{0}{4}
+\beamer@sectionintoc {5}{Chính sách khai thác \& Khuyến nghị quản lý}{20}{0}{5}

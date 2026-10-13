@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.10.7)  7 OCT 2026 16:35
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  12 OCT 2026 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,7 +7,7 @@ entering extended mode
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\namxi\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
-Document Class: beamer 2026/08/20 v3.78 A class for typesetting presentations
+Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
 
 (C:\Users\namxi\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasemodes.
 sty
@@ -1392,11 +1392,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1
 
-]
-Overfull \vbox (9.76738pt too high) detected at line 223
- []
-
-[2
+] [2
 
 ] [3
 
@@ -1417,15 +1413,21 @@ Overfull \vbox (9.76738pt too high) detected at line 223
 ] [11
 
 ]
-Overfull \hbox (5.77852pt too wide) in paragraph at lines 601--601
+Overfull \hbox (5.77852pt too wide) in paragraph at lines 602--602
  [][] 
  []
 
 [12
 
-] [13
+]
+File: fig1_fitted_curves.pdf Graphic file (type pdf)
+<use fig1_fitted_curves.pdf>
+ [13
 
-] [14
+]
+File: fig2_model_prediction.pdf Graphic file (type pdf)
+<use fig2_model_prediction.pdf>
+ [14
 
 ] [15
 
@@ -1466,13 +1468,13 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 2D71CCC9FBE2D960B6518E52752CCCAA;1245.
  ) 
 Here is how much of TeX's memory you used:
- 33674 strings out of 402986
- 739240 string characters out of 5448503
- 1259797 words of memory out of 5000000
- 61787 multiletter control sequences out of 15000+600000
+ 33647 strings out of 402987
+ 737951 string characters out of 5448524
+ 1233803 words of memory out of 5000000
+ 61757 multiletter control sequences out of 15000+600000
  636290 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,19n,123p,420b,1367s stack positions out of 10000i,1000n,20000p,200000b,200000s

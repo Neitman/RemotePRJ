@@ -168,56 +168,54 @@
   \end{columns}
 \end{frame}
 
+
+% ==============================================================================
+% SLIDE 2: MỤC LỤC NỘI DUNG BÁO CÁO (AGENDA)
 % ------------------------------------------------------------------------------
-% SLIDE 2: NỘI DUNG BÁO CÁO (AGENDA)
-% ------------------------------------------------------------------------------
-\begin{frame}{Nội dung báo cáo}
+\begin{frame}{Mục lục nội dung báo cáo}
+  \vspace*{-0.1cm}
   \begin{columns}[t]
-    \begin{column}{0.49\textwidth}
-      \begin{block}{\textbf{Phần I: Bối cảnh \& Đặt vấn đề (Chương 1)}}
-        \footnotesize
-        \begin{itemize}
-          \item Hệ sinh thái Vịnh Chesapeake \& Đặt bài toán.
-          \item Hai loài then chốt: Menhaden \& Striped Bass.
-          \item Khủng hoảng khai thác \& Bi kịch tài nguyên chung.
-          \item Quản lý Dựa trên Hệ sinh thái (EBFM).
-          \item Sơ đồ tương tác sinh thái -- kinh tế.
-        \end{itemize}
-      \end{block}
+    \begin{column}{0.48\textwidth}
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{1. Bối cảnh nghiên cứu \& Đặt vấn đề}}]
+        \scriptsize
+        $\blacktriangleright$ Hệ sinh thái Vịnh Chesapeake \& 2 loài cá\\
+        $\blacktriangleright$ Khủng hoảng khai thác \& Chuyển dịch EBFM
+      \end{tcolorbox}
+      
+      \vspace{0.15cm}
+      
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanBlue, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{2. Mô hình Lotka--Volterra mở rộng}}]
+        \scriptsize
+        $\blacktriangleright$ Hệ phương trình vi phân phi tuyến 2 loài\\
+        $\blacktriangleright$ Ý nghĩa 6 tham số \& Cơ chế tự giới hạn
+      \end{tcolorbox}
 
       \vspace{0.15cm}
-
-      \begin{block}{\textbf{Phần II: Mô hình Toán học (Chương 2)}}
-        \footnotesize
-        \begin{itemize}
-          \item Hệ vi phân Lotka--Volterra mở rộng 2 loài.
-          \item Ý nghĩa sinh học 6 tham số \& 5 giả thiết nền tảng.
-          \item Ưu thế giải tích và tính chân thực của mô hình.
-        \end{itemize}
-      \end{block}
+      
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanTeal, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{3. Dữ liệu thực tế \& Khớp tham số}}]
+        \scriptsize
+        $\blacktriangleright$ Chuỗi số liệu 23 năm \& Hồi quy phi tuyến NLS\\
+        $\blacktriangleright$ Đồ thị khớp (Fig. 1) \& Dự báo đến 2100 (Fig. 2)\\
+        $\blacktriangleright$ Điểm cân bằng dừng tự nhiên $Q(x^*, y^*)$
+      \end{tcolorbox}
     \end{column}
 
-    \begin{column}{0.49\textwidth}
-      \begin{block}{\textbf{Phần III: Dữ liệu thực tế \& Độ đàn hồi (Chương 2)}}
-        \footnotesize
-        \begin{itemize}
-          \item Khớp dữ liệu ASMFC 1995--2017 qua NLS ($S = 0.11$).
-          \item Hiện tượng dao động trễ pha \& Dự báo đến 2100.
-          \item Điểm dừng $Q(x^*, y^*)$ \& Phân tích Jacobi.
-          \item Độ đàn hồi (Resilience) \& Chu kỳ hồi phục $\tau \approx 13$ năm.
-        \end{itemize}
-      \end{block}
+    \begin{column}{0.48\textwidth}
+      \begin{tcolorbox}[colback=OceanLight, colframe=OceanNavy!70!OceanBlue, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{4. Phân tích độ đàn hồi sinh học}}]
+        \scriptsize
+        $\blacktriangleright$ Ma trận Jacobian \& Tính ổn định tiệm cận\\
+        $\blacktriangleright$ Cặp giá trị riêng phức \& Thời gian phục hồi 13 năm\\
+        $\blacktriangleright$ Cảnh báo sức chống chịu mong manh của Vịnh
+      \end{tcolorbox}
+      
+      \vspace{0.25cm}
 
-      \vspace{0.15cm}
-
-      \begin{alertblock}{\textbf{Phần IV: Kết luận \& Khuyến nghị (Chương 6)}}
-        \footnotesize
-        \begin{itemize}
-          \item Mở rộng Bionomic: So sánh 3 chính sách (MSY, MEY, RMY).
-          \item Tổng kết kết quả nghiên cứu đề tài.
-          \item Hàm ý chính sách cho Vịnh Chesapeake \& Hướng mở rộng.
-        \end{itemize}
-      \end{alertblock}
+      \begin{tcolorbox}[colback=OceanLight, colframe=CoralAlert!90!OceanNavy, arc=1.5mm, boxrule=0.7pt, top=1.2mm, bottom=1.2mm, left=2mm, right=2mm, title={\textbf{5. Chính sách khai thác \& Khuyến nghị}}]
+        \scriptsize
+        $\blacktriangleright$ Đánh giá 3 chính sách: MSY, MEY và RMY\\
+        $\blacktriangleright$ Bác bỏ MSY đơn loài $\implies$ Cắt giảm 50\% hạn ngạch\\
+        $\blacktriangleright$ Khuyến nghị quản lý EBFM cho Vịnh Chesapeake
+      \end{tcolorbox}
     \end{column}
   \end{columns}
 \end{frame}
@@ -225,6 +223,7 @@
 % ==============================================================================
 % PHẦN 1: BỐI CẢNH NGHIÊN CỨU & ĐẶT VẤN ĐỀ (CHƯƠNG 1)
 % ==============================================================================
+\section{Bối cảnh nghiên cứu \& Đặt vấn đề}
 
 % ------------------------------------------------------------------------------
 % SLIDE 3: BỐI CẢNH VỊNH CHESAPEAKE
@@ -425,6 +424,7 @@
 % ==============================================================================
 % PHẦN 2: MÔ HÌNH TOÁN HỌC LOTKA--VOLTERRA TỔNG QUÁT (CHƯƠNG 2)
 % ==============================================================================
+\section{Mô hình Lotka--Volterra mở rộng}
 
 % ------------------------------------------------------------------------------
 % SLIDE 8: HỆ PHƯƠNG TRÌNH VI PHÂN LOTKA--VOLTERRA MỞ RỘNG
@@ -528,6 +528,7 @@
 % ==============================================================================
 % PHẦN 3: DỮ LIỆU THỰC TẾ & KHỚP THAM SỐ (CHƯƠNG 2)
 % ==============================================================================
+\section{Dữ liệu thực tế \& Khớp tham số}
 
 % ------------------------------------------------------------------------------
 % SLIDE 11: DỮ LIỆU THỰC TẾ & PHƯƠNG PHÁP NLS
@@ -607,63 +608,7 @@
   \begin{columns}[c]
     \begin{column}{0.62\textwidth}
       \centering
-      \begin{tikzpicture}
-        \begin{scope}[xscale=0.25, yscale=7]
-          % Trục tọa độ
-          \draw[->, >=stealth, thick] (0, 0) -- (23.5, 0) node[right, font=\tiny] {Năm};
-          \draw[->, >=stealth, thick] (0, 0) -- (0, 0.52) node[above, font=\tiny] {Số lượng (Tỷ con)};
-
-          % Vạch trục hoành
-          \foreach \t/\yr in {0/95, 4/99, 8/03, 12/07, 16/11, 20/15, 22/17} {
-            \draw (\t, 0.01) -- (\t, -0.01) node[below, font=\tiny] {\yr};
-          }
-          % Vạch trục tung
-          \foreach \ab in {0.1, 0.2, 0.3, 0.4, 0.5} {
-            \draw (-0.2, \ab) -- (0.2, \ab) node[left=1pt, font=\tiny] {\ab};
-            \draw[gray!25, dotted] (0, \ab) -- (22.5, \ab);
-          }
-
-          % Đường cong mô hình cá mòi dầu (đỏ)
-          \draw[very thick, CoralAlert] plot[smooth, tension=0.6] coordinates {
-            (0, 0.09) (2, 0.12) (4, 0.14) (6, 0.15) (8, 0.13)
-            (10, 0.11) (12, 0.10) (14, 0.11) (16, 0.13) (18, 0.14)
-            (20, 0.13) (22, 0.12)
-          };
-
-          % Dữ liệu thực tế cá mòi dầu
-          \foreach \coord in {
-            (0, 0.08), (2, 0.13), (4, 0.14), (6, 0.16), (8, 0.12), (10, 0.10),
-            (12, 0.11), (14, 0.12), (16, 0.14), (18, 0.14), (20, 0.12), (22, 0.13)
-          } {
-            \node[draw=CoralAlert, fill=white, circle, inner sep=1pt, thick] at \coord {};
-          }
-
-          % Đường cong mô hình cá vược sọc (xanh)
-          \draw[very thick, OceanBlue] plot[smooth, tension=0.6] coordinates {
-            (0, 0.38) (2, 0.34) (4, 0.29) (6, 0.27) (8, 0.28)
-            (10, 0.32) (12, 0.33) (14, 0.31) (16, 0.28) (18, 0.26)
-            (20, 0.27) (22, 0.29)
-          };
-
-          % Dữ liệu thực tế cá vược sọc
-          \foreach \coord in {
-            (0, 0.40), (2, 0.33), (4, 0.31), (6, 0.25), (8, 0.24), (10, 0.36),
-            (12, 0.33), (14, 0.30), (16, 0.27), (18, 0.29), (20, 0.22), (22, 0.25)
-          } {
-            \node[draw=OceanBlue, fill=white, circle, inner sep=1pt, thick] at \coord {};
-          }
-
-          % Legend
-          \draw[fill=white, draw=gray!60] (14.5, 0.43) rectangle (22.5, 0.51);
-          \draw[CoralAlert, thick] (14.8, 0.485) -- (16.2, 0.485);
-          \node[draw=CoralAlert, fill=white, circle, inner sep=0.8pt] at (15.5, 0.485) {};
-          \node[right=1pt, font=\tiny] at (16.2, 0.485) {Cá mòi dầu};
-          
-          \draw[OceanBlue, thick] (14.8, 0.450) -- (16.2, 0.450);
-          \node[draw=OceanBlue, fill=white, circle, inner sep=0.8pt] at (15.5, 0.450) {};
-          \node[right=1pt, font=\tiny] at (16.2, 0.450) {Cá vược sọc};
-        \end{scope}
-      \end{tikzpicture}
+      \includegraphics[width=\linewidth, keepaspectratio]{fig1_fitted_curves.pdf}
     \end{column}
 
     \begin{column}{0.37\textwidth}
@@ -687,42 +632,7 @@
   \begin{columns}[c]
     \begin{column}{0.62\textwidth}
       \centering
-      \begin{tikzpicture}
-        \begin{scope}[xscale=0.055, yscale=7]
-          % Trục
-          \draw[->, >=stealth, thick] (0, 0) -- (110, 0) node[right, font=\tiny] {Năm};
-          \draw[->, >=stealth, thick] (0, 0) -- (0, 0.52) node[above, font=\tiny] {Sinh khối (Tỷ con)};
-
-          % Vạch hoành
-          \foreach \t/\yr in {0/1995, 25/2020, 50/2045, 75/2070, 105/2100} {
-            \draw (\t, 0.01) -- (\t, -0.01) node[below, font=\tiny] {\yr};
-          }
-          \foreach \ab in {0.1, 0.2, 0.3, 0.4, 0.5} {
-            \draw (-1.5, \ab) -- (1.5, \ab) node[left=1pt, font=\tiny] {\ab};
-            \draw[gray!25, dotted] (0, \ab) -- (105, \ab);
-          }
-
-          % Đường dự báo cá mòi dầu tắt dần về 0.1363
-          \draw[very thick, CoralAlert] plot[smooth, tension=0.6] coordinates {
-            (0, 0.09) (5, 0.14) (10, 0.11) (15, 0.13) (20, 0.15)
-            (25, 0.12) (30, 0.14) (35, 0.13) (40, 0.14) (45, 0.135)
-            (50, 0.137) (60, 0.1363) (80, 0.1363) (105, 0.1363)
-          };
-
-          % Đường dự báo cá vược sọc tắt dần về 0.2886
-          \draw[very thick, OceanBlue] plot[smooth, tension=0.6] coordinates {
-            (0, 0.38) (5, 0.28) (10, 0.33) (15, 0.26) (20, 0.31)
-            (25, 0.27) (30, 0.30) (35, 0.28) (40, 0.295) (45, 0.285)
-            (50, 0.289) (60, 0.2886) (80, 0.2886) (105, 0.2886)
-          };
-
-          % Tiệm cận dừng
-          \draw[dashed, CoralAlert!80!black, thick] (50, 0.1363) -- (105, 0.1363)
-            node[right, font=\tiny] {$x^* = 0.1363$};
-          \draw[dashed, OceanBlue!80!black, thick] (50, 0.2886) -- (105, 0.2886)
-            node[right, font=\tiny] {$y^* = 0.2886$};
-        \end{scope}
-      \end{tikzpicture}
+      \includegraphics[width=\linewidth, keepaspectratio]{fig2_model_prediction.pdf}
     \end{column}
 
     \begin{column}{0.37\textwidth}
@@ -798,6 +708,7 @@
 % ==============================================================================
 % PHẦN 4: PHÂN TÍCH ĐỘ ĐÀN HỒI SINH THÁI (RESILIENCE) (CHƯƠNG 2)
 % ==============================================================================
+\section{Phân tích độ đàn hồi sinh thái}
 
 % ------------------------------------------------------------------------------
 % SLIDE 16: KHÁI NIỆM ĐỘ ĐÀN HỒI SINH THÁI
@@ -946,6 +857,7 @@
 % ==============================================================================
 % PHẦN 5: CHÍNH SÁCH KHAI THÁC, TỔNG KẾT & KẾT LUẬN (CHƯƠNG 6)
 % ==============================================================================
+\section{Chính sách khai thác \& Khuyến nghị quản lý}
 
 % ------------------------------------------------------------------------------
 % SLIDE 20: TỔNG QUAN 3 CHÍNH SÁCH KHAI THÁC (TÓM TẮT CHƯƠNG 3, 4, 5)
